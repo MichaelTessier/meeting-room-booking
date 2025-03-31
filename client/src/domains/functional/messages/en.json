@@ -1,0 +1,8 @@
+{
+  "functional": {
+    "dataProvider": {
+      "error": "Sorry, something's wrong",
+      "loading": "Data is loading"
+    }
+  }
+}

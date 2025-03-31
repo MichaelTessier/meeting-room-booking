@@ -1,0 +1,25 @@
+{
+  "folders": [
+    {
+      "name": "ROOT",
+      "path": "../"
+    },
+    {
+      "name": "client",
+      "path": "../client"
+    },
+    {
+      "name": "server",
+      "path": "../server"
+    },
+  ],
+  "settings": {
+    "files.exclude": {
+      "node_modules/": false,
+      "server/": true,
+      "client/": true
+    },
+    "liveServer.settings.multiRootWorkspaceName": "ROOT",
+    "i18n-ally.keystyle": "nested",
+  }
+}

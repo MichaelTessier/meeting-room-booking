@@ -1,0 +1,51 @@
+{
+  "name": "meeting-room-booking-server",
+  "version": "1.0.0",
+  "description": "server backend for meeting room booking application ",
+  "main": "src/index.ts",
+  "repository": "https://github.com/MichaelTessier/meeting-room-booking",
+  "author": "DemiPixel <michael.tessier.paris@maisonsdgmail.comumonde.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node .",
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.13.14",
+    "@types/supertest": "^6.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.29.0",
+    "@typescript-eslint/parser": "^8.29.0",
+    "eslint": "^9.23.0",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.5.3",
+    "prettier-eslint": "^16.3.0",
+    "supertest": "^7.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.29.0",
+    "vitest": "^3.1.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.1.0"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint",
+      "prettier --write"
+    ],
+    "**/*.{html,json,css,scss,md,mdx}": [
+      "prettier -w"
+    ]
+  }
+}

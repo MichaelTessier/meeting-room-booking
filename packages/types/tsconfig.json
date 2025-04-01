@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    // "outDir": "dist",
+    // "sourceMap": true,
+    // "target": "ES6",
+    "module": "CommonJS",
+    // "esModuleInterop": true,
+    "strict": true,
+    "noEmit": false,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+  },
+  // "include": ["./src/types/**.d.ts"],
+
+  "include": ["src", "*.d.ts", "src/**/*.json"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}

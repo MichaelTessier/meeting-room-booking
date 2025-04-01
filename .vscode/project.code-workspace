@@ -12,6 +12,10 @@
       "name": "server",
       "path": "../server"
     },
+    {
+      "name": "types",
+      "path": "../packages/types"
+    },
   ],
   "settings": {
     "files.exclude": {

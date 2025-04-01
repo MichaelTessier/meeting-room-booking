@@ -1,11 +1,11 @@
 import express from 'express'
-import { HelloResponse } from './models'
+import { Hello } from 'meeting-room-booking-types'
 
 const router = express.Router()
 
-router.get<{}, HelloResponse>('/', (req, res) => {
+router.get<{}, Hello>('/', (req, res) => {
   res.json({
-    text: 'Hello API',
+    message: 'Hello API',
   })
 })
 

@@ -25,5 +25,8 @@
     },
     "liveServer.settings.multiRootWorkspaceName": "ROOT",
     "i18n-ally.keystyle": "nested",
+    "cSpell.words": [
+      "Lucide"
+    ],
   }
 }

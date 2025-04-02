@@ -6,7 +6,7 @@ describe('router', () => {
       .sort()
 
     expect(routeNames).toStrictEqual(
-      ['room-booking', 'room-overview', 'user'].sort(),
+      ['booking', 'booking-calendar', 'booking-overview', 'user'].sort(),
     )
   })
 })

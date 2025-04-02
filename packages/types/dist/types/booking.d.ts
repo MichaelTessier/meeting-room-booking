@@ -1,5 +1,5 @@
-import { Room } from './room';
 import { User } from './user';
+import { Room } from './room';
 export interface Booking {
     id: string;
     title: string;

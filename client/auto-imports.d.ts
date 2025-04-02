@@ -7,6 +7,7 @@
 export {}
 declare global {
   const AVAILABLE_COMPONENTS: (typeof import('./src/lib/utils'))['AVAILABLE_COMPONENTS']
+  const BOOKING_ROUTES: (typeof import('./src/domains/booking/routes'))['BOOKING_ROUTES']
   const Badge: (typeof import('./src/lib/shadcn/ui/badge/index'))['Badge']
   const BarChart: (typeof import('./src/lib/shadcn/ui/chart-bar/index'))['BarChart']
   const Button: (typeof import('./src/lib/shadcn/ui/button/index'))['Button']
@@ -20,26 +21,29 @@ declare global {
   const ChartLegend: (typeof import('./src/lib/shadcn/ui/chart/index'))['ChartLegend']
   const ChartSingleTooltip: (typeof import('./src/lib/shadcn/ui/chart/index'))['ChartSingleTooltip']
   const ChartTooltip: (typeof import('./src/lib/shadcn/ui/chart/index'))['ChartTooltip']
-  const DASHBOARD_ROUTES: (typeof import('./src/domains/roomBooking/routes'))['DASHBOARD_ROUTES']
+  const DASHBOARD_ROUTES: (typeof import('./src/domains/booking/routes'))['DASHBOARD_ROUTES']
   const EffectScope: (typeof import('vue'))['EffectScope']
   const ICON_NAME: (typeof import('./src/domains/functional/components/Icon/Icon.model'))['ICON_NAME']
   const ICON_NAMES: (typeof import('./src/domains/functional/components/Icon/Icon.model'))['ICON_NAMES']
+  const ICON_SIZE: (typeof import('./src/domains/functional/components/Icon/Icon.model'))['ICON_SIZE']
+  const ICON_SIZES: (typeof import('./src/domains/functional/components/Icon/Icon.model'))['ICON_SIZES']
   const Label: (typeof import('./src/lib/shadcn/ui/label/index'))['Label']
   const LineChart: (typeof import('./src/lib/shadcn/ui/chart-line/index'))['LineChart']
-  const ROOM_BOOKING_ROUTES: (typeof import('./src/domains/roomBooking/routes'))['ROOM_BOOKING_ROUTES']
+  const ROOM_BOOKING_ROUTES: (typeof import('./src/domains/booking/routes'))['ROOM_BOOKING_ROUTES']
   const ROUTES: (typeof import('./src/router/index'))['ROUTES']
   const Switch: (typeof import('./src/lib/shadcn/ui/switch/index'))['Switch']
   const UIComponentResolver: (typeof import('./src/lib/utils'))['UIComponentResolver']
   const USER_ROUTES: (typeof import('./src/domains/user/routes'))['USER_ROUTES']
   const acceptHMRUpdate: (typeof import('pinia'))['acceptHMRUpdate']
   const badgeVariants: (typeof import('./src/lib/shadcn/ui/badge/index'))['badgeVariants']
+  const bookingRoutes: (typeof import('./src/domains/booking/routes'))['bookingRoutes']
   const buttonVariants: (typeof import('./src/lib/shadcn/ui/button/index'))['buttonVariants']
   const cn: (typeof import('./src/lib/shadcn/utils'))['cn']
   const computed: (typeof import('vue'))['computed']
   const createApp: (typeof import('vue'))['createApp']
   const createPinia: (typeof import('pinia'))['createPinia']
   const customRef: (typeof import('vue'))['customRef']
-  const dashboardRoutes: (typeof import('./src/domains/roomBooking/routes'))['dashboardRoutes']
+  const dashboardRoutes: (typeof import('./src/domains/booking/routes'))['dashboardRoutes']
   const defaultColors: (typeof import('./src/lib/shadcn/ui/chart/index'))['defaultColors']
   const defineAsyncComponent: (typeof import('vue'))['defineAsyncComponent']
   const defineComponent: (typeof import('vue'))['defineComponent']
@@ -81,12 +85,12 @@ declare global {
   const onUpdated: (typeof import('vue'))['onUpdated']
   const onWatcherCleanup: (typeof import('vue'))['onWatcherCleanup']
   const provide: (typeof import('vue'))['provide']
-  const rOOM_BOOKINGRoutes: (typeof import('./src/domains/roomBooking/routes'))['rOOM_BOOKINGRoutes']
+  const rOOM_BOOKINGRoutes: (typeof import('./src/domains/booking/routes'))['rOOM_BOOKINGRoutes']
   const reactive: (typeof import('vue'))['reactive']
   const readonly: (typeof import('vue'))['readonly']
   const ref: (typeof import('vue'))['ref']
   const resolveComponent: (typeof import('vue'))['resolveComponent']
-  const roomBookingRoutes: (typeof import('./src/domains/roomBooking/routes'))['roomBookingRoutes']
+  const roomBookingRoutes: (typeof import('./src/domains/booking/routes'))['roomBookingRoutes']
   const router: (typeof import('./src/router/index'))['router']
   const routes: (typeof import('./src/router/index'))['routes']
   const setActivePinia: (typeof import('pinia'))['setActivePinia']
@@ -142,7 +146,10 @@ declare global {
   } from 'vue'
   import('vue')
   // @ts-ignore
-  export type { IconName } from './src/domains/functional/components/Icon/Icon.model'
+  export type {
+    IconName,
+    IconSize,
+  } from './src/domains/functional/components/Icon/Icon.model'
   import('./src/domains/functional/components/Icon/Icon.model')
   // @ts-ignore
   export type { BadgeVariants } from './src/lib/shadcn/ui/badge/index'
@@ -157,6 +164,9 @@ import { UnwrapRef } from 'vue'
 declare module 'vue' {
   interface GlobalComponents {}
   interface ComponentCustomProperties {
+    readonly BOOKING_ROUTES: UnwrapRef<
+      (typeof import('./src/domains/booking/routes'))['BOOKING_ROUTES']
+    >
     readonly Badge: UnwrapRef<
       (typeof import('./src/lib/shadcn/ui/badge/index'))['Badge']
     >
@@ -188,11 +198,14 @@ declare module 'vue' {
     readonly ICON_NAMES: UnwrapRef<
       (typeof import('./src/domains/functional/components/Icon/Icon.model'))['ICON_NAMES']
     >
+    readonly ICON_SIZE: UnwrapRef<
+      (typeof import('./src/domains/functional/components/Icon/Icon.model'))['ICON_SIZE']
+    >
+    readonly ICON_SIZES: UnwrapRef<
+      (typeof import('./src/domains/functional/components/Icon/Icon.model'))['ICON_SIZES']
+    >
     readonly Label: UnwrapRef<
       (typeof import('./src/lib/shadcn/ui/label/index'))['Label']
-    >
-    readonly ROOM_BOOKING_ROUTES: UnwrapRef<
-      (typeof import('./src/domains/roomBooking/routes'))['ROOM_BOOKING_ROUTES']
     >
     readonly Switch: UnwrapRef<
       (typeof import('./src/lib/shadcn/ui/switch/index'))['Switch']
@@ -205,6 +218,9 @@ declare module 'vue' {
     >
     readonly badgeVariants: UnwrapRef<
       (typeof import('./src/lib/shadcn/ui/badge/index'))['badgeVariants']
+    >
+    readonly bookingRoutes: UnwrapRef<
+      (typeof import('./src/domains/booking/routes'))['bookingRoutes']
     >
     readonly buttonVariants: UnwrapRef<
       (typeof import('./src/lib/shadcn/ui/button/index'))['buttonVariants']
@@ -289,9 +305,6 @@ declare module 'vue' {
     readonly ref: UnwrapRef<(typeof import('vue'))['ref']>
     readonly resolveComponent: UnwrapRef<
       (typeof import('vue'))['resolveComponent']
-    >
-    readonly roomBookingRoutes: UnwrapRef<
-      (typeof import('./src/domains/roomBooking/routes'))['roomBookingRoutes']
     >
     readonly router: UnwrapRef<(typeof import('./src/router/index'))['router']>
     readonly routes: UnwrapRef<(typeof import('./src/router/index'))['routes']>

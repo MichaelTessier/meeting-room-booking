@@ -1,16 +1,19 @@
 {
   "booking": {
-    "title": "Booking",
     "header": {
       "menu": {
-        "overview": "Overview",
-        "calendar": "Calendar"
+        "calendar": "Calendar",
+        "overview": "Overview"
       }
     },
     "room": {
+      "book": "See availability",
+      "capacity": "Capacity",
+      "capacityInfo": "up to {capacity} people",
       "card": {
         "capacity": "Capacity:"
       }
-    }
+    },
+    "title": "Booking"
   }
 }

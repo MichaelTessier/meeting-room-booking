@@ -5,6 +5,9 @@
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
   "files.autoSave": "onFocusChange",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
   "vs-code-prettier-eslint.prettierLast": false,
   "editor.gotoLocation.multipleDefinitions": "goto",
   "i18n-ally.localesPaths": [

@@ -6,7 +6,6 @@ export const corsMiddleware = () =>
   cors({
     credentials: true,
     origin: (origin, callback) => {
-      console.log(`origin: ${origin}`)
       if (process.env.NODE_ENV === 'test') {
         return callback(null, true)
       }

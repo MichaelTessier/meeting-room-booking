@@ -3,8 +3,10 @@ export const ICON_NAME = {
   ARROW_DOWN_RIGHT: 'arrow-down-right',
   ARROW_UP_WIDE_NARROW: 'arrow-up-wide-narrow',
   CIRCLE_DOT_DASHED: 'circle-dot-dashed',
-  CIRCLE_PLUS: 'circle-plus',
+  // CIRCLE_PLUS: 'circle-plus',
   PLUS: 'plus',
+  TV_MINIMAL: 'tv-minimal',
+  PROJECTOR: 'projector',
 } as const
 
 export const ICON_NAMES = Object.values(ICON_NAME)
@@ -15,7 +17,10 @@ export const iconLucideMatcher = {
   [ICON_NAME.ARROW_DOWN_RIGHT]: 'ArrowDownRight',
   [ICON_NAME.ARROW_UP_WIDE_NARROW]: 'ArrowUpWideNarrow',
   [ICON_NAME.CIRCLE_DOT_DASHED]: 'CircleDotDashed',
+  // [ICON_NAME.CIRCLE_PLUS]: 'CirclePlus',
   [ICON_NAME.PLUS]: 'Plus',
+  [ICON_NAME.TV_MINIMAL]: 'TvMinimal',
+  [ICON_NAME.PROJECTOR]: 'Projector',
 }
 
 export const ICON_SIZE = {

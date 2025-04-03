@@ -1,21 +1,13 @@
 {
-  "name": "meeting-room-booking-server",
-  "version": "1.0.0",
-  "description": "server backend for meeting room booking application ",
-  "main": "src/index.ts",
-  "repository": "https://github.com/MichaelTessier/meeting-room-booking",
   "author": "DemiPixel <michael.tessier.paris@maisonsdgmail.comumonde.com>",
-  "license": "MIT",
-  "scripts": {
-    "build": "tsc",
-    "start": "ts-node .",
-    "dev": "nodemon --exec ts-node src/index.ts",
-    "typecheck": "tsc --noEmit",
-    "test": "NODE_ENV=test vitest",
-    "test:watch": "NODE_ENV=test vitest --watch",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0"
   },
+  "description": "server backend for meeting room booking application ",
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.1",
@@ -30,24 +22,35 @@
     "prettier-eslint": "^16.3.0",
     "supertest": "^7.1.0",
     "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.13",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.29.0",
     "vitest": "^3.1.1"
   },
-  "dependencies": {
-    "body-parser": "^2.2.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "helmet": "^8.1.0"
-  },
+  "license": "MIT",
   "lint-staged": {
+    "**/*.{html,json,css,scss,md,mdx}": [
+      "prettier -w"
+    ],
     "**/*.{js,jsx,ts,tsx}": [
       "eslint",
       "prettier --write"
-    ],
-    "**/*.{html,json,css,scss,md,mdx}": [
-      "prettier -w"
     ]
-  }
+  },
+  "main": "src/index.ts",
+  "name": "meeting-room-booking-server",
+  "repository": "https://github.com/MichaelTessier/meeting-room-booking",
+  "scripts": {
+    "build": "tsc && tsc-alias",
+    "dev": "NODE_ENV=development nodemon -r tsconfig-paths/register --exec ts-node ./src/index.ts --files",
+    "dev--": "nodemon --exec ts-node src/index.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "start": "ts-node .",
+    "test": "NODE_ENV=test vitest",
+    "test:watch": "NODE_ENV=test vitest --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "version": "1.0.0"
 }

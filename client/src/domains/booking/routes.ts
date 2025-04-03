@@ -4,6 +4,7 @@ export const BOOKING_ROUTES = {
   ROOT: 'booking',
   OVERVIEW: 'booking-overview',
   CALENDAR: 'booking-calendar',
+  ROOM: 'room',
 }
 
 export const bookingRoutes = [
@@ -24,6 +25,11 @@ export const bookingRoutes = [
         name: BOOKING_ROUTES.CALENDAR,
         component: () =>
           import('@/domains/booking/pages/BookingCalendar/BookingCalendar.vue'),
+      },
+      {
+        path: '/room/:slug',
+        name: BOOKING_ROUTES.ROOM,
+        component: () => import('@/domains/booking/pages/Room/Room.vue'),
       },
     ],
   },

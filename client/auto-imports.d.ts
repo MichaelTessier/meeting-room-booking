@@ -23,6 +23,10 @@ declare global {
   const ChartTooltip: (typeof import('./src/lib/shadcn/ui/chart/index'))['ChartTooltip']
   const DASHBOARD_ROUTES: (typeof import('./src/domains/booking/routes'))['DASHBOARD_ROUTES']
   const EffectScope: (typeof import('vue'))['EffectScope']
+  const HEADING_TAG: (typeof import('./src/domains/functional/components/Heading/Heading.model'))['HEADING_TAG']
+  const HEADING_TAGS: (typeof import('./src/domains/functional/components/Heading/Heading.model'))['HEADING_TAGS']
+  const HEADING_TYPE: (typeof import('./src/domains/functional/components/Heading/Heading.model'))['HEADING_TYPE']
+  const HEADING_TYPES: (typeof import('./src/domains/functional/components/Heading/Heading.model'))['HEADING_TYPES']
   const ICON_NAME: (typeof import('./src/domains/functional/components/Icon/Icon.model'))['ICON_NAME']
   const ICON_NAMES: (typeof import('./src/domains/functional/components/Icon/Icon.model'))['ICON_NAMES']
   const ICON_SIZE: (typeof import('./src/domains/functional/components/Icon/Icon.model'))['ICON_SIZE']
@@ -32,6 +36,8 @@ declare global {
   const ROOM_BOOKING_ROUTES: (typeof import('./src/domains/booking/routes'))['ROOM_BOOKING_ROUTES']
   const ROUTES: (typeof import('./src/router/index'))['ROUTES']
   const Switch: (typeof import('./src/lib/shadcn/ui/switch/index'))['Switch']
+  const TEXT_TYPE: (typeof import('./src/domains/functional/components/Text/Text.model'))['TEXT_TYPE']
+  const TEXT_TYPES: (typeof import('./src/domains/functional/components/Text/Text.model'))['TEXT_TYPES']
   const UIComponentResolver: (typeof import('./src/lib/utils'))['UIComponentResolver']
   const USER_ROUTES: (typeof import('./src/domains/user/routes'))['USER_ROUTES']
   const acceptHMRUpdate: (typeof import('pinia'))['acceptHMRUpdate']
@@ -147,10 +153,19 @@ declare global {
   import('vue')
   // @ts-ignore
   export type {
+    HeadingType,
+    HeadingTag,
+  } from './src/domains/functional/components/Heading/Heading.model'
+  import('./src/domains/functional/components/Heading/Heading.model')
+  // @ts-ignore
+  export type {
     IconName,
     IconSize,
   } from './src/domains/functional/components/Icon/Icon.model'
   import('./src/domains/functional/components/Icon/Icon.model')
+  // @ts-ignore
+  export type { TextType } from './src/domains/functional/components/Text/Text.model'
+  import('./src/domains/functional/components/Text/Text.model')
   // @ts-ignore
   export type { BadgeVariants } from './src/lib/shadcn/ui/badge/index'
   import('./src/lib/shadcn/ui/badge/index')
@@ -192,6 +207,18 @@ declare module 'vue' {
       (typeof import('./src/lib/shadcn/ui/card/index'))['CardTitle']
     >
     readonly EffectScope: UnwrapRef<(typeof import('vue'))['EffectScope']>
+    readonly HEADING_TAG: UnwrapRef<
+      (typeof import('./src/domains/functional/components/Heading/Heading.model'))['HEADING_TAG']
+    >
+    readonly HEADING_TAGS: UnwrapRef<
+      (typeof import('./src/domains/functional/components/Heading/Heading.model'))['HEADING_TAGS']
+    >
+    readonly HEADING_TYPE: UnwrapRef<
+      (typeof import('./src/domains/functional/components/Heading/Heading.model'))['HEADING_TYPE']
+    >
+    readonly HEADING_TYPES: UnwrapRef<
+      (typeof import('./src/domains/functional/components/Heading/Heading.model'))['HEADING_TYPES']
+    >
     readonly ICON_NAME: UnwrapRef<
       (typeof import('./src/domains/functional/components/Icon/Icon.model'))['ICON_NAME']
     >
@@ -209,6 +236,12 @@ declare module 'vue' {
     >
     readonly Switch: UnwrapRef<
       (typeof import('./src/lib/shadcn/ui/switch/index'))['Switch']
+    >
+    readonly TEXT_TYPE: UnwrapRef<
+      (typeof import('./src/domains/functional/components/Text/Text.model'))['TEXT_TYPE']
+    >
+    readonly TEXT_TYPES: UnwrapRef<
+      (typeof import('./src/domains/functional/components/Text/Text.model'))['TEXT_TYPES']
     >
     readonly USER_ROUTES: UnwrapRef<
       (typeof import('./src/domains/user/routes'))['USER_ROUTES']

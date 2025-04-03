@@ -2,7 +2,7 @@
   "name": "meeting-room-booking-types",
   "version": "1.0.0",
   "description": "generated types for application",
-  "main": "index.js",
+  "main": "dist/types.mjs",
   "license": "MIT",
   "types": "dist/index.d.ts",
   "dependencies": {

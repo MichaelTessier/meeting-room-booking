@@ -7,8 +7,8 @@ export interface Room {
   image: string
   description?: string
   capacity: number
-  createdAt?: string
-  updatedAt?: string
+  createdAt: string
+  updatedAt: string
   equipments?: Equipment[]
 }
 

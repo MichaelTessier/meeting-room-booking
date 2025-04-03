@@ -3,13 +3,22 @@
 
   const { t } = useI18n()
 
-  defineProps<{
+  const props = defineProps<{
     room: Room
   }>()
+
+  const router = useRouter()
+
+  const onClick = () => {
+    router.push({ name: 'room', params: { slug: props.room.slug } })
+  }
 </script>
 
 <template>
-  <div data-test="room-card">
+  <article
+    data-test="room-card"
+    @click="onClick"
+  >
     <img
       v-if="room.image"
       data-test="room-card__image"
@@ -38,5 +47,5 @@
         size="x-large"
       />
     </div>
-  </div>
+  </article>
 </template>

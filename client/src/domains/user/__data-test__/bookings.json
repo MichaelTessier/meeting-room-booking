@@ -1,0 +1,50 @@
+[
+  {
+    "createdAt": "2025-04-07T12:39:29.812Z",
+    "dateEnd": "2025-04-08T12:00:00.000Z",
+    "dateStart": "2025-04-08T10:00:00.000Z",
+    "description": "Réunion avec les Avengers pour discuter de la prochaine mission.",
+    "id": "1",
+    "room": {
+      "id": "1",
+      "name": "Salle #1"
+    },
+    "title": "Réunion au sommet",
+    "updatedAt": "2025-04-08T17:31:39.489Z",
+    "user": {
+      "id": "1"
+    }
+  },
+  {
+    "createdAt": "2025-04-07T12:39:29.812Z",
+    "dateEnd": "2025-04-08T12:00:00.000Z",
+    "dateStart": "2025-04-08T10:00:00.000Z",
+    "description": "Réunion avec les Avengers pour discuter de la prochaine mission.",
+    "id": "1",
+    "room": {
+      "id": "2",
+      "name": "Salle #2"
+    },
+    "title": "Réunion au sommet",
+    "updatedAt": "2025-04-08T17:31:39.489Z",
+    "user": {
+      "id": "1"
+    }
+  },
+  {
+    "createdAt": "2025-04-07T12:39:29.812Z",
+    "dateEnd": "2025-04-08T12:00:00.000Z",
+    "dateStart": "2025-04-08T10:00:00.000Z",
+    "description": "Réunion avec les Avengers pour discuter de la prochaine mission.",
+    "id": "1",
+    "room": {
+      "id": "3",
+      "name": "Salle Okjsdkso"
+    },
+    "title": "Réunion au sommet",
+    "updatedAt": "2025-04-08T17:31:39.489Z",
+    "user": {
+      "id": "1"
+    }
+  }
+]

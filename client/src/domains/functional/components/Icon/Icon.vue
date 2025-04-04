@@ -31,6 +31,7 @@
   <component
     :is="IconAsyncComponent"
     v-if="IconAsyncComponent"
+    stroke-width="{1}"
     :size="sizeMatcher[props.size]"
   />
 </template>

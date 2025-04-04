@@ -11,10 +11,9 @@ export const fetchRooms = async () => {
 }
 
 export const fetchRoom = async (slug: string) => {
-  const roomsDataString = await fs.readFile(ROOMS_URL, 'utf-8')
-  const roomsData = JSON.parse(roomsDataString) as { rooms: Room[] }
+  const rooms = await fetchRooms()
 
-  const room = roomsData.rooms.find((room) => room.slug === slug)
+  const room = rooms.find((room) => room.slug === slug)
 
   return room
 }

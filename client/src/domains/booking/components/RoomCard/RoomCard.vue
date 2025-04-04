@@ -17,6 +17,7 @@
 <template>
   <article
     data-test="room-card"
+    class="cursor-pointer"
     @click="onClick"
   >
     <img

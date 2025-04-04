@@ -40,6 +40,7 @@ declare global {
   const TEXT_TYPES: (typeof import('./src/domains/functional/components/Text/Text.model'))['TEXT_TYPES']
   const UIComponentResolver: (typeof import('./src/lib/utils'))['UIComponentResolver']
   const USER_ROUTES: (typeof import('./src/domains/user/routes'))['USER_ROUTES']
+  const UserAvatar: (typeof import('./src/domains/user/components/UserAvatar/UserAvatar.vue'))['default']
   const acceptHMRUpdate: (typeof import('pinia'))['acceptHMRUpdate']
   const badgeVariants: (typeof import('./src/lib/shadcn/ui/badge/index'))['badgeVariants']
   const bookingRoutes: (typeof import('./src/domains/booking/routes'))['bookingRoutes']
@@ -112,6 +113,7 @@ declare global {
   const triggerRef: (typeof import('vue'))['triggerRef']
   const unref: (typeof import('vue'))['unref']
   const useAttrs: (typeof import('vue'))['useAttrs']
+  const useBookingStore: (typeof import('./src/domains/booking/stores/useBookingStore'))['useBookingStore']
   const useCssModule: (typeof import('vue'))['useCssModule']
   const useCssVars: (typeof import('vue'))['useCssVars']
   const useFetchMock: (typeof import('./src/test/mocks/useFetch'))['useFetchMock']
@@ -124,6 +126,7 @@ declare global {
   const useRouter: (typeof import('vue-router'))['useRouter']
   const useSlots: (typeof import('vue'))['useSlots']
   const useTemplateRef: (typeof import('vue'))['useTemplateRef']
+  const useUserStore: (typeof import('./src/domains/user/stores/useUserStore'))['useUserStore']
   const userRoutes: (typeof import('./src/domains/user/routes'))['userRoutes']
   const valueUpdater: (typeof import('./src/lib/shadcn/utils'))['valueUpdater']
   const watch: (typeof import('vue'))['watch']
@@ -378,6 +381,9 @@ declare module 'vue' {
     readonly useRouter: UnwrapRef<(typeof import('vue-router'))['useRouter']>
     readonly useSlots: UnwrapRef<(typeof import('vue'))['useSlots']>
     readonly useTemplateRef: UnwrapRef<(typeof import('vue'))['useTemplateRef']>
+    readonly useUserStore: UnwrapRef<
+      (typeof import('./src/domains/user/stores/useUserStore'))['useUserStore']
+    >
     readonly userRoutes: UnwrapRef<
       (typeof import('./src/domains/user/routes'))['userRoutes']
     >

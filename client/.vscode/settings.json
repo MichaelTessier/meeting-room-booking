@@ -14,5 +14,6 @@
     "src/i18n",
     "src/domains/dashboard/messages",
     "src/domains/functional/messages"
-  ]
+  ],
+  "cSpell.words": ["vueuse"]
 }

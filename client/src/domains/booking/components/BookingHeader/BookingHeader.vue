@@ -14,7 +14,9 @@
 </script>
 
 <template>
-  <header class="flex items-center bg-white p-4 shadow dark:bg-gray-900">
+  <header
+    class="flex items-center bg-white p-4 shadow dark:bg-gray-900 h-[100px]"
+  >
     <Icon
       icon="circle-dot-dashed"
       class="mr-10"

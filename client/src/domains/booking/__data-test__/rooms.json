@@ -2,7 +2,7 @@
   "rooms": [
     {
       "capacity": 5,
-      "createdAt": "2016-12-07T12:39:29.812Z",
+      "createdAt": "2025-04-07T12:39:29.812Z",
       "description": "Salle #1",
       "equipments": [
         {
@@ -20,11 +20,11 @@
       "image": "images/campaign.jpg",
       "name": "Salle #1",
       "slug": "salle-1",
-      "updatedAt": "2016-12-08T17:31:39.489Z"
+      "updatedAt": "2025-04-08T17:31:39.489Z"
     },
     {
       "capacity": 10,
-      "createdAt": "2016-12-07T12:39:55.384Z",
+      "createdAt": "2025-04-07T12:39:55.384Z",
       "description": "Salle #2",
       "equipments": [
         {
@@ -37,22 +37,22 @@
       "image": "images/cooper.jpg",
       "name": "Salle #2",
       "slug": "salle-2",
-      "updatedAt": "2016-12-07T13:33:37.184Z"
+      "updatedAt": "2025-04-07T13:33:37.184Z"
     },
     {
       "capacity": 11,
-      "createdAt": "2016-12-07T14:15:55.733Z",
+      "createdAt": "2025-04-07T14:15:55.733Z",
       "description": "Salle Okjsdkso",
       "equipments": [],
       "id": "3",
       "image": "images/hemant.jpg",
       "name": "Salle Okjsdkso",
       "slug": "salle-okjsdkso",
-      "updatedAt": "2016-12-09T16:45:19.025Z"
+      "updatedAt": "2025-04-09T16:45:19.025Z"
     },
     {
       "capacity": 10,
-      "createdAt": "2016-12-09T16:45:34.419Z",
+      "createdAt": "2025-04-09T16:45:34.419Z",
       "description": "Salle de ouf",
       "equipments": [
         {
@@ -70,11 +70,11 @@
       "image": "images/walls.jpg",
       "name": "Salle de ouf",
       "slug": "salle-de-ouf",
-      "updatedAt": "2016-12-09T16:45:34.419Z"
+      "updatedAt": "2025-04-09T16:45:34.419Z"
     },
     {
       "capacity": 26,
-      "createdAt": "2016-12-09T16:45:49.096Z",
+      "createdAt": "2025-04-09T16:45:49.096Z",
       "description": "Salle nulle",
       "equipments": [
         {
@@ -91,7 +91,7 @@
       "image": "images/wells.jpg",
       "name": "Salle nulle",
       "slug": "salle-nulle",
-      "updatedAt": "2016-12-09T16:45:49.096Z"
+      "updatedAt": "2025-04-09T16:45:49.096Z"
     }
   ]
 }

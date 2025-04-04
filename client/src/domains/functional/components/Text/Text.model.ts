@@ -1,4 +1,5 @@
 export const TEXT_TYPE = {
+  X_SMALL: 'x-small',
   SMALL: 'small',
   MEDIUM: 'medium',
   LARGE: 'large',

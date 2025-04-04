@@ -6,10 +6,12 @@
 
 <template>
   <BookingLayout>
-    <DataProvider :url="url">
-      <template #data="{ data }: { data: Room[] }">
-        <BookingOverviewTemplate :rooms="data" />
-      </template>
-    </DataProvider>
+    <KeepAlive>
+      <DataProvider :url="url">
+        <template #data="{ data }: { data: Room[] }">
+          <BookingOverviewTemplate :rooms="data" />
+        </template>
+      </DataProvider>
+    </KeepAlive>
   </BookingLayout>
 </template>

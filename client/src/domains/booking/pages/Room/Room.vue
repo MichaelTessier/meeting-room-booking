@@ -10,7 +10,7 @@
   <BookingLayout>
     <DataProvider :url="url">
       <template #data="{ data }: { data: Room }">
-        <RoomTemplate :room="data" />
+        <RoomDetail :room="data" />
       </template>
     </DataProvider>
   </BookingLayout>

@@ -1,10 +1,17 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import type { Room } from 'meeting-room-booking-types'
+
+  defineProps<{
+    bookings: any[]
+    rooms: Room[]
+  }>()
+</script>
 
 <template>
   <BookingLayout>
-    <BookingCalendarTemplate
-      :bookings="[]"
-      :rooms="[]"
+    <TimeTable
+      :locations="[]"
+      :items="[]"
     />
   </BookingLayout>
 </template>

@@ -12,7 +12,7 @@
   <div>
     <img
       v-if="room.image"
-      data-test="room-template__image"
+      data-test="room-detail__image"
       :src="room.image"
       :alt="room.name"
       class="w-full h-[32rem] object-cover object-center"
@@ -24,20 +24,20 @@
         <Heading
           v-if="room.name"
           class="py-4"
-          data-test="room-template__name"
+          data-test="room-detail__name"
           type="heading-xx-large"
         >
           {{ room.name }}
         </Heading>
         <p
           v-if="room.capacity"
-          data-test="room-template__capacity"
+          data-test="room-detail__capacity"
         >
-          <Text data-test="room-template__capacity-label">
+          <Text data-test="room-detail__capacity-label">
             {{ t('booking.room.capacity') }}&nbsp;
           </Text>
           <Text
-            data-test="room-template__capacity-info"
+            data-test="room-detail__capacity-info"
             type="large"
           >
             {{

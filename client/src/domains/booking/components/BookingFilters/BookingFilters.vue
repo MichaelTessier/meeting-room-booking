@@ -1,29 +1,35 @@
 <script setup lang="ts">
   import { type DateValue } from '@internationalized/date'
+  import { getLocalTimeZone, today } from '@internationalized/date'
 
-  const time = ref<string>()
-  const date = ref<DateValue>()
+  const props = defineProps<{
+    hasTimes?: boolean
+  }>()
+
+  const time = ref<string>(getCurrentHours(true))
+  const date = ref<DateValue>(today(getLocalTimeZone()))
 
   const router = useRouter()
+  const route = useRoute()
 
   const startDate = computed(() => {
-    if (!date.value || !time.value) {
-      return undefined
-    }
+    const _time = props.hasTimes ? time.value : undefined
 
-    return getLocalISOString(
-      new Date(`${date?.value?.toString()} ${time.value}`),
-    )
+    if (!date.value) return
+
+    const _date = _time
+      ? new Date(`${date?.value?.toString()} ${_time}`)
+      : new Date(date?.value?.toString())
+
+    return getLocalISOString(_date)
   })
 
   const onClick = () => {
     router.push({
-      name: 'booking-overview',
+      name: route.name,
       query: {
         ...(startDate.value && {
-          start: getLocalISOString(
-            new Date(`${date?.value?.toString()} ${time.value}`),
-          ),
+          start: startDate.value,
         }),
       },
     })
@@ -33,7 +39,10 @@
   <div class="mb-8 flex justify-between">
     <div class="flex gap-4">
       <DatePicker v-model="date" />
-      <TimeSelect v-model="time" />
+      <TimeSelect
+        v-if="hasTimes"
+        v-model="time"
+      />
     </div>
     <Button @click="onClick">Search</Button>
   </div>

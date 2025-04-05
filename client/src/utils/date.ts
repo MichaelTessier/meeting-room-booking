@@ -1,4 +1,5 @@
 export function getLocalISOString(date: Date) {
+  console.log('🚀 ~ getLocalISOString ~ date:', date)
   const timezoneOffset = new Date(date).getTimezoneOffset() * 60000 //offset in milliseconds
 
   return new Date(date.getTime() - timezoneOffset).toISOString().slice(0, -1)

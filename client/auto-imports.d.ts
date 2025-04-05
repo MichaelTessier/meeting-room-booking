@@ -6,10 +6,8 @@
 // biome-ignore lint: disable
 export {}
 declare global {
-  const AVAILABLE_COMPONENTS: (typeof import('./src/lib/utils'))['AVAILABLE_COMPONENTS']
   const BOOKING_ROUTES: (typeof import('./src/domains/booking/routes'))['BOOKING_ROUTES']
   const Badge: (typeof import('./src/lib/shadcn/ui/badge/index'))['Badge']
-  const BarChart: (typeof import('./src/lib/shadcn/ui/chart-bar/index'))['BarChart']
   const Button: (typeof import('./src/lib/shadcn/ui/button/index'))['Button']
   const Calendar: (typeof import('./src/lib/shadcn/ui/calendar/index'))['Calendar']
   const CalendarCell: (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarCell']
@@ -29,11 +27,6 @@ declare global {
   const CardFooter: (typeof import('./src/lib/shadcn/ui/card/index'))['CardFooter']
   const CardHeader: (typeof import('./src/lib/shadcn/ui/card/index'))['CardHeader']
   const CardTitle: (typeof import('./src/lib/shadcn/ui/card/index'))['CardTitle']
-  const ChartCrosshair: (typeof import('./src/lib/shadcn/ui/chart/index'))['ChartCrosshair']
-  const ChartLegend: (typeof import('./src/lib/shadcn/ui/chart/index'))['ChartLegend']
-  const ChartSingleTooltip: (typeof import('./src/lib/shadcn/ui/chart/index'))['ChartSingleTooltip']
-  const ChartTooltip: (typeof import('./src/lib/shadcn/ui/chart/index'))['ChartTooltip']
-  const DASHBOARD_ROUTES: (typeof import('./src/domains/booking/routes'))['DASHBOARD_ROUTES']
   const EffectScope: (typeof import('vue'))['EffectScope']
   const HEADING_TAG: (typeof import('./src/domains/functional/components/Heading/Heading.model'))['HEADING_TAG']
   const HEADING_TAGS: (typeof import('./src/domains/functional/components/Heading/Heading.model'))['HEADING_TAGS']
@@ -44,13 +37,10 @@ declare global {
   const ICON_SIZE: (typeof import('./src/domains/functional/components/Icon/Icon.model'))['ICON_SIZE']
   const ICON_SIZES: (typeof import('./src/domains/functional/components/Icon/Icon.model'))['ICON_SIZES']
   const Label: (typeof import('./src/lib/shadcn/ui/label/index'))['Label']
-  const LineChart: (typeof import('./src/lib/shadcn/ui/chart-line/index'))['LineChart']
   const Popover: (typeof import('./src/lib/shadcn/ui/popover/index'))['Popover']
   const PopoverAnchor: (typeof import('./src/lib/shadcn/ui/popover/index'))['PopoverAnchor']
   const PopoverContent: (typeof import('./src/lib/shadcn/ui/popover/index'))['PopoverContent']
   const PopoverTrigger: (typeof import('./src/lib/shadcn/ui/popover/index'))['PopoverTrigger']
-  const ROOM_BOOKING_ROUTES: (typeof import('./src/domains/booking/routes'))['ROOM_BOOKING_ROUTES']
-  const ROUTES: (typeof import('./src/router/index'))['ROUTES']
   const Select: (typeof import('./src/lib/shadcn/ui/select/index'))['Select']
   const SelectContent: (typeof import('./src/lib/shadcn/ui/select/index'))['SelectContent']
   const SelectGroup: (typeof import('./src/lib/shadcn/ui/select/index'))['SelectGroup']
@@ -65,9 +55,7 @@ declare global {
   const Switch: (typeof import('./src/lib/shadcn/ui/switch/index'))['Switch']
   const TEXT_TYPE: (typeof import('./src/domains/functional/components/Text/Text.model'))['TEXT_TYPE']
   const TEXT_TYPES: (typeof import('./src/domains/functional/components/Text/Text.model'))['TEXT_TYPES']
-  const UIComponentResolver: (typeof import('./src/lib/utils'))['UIComponentResolver']
   const USER_ROUTES: (typeof import('./src/domains/user/routes'))['USER_ROUTES']
-  const UserAvatar: (typeof import('./src/domains/user/components/UserAvatar/UserAvatar.vue'))['default']
   const acceptHMRUpdate: (typeof import('pinia'))['acceptHMRUpdate']
   const badgeVariants: (typeof import('./src/lib/shadcn/ui/badge/index'))['badgeVariants']
   const bookingRoutes: (typeof import('./src/domains/booking/routes'))['bookingRoutes']
@@ -77,8 +65,6 @@ declare global {
   const createApp: (typeof import('vue'))['createApp']
   const createPinia: (typeof import('pinia'))['createPinia']
   const customRef: (typeof import('vue'))['customRef']
-  const dashboardRoutes: (typeof import('./src/domains/booking/routes'))['dashboardRoutes']
-  const defaultColors: (typeof import('./src/lib/shadcn/ui/chart/index'))['defaultColors']
   const defineAsyncComponent: (typeof import('vue'))['defineAsyncComponent']
   const defineComponent: (typeof import('vue'))['defineComponent']
   const defineStore: (typeof import('pinia'))['defineStore']
@@ -121,12 +107,10 @@ declare global {
   const onUpdated: (typeof import('vue'))['onUpdated']
   const onWatcherCleanup: (typeof import('vue'))['onWatcherCleanup']
   const provide: (typeof import('vue'))['provide']
-  const rOOM_BOOKINGRoutes: (typeof import('./src/domains/booking/routes'))['rOOM_BOOKINGRoutes']
   const reactive: (typeof import('vue'))['reactive']
   const readonly: (typeof import('vue'))['readonly']
   const ref: (typeof import('vue'))['ref']
   const resolveComponent: (typeof import('vue'))['resolveComponent']
-  const roomBookingRoutes: (typeof import('./src/domains/booking/routes'))['roomBookingRoutes']
   const router: (typeof import('./src/router/index'))['router']
   const routes: (typeof import('./src/router/index'))['routes']
   const setActivePinia: (typeof import('pinia'))['setActivePinia']
@@ -142,7 +126,6 @@ declare global {
   const triggerRef: (typeof import('vue'))['triggerRef']
   const unref: (typeof import('vue'))['unref']
   const useAttrs: (typeof import('vue'))['useAttrs']
-  const useBookingStore: (typeof import('./src/domains/booking/stores/useBookingStore'))['useBookingStore']
   const useCssModule: (typeof import('vue'))['useCssModule']
   const useCssVars: (typeof import('vue'))['useCssVars']
   const useFetchMock: (typeof import('./src/test/mocks/useFetch'))['useFetchMock']
@@ -151,6 +134,7 @@ declare global {
   const useId: (typeof import('vue'))['useId']
   const useLink: (typeof import('vue-router'))['useLink']
   const useModel: (typeof import('vue'))['useModel']
+  const useRooms: (typeof import('./src/domains/booking/composables/useRooms'))['default']
   const useRoute: (typeof import('vue-router'))['useRoute']
   const useRouter: (typeof import('vue-router'))['useRouter']
   const useSlots: (typeof import('vue'))['useSlots']
@@ -493,6 +477,9 @@ declare module 'vue' {
     readonly useId: UnwrapRef<(typeof import('vue'))['useId']>
     readonly useLink: UnwrapRef<(typeof import('vue-router'))['useLink']>
     readonly useModel: UnwrapRef<(typeof import('vue'))['useModel']>
+    readonly useRooms: UnwrapRef<
+      (typeof import('./src/domains/booking/composables/useRooms'))['default']
+    >
     readonly useRoute: UnwrapRef<(typeof import('vue-router'))['useRoute']>
     readonly useRouter: UnwrapRef<(typeof import('vue-router'))['useRouter']>
     readonly useSlots: UnwrapRef<(typeof import('vue'))['useSlots']>

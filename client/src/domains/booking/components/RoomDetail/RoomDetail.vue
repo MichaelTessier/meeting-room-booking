@@ -6,6 +6,11 @@
   }>()
 
   const { t } = useI18n()
+  const router = useRouter()
+
+  const onClick = () => {
+    router.push({ name: BOOKING_ROUTES.CALENDAR })
+  }
 </script>
 
 <template>
@@ -58,6 +63,7 @@
           class="w-full"
           variant="outline"
           size="lg"
+          @click="onClick"
         >
           {{ t('booking.room.book') }}
         </Button>

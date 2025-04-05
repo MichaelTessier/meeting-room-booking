@@ -10,7 +10,6 @@
 
 <script setup lang="ts">
   const userStore = useUserStore()
-  console.log('🚀 ~ userStore:', userStore.user)
 
   const avatarLetters = computed(() => {
     if (!userStore.user?.name) return ''

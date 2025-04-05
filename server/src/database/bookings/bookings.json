@@ -7,13 +7,34 @@
       "description": "Réunion avec les Avengers pour discuter de la prochaine mission.",
       "id": "1",
       "room": {
+        "capacity": 5,
+        "createdAt": "2025-04-07T12:39:29.812Z",
+        "description": "Salle #1",
+        "equipments": [
+          {
+            "id": "1",
+            "name": "TV",
+            "type": "TELEVISION"
+          },
+          {
+            "id": "2",
+            "name": "Retro Projecteur",
+            "type": "PROJECTOR"
+          }
+        ],
         "id": "1",
-        "name": "Salle #1"
+        "image": "images/campaign.jpg",
+        "name": "Salle #1",
+        "slug": "salle-1",
+        "updatedAt": "2025-04-08T17:31:39.489Z"
       },
       "title": "Réunion au sommet",
       "updatedAt": "2025-04-08T17:31:39.489Z",
       "user": {
-        "id": "1"
+        "createdAt": "2025-04-07T12:39:29.812Z",
+        "id": "1",
+        "name": "Iron Man",
+        "updatedAt": "2025-04-08T17:31:39.489Z"
       }
     },
     {
@@ -21,15 +42,31 @@
       "dateEnd": "2025-04-08T12:00:00.000Z",
       "dateStart": "2025-04-08T10:00:00.000Z",
       "description": "Réunion avec les Avengers pour discuter de la prochaine mission.",
-      "id": "1",
+      "id": "2",
       "room": {
+        "capacity": 10,
+        "createdAt": "2025-04-07T12:39:55.384Z",
+        "description": "Salle #2",
+        "equipments": [
+          {
+            "id": "2",
+            "name": "Retro Projecteur",
+            "type": "PROJECTOR"
+          }
+        ],
         "id": "2",
-        "name": "Salle #2"
+        "image": "images/cooper.jpg",
+        "name": "Salle #2",
+        "slug": "salle-2",
+        "updatedAt": "2025-04-07T13:33:37.184Z"
       },
       "title": "Réunion au sommet",
       "updatedAt": "2025-04-08T17:31:39.489Z",
       "user": {
-        "id": "1"
+        "createdAt": "2025-04-07T12:39:29.812Z",
+        "id": "1",
+        "name": "Iron Man",
+        "updatedAt": "2025-04-08T17:31:39.489Z"
       }
     },
     {
@@ -37,15 +74,25 @@
       "dateEnd": "2025-04-08T12:00:00.000Z",
       "dateStart": "2025-04-08T10:00:00.000Z",
       "description": "Réunion avec les Avengers pour discuter de la prochaine mission.",
-      "id": "1",
+      "id": "3",
       "room": {
+        "capacity": 11,
+        "createdAt": "2025-04-07T14:15:55.733Z",
+        "description": "Salle Okjsdkso",
+        "equipments": [],
         "id": "3",
-        "name": "Salle Okjsdkso"
+        "image": "images/hemant.jpg",
+        "name": "Salle Okjsdkso",
+        "slug": "salle-okjsdkso",
+        "updatedAt": "2025-04-09T16:45:19.025Z"
       },
       "title": "Réunion au sommet",
       "updatedAt": "2025-04-08T17:31:39.489Z",
       "user": {
-        "id": "1"
+        "createdAt": "2025-04-07T12:39:29.812Z",
+        "id": "1",
+        "name": "Iron Man",
+        "updatedAt": "2025-04-08T17:31:39.489Z"
       }
     },
     {
@@ -53,15 +100,31 @@
       "dateEnd": "2025-04-08T14:00:00.000Z",
       "dateStart": "2025-04-08T12:00:00.000Z",
       "description": "Réunion avec les Avengers pour discuter de la prochaine mission.",
-      "id": "2",
+      "id": "4",
       "room": {
+        "capacity": 10,
+        "createdAt": "2025-04-07T12:39:55.384Z",
+        "description": "Salle #2",
+        "equipments": [
+          {
+            "id": "2",
+            "name": "Retro Projecteur",
+            "type": "PROJECTOR"
+          }
+        ],
         "id": "2",
-        "name": "Salle #2"
+        "image": "images/cooper.jpg",
+        "name": "Salle #2",
+        "slug": "salle-2",
+        "updatedAt": "2025-04-07T13:33:37.184Z"
       },
       "title": "Réunion au sommet",
       "updatedAt": "2025-04-08T17:31:39.489Z",
       "user": {
-        "id": "2"
+        "createdAt": "2025-04-07T12:39:29.812Z",
+        "id": "2",
+        "name": "Daredevil",
+        "updatedAt": "2025-04-08T17:31:39.489Z"
       }
     },
     {
@@ -69,15 +132,25 @@
       "dateEnd": "2025-04-08T16:00:00.000Z",
       "dateStart": "2025-04-08T14:00:00.000Z",
       "description": "Réunion avec les Avengers pour discuter de la prochaine mission.",
-      "id": "3",
+      "id": "5",
       "room": {
+        "capacity": 11,
+        "createdAt": "2025-04-07T14:15:55.733Z",
+        "description": "Salle Okjsdkso",
+        "equipments": [],
         "id": "3",
-        "name": "Salle Okjsdkso"
+        "image": "images/hemant.jpg",
+        "name": "Salle Okjsdkso",
+        "slug": "salle-okjsdkso",
+        "updatedAt": "2025-04-09T16:45:19.025Z"
       },
       "title": "Réunion au sommet",
       "updatedAt": "2025-04-08T17:31:39.489Z",
       "user": {
-        "id": "3"
+        "createdAt": "2025-04-07T12:39:29.812Z",
+        "id": "3",
+        "name": "Thor",
+        "updatedAt": "2025-04-08T17:31:39.489Z"
       }
     }
   ]

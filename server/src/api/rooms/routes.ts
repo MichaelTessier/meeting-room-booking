@@ -6,9 +6,17 @@ import { fetchRoom, fetchRooms } from '@/database/rooms'
 
 const router = express.Router()
 
-router.get<{}, ApiResponse<Room[]>>('/', async (req, res) => {
+interface RoomsQuery {
+  start: string
+}
+
+router.get<{}, ApiResponse<Room[]>, {}, RoomsQuery>('/', async (req, res) => {
   try {
-    const response = await fetchRooms()
+    const response = await fetchRooms({
+      filters: {
+        start: req.query.start,
+      },
+    })
 
     if (!response) {
       res.status(404).json({ message: 'Rooms not found' })

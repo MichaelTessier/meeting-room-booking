@@ -7,7 +7,13 @@
 
   const props = defineProps<Props>()
 
-  const { isFetching, error, data } = await useFetch(props.url).get().json()
+  const url = computed(() => props.url)
+
+  const { isFetching, error, data } = await useFetch(url, {
+    refetch: true,
+  })
+    .get()
+    .json()
 </script>
 
 <template>

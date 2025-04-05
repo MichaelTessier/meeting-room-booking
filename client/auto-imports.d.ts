@@ -11,6 +11,18 @@ declare global {
   const Badge: (typeof import('./src/lib/shadcn/ui/badge/index'))['Badge']
   const BarChart: (typeof import('./src/lib/shadcn/ui/chart-bar/index'))['BarChart']
   const Button: (typeof import('./src/lib/shadcn/ui/button/index'))['Button']
+  const Calendar: (typeof import('./src/lib/shadcn/ui/calendar/index'))['Calendar']
+  const CalendarCell: (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarCell']
+  const CalendarCellTrigger: (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarCellTrigger']
+  const CalendarGrid: (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarGrid']
+  const CalendarGridBody: (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarGridBody']
+  const CalendarGridHead: (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarGridHead']
+  const CalendarGridRow: (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarGridRow']
+  const CalendarHeadCell: (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarHeadCell']
+  const CalendarHeader: (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarHeader']
+  const CalendarHeading: (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarHeading']
+  const CalendarNextButton: (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarNextButton']
+  const CalendarPrevButton: (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarPrevButton']
   const Card: (typeof import('./src/lib/shadcn/ui/card/index'))['Card']
   const CardContent: (typeof import('./src/lib/shadcn/ui/card/index'))['CardContent']
   const CardDescription: (typeof import('./src/lib/shadcn/ui/card/index'))['CardDescription']
@@ -33,8 +45,23 @@ declare global {
   const ICON_SIZES: (typeof import('./src/domains/functional/components/Icon/Icon.model'))['ICON_SIZES']
   const Label: (typeof import('./src/lib/shadcn/ui/label/index'))['Label']
   const LineChart: (typeof import('./src/lib/shadcn/ui/chart-line/index'))['LineChart']
+  const Popover: (typeof import('./src/lib/shadcn/ui/popover/index'))['Popover']
+  const PopoverAnchor: (typeof import('./src/lib/shadcn/ui/popover/index'))['PopoverAnchor']
+  const PopoverContent: (typeof import('./src/lib/shadcn/ui/popover/index'))['PopoverContent']
+  const PopoverTrigger: (typeof import('./src/lib/shadcn/ui/popover/index'))['PopoverTrigger']
   const ROOM_BOOKING_ROUTES: (typeof import('./src/domains/booking/routes'))['ROOM_BOOKING_ROUTES']
   const ROUTES: (typeof import('./src/router/index'))['ROUTES']
+  const Select: (typeof import('./src/lib/shadcn/ui/select/index'))['Select']
+  const SelectContent: (typeof import('./src/lib/shadcn/ui/select/index'))['SelectContent']
+  const SelectGroup: (typeof import('./src/lib/shadcn/ui/select/index'))['SelectGroup']
+  const SelectItem: (typeof import('./src/lib/shadcn/ui/select/index'))['SelectItem']
+  const SelectItemText: (typeof import('./src/lib/shadcn/ui/select/index'))['SelectItemText']
+  const SelectLabel: (typeof import('./src/lib/shadcn/ui/select/index'))['SelectLabel']
+  const SelectScrollDownButton: (typeof import('./src/lib/shadcn/ui/select/index'))['SelectScrollDownButton']
+  const SelectScrollUpButton: (typeof import('./src/lib/shadcn/ui/select/index'))['SelectScrollUpButton']
+  const SelectSeparator: (typeof import('./src/lib/shadcn/ui/select/index'))['SelectSeparator']
+  const SelectTrigger: (typeof import('./src/lib/shadcn/ui/select/index'))['SelectTrigger']
+  const SelectValue: (typeof import('./src/lib/shadcn/ui/select/index'))['SelectValue']
   const Switch: (typeof import('./src/lib/shadcn/ui/switch/index'))['Switch']
   const TEXT_TYPE: (typeof import('./src/domains/functional/components/Text/Text.model'))['TEXT_TYPE']
   const TEXT_TYPES: (typeof import('./src/domains/functional/components/Text/Text.model'))['TEXT_TYPES']
@@ -57,8 +84,10 @@ declare global {
   const defineStore: (typeof import('pinia'))['defineStore']
   const effectScope: (typeof import('vue'))['effectScope']
   const getActivePinia: (typeof import('pinia'))['getActivePinia']
+  const getCurrentHours: (typeof import('./src/utils/date'))['getCurrentHours']
   const getCurrentInstance: (typeof import('vue'))['getCurrentInstance']
   const getCurrentScope: (typeof import('vue'))['getCurrentScope']
+  const getLocalISOString: (typeof import('./src/utils/date'))['getLocalISOString']
   const h: (typeof import('vue'))['h']
   const i18n: (typeof import('./src/i18n/index'))['i18n']
   const iconLucideMatcher: (typeof import('./src/domains/functional/components/Icon/Icon.model'))['iconLucideMatcher']
@@ -191,6 +220,42 @@ declare module 'vue' {
     readonly Button: UnwrapRef<
       (typeof import('./src/lib/shadcn/ui/button/index'))['Button']
     >
+    readonly Calendar: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/calendar/index'))['Calendar']
+    >
+    readonly CalendarCell: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarCell']
+    >
+    readonly CalendarCellTrigger: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarCellTrigger']
+    >
+    readonly CalendarGrid: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarGrid']
+    >
+    readonly CalendarGridBody: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarGridBody']
+    >
+    readonly CalendarGridHead: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarGridHead']
+    >
+    readonly CalendarGridRow: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarGridRow']
+    >
+    readonly CalendarHeadCell: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarHeadCell']
+    >
+    readonly CalendarHeader: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarHeader']
+    >
+    readonly CalendarHeading: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarHeading']
+    >
+    readonly CalendarNextButton: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarNextButton']
+    >
+    readonly CalendarPrevButton: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarPrevButton']
+    >
     readonly Card: UnwrapRef<
       (typeof import('./src/lib/shadcn/ui/card/index'))['Card']
     >
@@ -237,6 +302,51 @@ declare module 'vue' {
     readonly Label: UnwrapRef<
       (typeof import('./src/lib/shadcn/ui/label/index'))['Label']
     >
+    readonly Popover: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/popover/index'))['Popover']
+    >
+    readonly PopoverAnchor: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/popover/index'))['PopoverAnchor']
+    >
+    readonly PopoverContent: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/popover/index'))['PopoverContent']
+    >
+    readonly PopoverTrigger: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/popover/index'))['PopoverTrigger']
+    >
+    readonly Select: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/select/index'))['Select']
+    >
+    readonly SelectContent: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/select/index'))['SelectContent']
+    >
+    readonly SelectGroup: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/select/index'))['SelectGroup']
+    >
+    readonly SelectItem: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/select/index'))['SelectItem']
+    >
+    readonly SelectItemText: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/select/index'))['SelectItemText']
+    >
+    readonly SelectLabel: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/select/index'))['SelectLabel']
+    >
+    readonly SelectScrollDownButton: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/select/index'))['SelectScrollDownButton']
+    >
+    readonly SelectScrollUpButton: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/select/index'))['SelectScrollUpButton']
+    >
+    readonly SelectSeparator: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/select/index'))['SelectSeparator']
+    >
+    readonly SelectTrigger: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/select/index'))['SelectTrigger']
+    >
+    readonly SelectValue: UnwrapRef<
+      (typeof import('./src/lib/shadcn/ui/select/index'))['SelectValue']
+    >
     readonly Switch: UnwrapRef<
       (typeof import('./src/lib/shadcn/ui/switch/index'))['Switch']
     >
@@ -277,11 +387,17 @@ declare module 'vue' {
     readonly getActivePinia: UnwrapRef<
       (typeof import('pinia'))['getActivePinia']
     >
+    readonly getCurrentHours: UnwrapRef<
+      (typeof import('./src/utils/date'))['getCurrentHours']
+    >
     readonly getCurrentInstance: UnwrapRef<
       (typeof import('vue'))['getCurrentInstance']
     >
     readonly getCurrentScope: UnwrapRef<
       (typeof import('vue'))['getCurrentScope']
+    >
+    readonly getLocalISOString: UnwrapRef<
+      (typeof import('./src/utils/date'))['getLocalISOString']
     >
     readonly h: UnwrapRef<(typeof import('vue'))['h']>
     readonly i18n: UnwrapRef<(typeof import('./src/i18n/index'))['i18n']>

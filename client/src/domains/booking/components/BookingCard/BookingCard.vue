@@ -39,8 +39,8 @@
           type="x-small"
           data-test="booking-card__date"
         >
-          {{ d(booking.dateStart) }} -
-          {{ d(booking.dateEnd) }}
+          {{ d(booking.dateStart, 'day') }} -
+          {{ d(booking.dateEnd, 'day') }}
         </Text>
 
         <Icon icon="edit" />

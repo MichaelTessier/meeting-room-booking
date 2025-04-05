@@ -1,22 +1,5 @@
 {
-  "name": "meeting-room-booking-client",
-  "private": true,
-  "version": "1.0.0",
-  "type": "module",
-  "repository": "https://github.com/MichaelTessier/meeting-room-booking",
   "author": "DemiPixel <michael.tessier.paris@maisonsdgmail.comumonde.com>",
-  "license": "MIT",
-  "scripts": {
-    "build": "vue-tsc -b && vite build",
-    "dev": "vite",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "prepare": "husky",
-    "preview": "vite preview",
-    "test": "vitest",
-    "test:watch": "vitest --watch",
-    "server": "npx json-server db.json -p4000"
-  },
   "dependencies": {
     "@radix-icons/vue": "^1.0.0",
     "@unovis/ts": "^1.5.1",
@@ -28,6 +11,7 @@
     "lucide-vue-next": "^0.475.0",
     "pinia": "^3.0.1",
     "radix-vue": "^1.9.15",
+    "reka-ui": "^2.2.0",
     "tailwind-merge": "^3.0.2",
     "tailwindcss-animate": "^1.0.7",
     "vue": "^3.5.13",
@@ -66,13 +50,30 @@
     "vue-eslint-parser": "^9.4.3",
     "vue-tsc": "^2.2.0"
   },
+  "license": "MIT",
   "lint-staged": {
+    "**/*.{html,json,css,scss,md,mdx}": [
+      "prettier -w"
+    ],
     "**/*.{vue,js,jsx,ts,tsx}": [
       "eslint",
       "prettier --write"
-    ],
-    "**/*.{html,json,css,scss,md,mdx}": [
-      "prettier -w"
     ]
-  }
+  },
+  "name": "meeting-room-booking-client",
+  "private": true,
+  "repository": "https://github.com/MichaelTessier/meeting-room-booking",
+  "scripts": {
+    "build": "vue-tsc -b && vite build",
+    "dev": "vite",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky",
+    "preview": "vite preview",
+    "server": "npx json-server db.json -p4000",
+    "test": "vitest",
+    "test:watch": "vitest --watch"
+  },
+  "type": "module",
+  "version": "1.0.0"
 }

@@ -29,24 +29,36 @@
 </template>
 
 <style>
+  .ftr-timetable {
+    --custom-border-style: 1px solid #dadada !important;
+    --custom-background-color: #e1e8f0 !important;
+    --custom-text-color: #020203 !important;
+  }
+
+  .dark .ftr-timetable {
+    --custom-border-style: 1px solid #03060a !important;
+    --custom-background-color: #0a101c !important;
+    --custom-text-color: #e1e8f0 !important;
+  }
+
   .ftr-timetable-datetime__select {
     display: none !important;
   }
 
-  .ftr-timetable-location {
-    height: 91px !important;
-    background: #0a101c;
+  .ftr-timetable-location,
+  .ftr-timetable-datetime__date {
+    height: 100px !important;
+    background-color: var(--custom-background-color) !important;
   }
+
   .ftr-timetable-location__name {
     text-align: center;
     font-size: 30px;
-    height: 100px;
+    height: 110px;
     display: flex !important;
     justify-content: center;
     align-items: center;
-  }
-
-  .ftr-timetable-datetime__container {
-    background: #0a101c !important;
+    line-height: 1.2em;
+    font-weight: 200;
   }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-slate-200 p-4 shadow dark:bg-slate-600 h-[100px]">
+  <header class="bg-slate-200 p-4 shadow dark:bg-slate-700 h-[100px]">
     <menu class="flex items-center justify-between h-full">
       <div class="flex items-center gap-4">
         <Icon icon="notification" />

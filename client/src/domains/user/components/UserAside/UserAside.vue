@@ -4,7 +4,7 @@
   <aside class="bg-slate-200 dark:bg-slate-800">
     <UserHeader />
 
-    <div class="mx-4 mt-10 py-4">
+    <div class="mx-4 pt-10">
       <UserBookings />
     </div>
   </aside>

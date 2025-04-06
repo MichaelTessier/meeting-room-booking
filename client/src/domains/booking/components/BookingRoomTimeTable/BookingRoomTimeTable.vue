@@ -6,6 +6,8 @@
     rooms: Room[]
   }>()
 
+  const userStore = useUserStore()
+
   const locations = computed<TimeTableItem[]>(() => {
     return props.rooms.map((room) => ({
       id: room.id,
@@ -17,7 +19,8 @@
         name: booking.title,
         info: booking.description,
         style: {
-          backgroundColor: 'red',
+          backgroundColor:
+            userStore.user?.id === booking.user?.id ? '#3a82f6' : '#34435c',
         },
       })),
     }))

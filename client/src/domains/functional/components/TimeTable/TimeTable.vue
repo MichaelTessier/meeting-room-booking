@@ -2,7 +2,6 @@
   import { TimeTable as VueTimeTable, type TimeTableItem } from 'vue3-timetable'
 
   defineProps<{
-    items: TimeTableItem[]
     locations: TimeTableItem[]
     date: string
   }>()

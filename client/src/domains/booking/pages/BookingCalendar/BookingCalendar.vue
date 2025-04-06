@@ -1,7 +1,25 @@
 <script setup lang="ts">
-  import type { Room } from 'meeting-room-booking-types'
+  const roomStore = useRoomStore()
+  const bookingStore = useBookingStore()
 
-  const { getRoomsUrl } = useRooms()
+  const {
+    rooms,
+    isFetching: roomIsFetching,
+    error: roomError,
+  } = storeToRefs(roomStore)
+
+  const {
+    bookings,
+    isFetching: bookingIsFetching,
+    error: bookingError,
+  } = storeToRefs(bookingStore)
+
+  const route = useRoute()
+
+  onMounted(async () => {
+    await roomStore.fetchRooms(route.query.start as string)
+    await bookingStore.fetchBookings(route.query.start as string)
+  })
 </script>
 
 <template>
@@ -9,14 +27,12 @@
     <div class="flex h-full flex-col">
       <BookingFilters />
 
-      <DataProvider :url="getRoomsUrl">
-        <template #data="{ data }: { data: Room[] }">
-          <BookingRoomTimeTable
-            :rooms="data"
-            class="mb-4"
-          />
-        </template>
-      </DataProvider>
+      <BookingRoomTimeTable
+        v-if="rooms.length && bookings.length"
+        :rooms="rooms"
+        :bookings="bookings"
+        class="mb-4"
+      />
     </div>
   </BookingLayout>
 </template>

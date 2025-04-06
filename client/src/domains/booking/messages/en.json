@@ -7,12 +7,14 @@
       }
     },
     "room": {
+      "available": "Available",
       "book": "See availability",
       "capacity": "Capacity",
       "capacityInfo": "up to {capacity} people",
       "card": {
         "capacity": "Capacity:"
-      }
+      },
+      "unavailable": "Not available"
     },
     "title": "Booking"
   }

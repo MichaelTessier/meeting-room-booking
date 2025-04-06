@@ -17,35 +17,42 @@ export const fetchRooms = async ({ filters }: FetchRoomsOptions = {}) => {
     fetchBookings(),
   ])
   const roomsData = JSON.parse(roomsDataString) as { rooms: Room[] }
+  const startDate = filters?.start ? new Date(filters.start) : new Date()
 
   const rooms = roomsData.rooms.map((room) => {
     const roomBookings = bookings.filter(
       (booking) => booking.room.id === room.id,
     )
 
+    const hasBooking = roomBookings.some((booking) => {
+      const bookingStart = new Date(booking.dateStart)
+      const bookingEnd = new Date(booking.dateEnd)
+      return startDate >= bookingStart && startDate <= bookingEnd
+    })
+
     return {
       ...room,
-      bookings: roomBookings,
+      isAvailable: !hasBooking,
     }
   })
 
-  if (filters?.start) {
-    const startDate = new Date(filters.start)
-    const filteredRooms = rooms.filter((room) => {
-      if (!room?.bookings?.length) return true
+  // if (filters?.start) {
+  //   const startDate = new Date(filters.start)
+  //   const filteredRooms = rooms.filter((room) => {
+  //     if (!room?.bookings?.length) return true
 
-      const isNotAvailable = room.bookings.some((booking) => {
-        const bookingStart = new Date(booking.dateStart)
-        const bookingEnd = new Date(booking.dateEnd)
+  //     const isNotAvailable = room.bookings.some((booking) => {
+  //       const bookingStart = new Date(booking.dateStart)
+  //       const bookingEnd = new Date(booking.dateEnd)
 
-        return startDate >= bookingStart && startDate <= bookingEnd
-      })
+  //       return startDate >= bookingStart && startDate <= bookingEnd
+  //     })
 
-      return !isNotAvailable
-    })
+  //     return !isNotAvailable
+  //   })
 
-    return filteredRooms
-  }
+  //   return filteredRooms
+  // }
 
   return rooms
 }

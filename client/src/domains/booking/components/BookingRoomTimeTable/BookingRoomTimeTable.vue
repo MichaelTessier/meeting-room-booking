@@ -1,9 +1,10 @@
 <script setup lang="ts">
-  import type { Room } from 'meeting-room-booking-types'
+  import type { Booking, Room } from 'meeting-room-booking-types'
   import { type TimeTableItem } from 'vue3-timetable'
 
   const props = defineProps<{
     rooms: Room[]
+    bookings: Booking[]
   }>()
 
   const userStore = useUserStore()
@@ -12,17 +13,19 @@
     return props.rooms.map((room) => ({
       id: room.id,
       name: room.name,
-      items: room.bookings.map((booking) => ({
-        id: booking.id,
-        startDate: booking.dateStart,
-        endDate: booking.dateEnd,
-        name: booking.title,
-        info: booking.description,
-        style: {
-          backgroundColor:
-            userStore.user?.id === booking.user?.id ? '#3a82f6' : '#34435c',
-        },
-      })),
+      items: props.bookings
+        .filter((booking) => booking.room.id === room.id)
+        .map((booking) => ({
+          id: booking.id,
+          startDate: booking.dateStart,
+          endDate: booking.dateEnd,
+          name: booking.title,
+          info: booking.description,
+          style: {
+            backgroundColor:
+              userStore.user?.id === booking.user?.id ? '#3a82f6' : '#34435c',
+          },
+        })),
     }))
   })
 
@@ -41,7 +44,6 @@
 <template>
   <TimeTable
     :locations="locations"
-    :items="[]"
     :date="date"
   />
 </template>

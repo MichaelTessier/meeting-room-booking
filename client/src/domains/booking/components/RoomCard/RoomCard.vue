@@ -10,6 +10,8 @@
   const router = useRouter()
 
   const onClick = () => {
+    if (!props.room.isAvailable) return
+
     router.push({ name: 'room', params: { slug: props.room.slug } })
   }
 </script>
@@ -17,7 +19,10 @@
 <template>
   <article
     data-test="room-card"
-    class="cursor-pointer"
+    :class="{
+      'cursor-pointer': room.isAvailable,
+      'pointer-event-none opacity-45': !room.isAvailable,
+    }"
     @click="onClick"
   >
     <img

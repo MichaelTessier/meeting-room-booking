@@ -1,17 +1,22 @@
 <script setup lang="ts">
-  import type { Room } from 'meeting-room-booking-types'
+  const roomStore = useRoomStore()
 
-  const { getRoomsUrl } = useRooms()
+  const { rooms, isFetching, error } = storeToRefs(roomStore)
+
+  const route = useRoute()
+
+  onBeforeMount(async () => {
+    await roomStore.fetchRooms(route.query.start as string)
+  })
 </script>
 
 <template>
   <BookingLayout>
     <BookingFilters has-times />
 
-    <DataProvider :url="getRoomsUrl">
-      <template #data="{ data }: { data: Room[] }">
-        <RoomGrid :rooms="data" />
-      </template>
-    </DataProvider>
+    <RoomGrid
+      v-if="rooms.length"
+      :rooms="rooms"
+    />
   </BookingLayout>
 </template>

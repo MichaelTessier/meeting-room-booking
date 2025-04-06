@@ -126,6 +126,7 @@ declare global {
   const triggerRef: (typeof import('vue'))['triggerRef']
   const unref: (typeof import('vue'))['unref']
   const useAttrs: (typeof import('vue'))['useAttrs']
+  const useBookingStore: (typeof import('./src/domains/booking/stores/useBookingStore'))['useBookingStore']
   const useCssModule: (typeof import('vue'))['useCssModule']
   const useCssVars: (typeof import('vue'))['useCssVars']
   const useFetchMock: (typeof import('./src/test/mocks/useFetch'))['useFetchMock']
@@ -134,7 +135,9 @@ declare global {
   const useId: (typeof import('vue'))['useId']
   const useLink: (typeof import('vue-router'))['useLink']
   const useModel: (typeof import('vue'))['useModel']
+  const useRoomStore: (typeof import('./src/domains/booking/stores/useRoomStore'))['useRoomStore']
   const useRooms: (typeof import('./src/domains/booking/composables/useRooms'))['default']
+  const useRoomsStore: (typeof import('./src/domains/booking/stores/useRoomsStore'))['useRoomsStore']
   const useRoute: (typeof import('vue-router'))['useRoute']
   const useRouter: (typeof import('vue-router'))['useRouter']
   const useSlots: (typeof import('vue'))['useSlots']
@@ -465,6 +468,9 @@ declare module 'vue' {
     readonly triggerRef: UnwrapRef<(typeof import('vue'))['triggerRef']>
     readonly unref: UnwrapRef<(typeof import('vue'))['unref']>
     readonly useAttrs: UnwrapRef<(typeof import('vue'))['useAttrs']>
+    readonly useBookingStore: UnwrapRef<
+      (typeof import('./src/domains/booking/stores/useBookingStore'))['useBookingStore']
+    >
     readonly useCssModule: UnwrapRef<(typeof import('vue'))['useCssModule']>
     readonly useCssVars: UnwrapRef<(typeof import('vue'))['useCssVars']>
     readonly useFetchMock: UnwrapRef<
@@ -477,6 +483,9 @@ declare module 'vue' {
     readonly useId: UnwrapRef<(typeof import('vue'))['useId']>
     readonly useLink: UnwrapRef<(typeof import('vue-router'))['useLink']>
     readonly useModel: UnwrapRef<(typeof import('vue'))['useModel']>
+    readonly useRoomStore: UnwrapRef<
+      (typeof import('./src/domains/booking/stores/useRoomStore'))['useRoomStore']
+    >
     readonly useRooms: UnwrapRef<
       (typeof import('./src/domains/booking/composables/useRooms'))['default']
     >

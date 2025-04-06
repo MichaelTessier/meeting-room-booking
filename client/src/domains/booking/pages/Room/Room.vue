@@ -1,17 +1,20 @@
 <script setup lang="ts">
-  import type { Room } from 'meeting-room-booking-types'
+  const roomStore = useRoomStore()
+
+  const { room, isFetching, error } = storeToRefs(roomStore)
 
   const route = useRoute()
 
-  const url = `${import.meta.env.VITE_API_URL}/api/V1/rooms/${route.params.slug}`
+  onBeforeMount(async () => {
+    await roomStore.fetchRoom(route.params.slug as string)
+  })
 </script>
 
 <template>
   <BookingLayout>
-    <DataProvider :url="url">
-      <template #data="{ data }: { data: Room }">
-        <RoomDetail :room="data" />
-      </template>
-    </DataProvider>
+    <RoomDetail
+      v-if="room"
+      :room="room"
+    />
   </BookingLayout>
 </template>

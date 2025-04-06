@@ -1,4 +1,3 @@
-import { Booking } from './booking';
 import { Equipment } from './equipment';
 export interface Room {
     id: string;
@@ -6,7 +5,7 @@ export interface Room {
     slug: string;
     image: string;
     description?: string;
-    bookings: Omit<Booking, 'room'>[];
+    isAvailable: boolean;
     capacity: number;
     createdAt: string;
     updatedAt: string;

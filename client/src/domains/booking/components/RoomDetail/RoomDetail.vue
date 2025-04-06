@@ -35,6 +35,26 @@
           {{ room.name }}
         </Heading>
         <p
+          class="flex items-center gap-2"
+          :class="{
+            'text-red-700': !room.isAvailable,
+            'text-green-700': room.isAvailable,
+          }"
+        >
+          <Icon icon="circle-small" />
+          <Text
+            data-test="room-detail__availability"
+            class="ml-2"
+            type="large"
+          >
+            {{
+              room.isAvailable
+                ? t('booking.room.available')
+                : t('booking.room.unavailable')
+            }}
+          </Text>
+        </p>
+        <p
           v-if="room.capacity"
           data-test="room-detail__capacity"
         >

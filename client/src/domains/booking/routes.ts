@@ -17,12 +17,19 @@ export const bookingRoutes = [
       {
         path: '/overview',
         name: BOOKING_ROUTES.OVERVIEW,
+        meta: {
+          hasDateFilter: true,
+          hasTimeFilter: true,
+        },
         component: () =>
           import('@/domains/booking/pages/BookingOverview/BookingOverview.vue'),
       },
       {
         path: '/calendar',
         name: BOOKING_ROUTES.CALENDAR,
+        meta: {
+          hasDateFilter: true,
+        },
         component: () =>
           import('@/domains/booking/pages/BookingCalendar/BookingCalendar.vue'),
       },

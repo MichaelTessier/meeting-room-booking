@@ -6,7 +6,11 @@
       <BookingHeader />
 
       <div class="flex flex-1 h-full">
-        <RouterView />
+        <BookingLayout>
+          <BookingFilters />
+
+          <RouterView />
+        </BookingLayout>
       </div>
     </div>
     <UserAside class="col-span-1 md:col-span-6 lg:col-span-4" />

@@ -16,23 +16,36 @@
 
   const route = useRoute()
 
-  onMounted(async () => {
-    await roomStore.fetchRooms(route.query.start as string)
-    await bookingStore.fetchBookings(route.query.start as string)
+  const startDate = computed(() => {
+    return route.query.start as string
   })
+
+  const fetchData = async () => {
+    await roomStore.fetchRooms(startDate.value)
+    await bookingStore.fetchBookings(startDate.value)
+  }
+
+  onMounted(async () => {
+    await fetchData()
+  })
+
+  watch(
+    () => startDate.value,
+    async (newValue) => {
+      if (newValue) {
+        await fetchData()
+      }
+    },
+    { immediate: true },
+  )
 </script>
 
 <template>
-  <BookingLayout>
-    <div class="flex h-full flex-col">
-      <BookingFilters />
-
-      <BookingRoomTimeTable
-        v-if="rooms.length && bookings.length"
-        :rooms="rooms"
-        :bookings="bookings"
-        class="mb-4"
-      />
-    </div>
-  </BookingLayout>
+  <BookingRoomTimeTable
+    v-if="rooms.length && bookings.length"
+    :rooms="rooms"
+    :bookings="bookings"
+    :date="startDate"
+    class="mb-4"
+  />
 </template>

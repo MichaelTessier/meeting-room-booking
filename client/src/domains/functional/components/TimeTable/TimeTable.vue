@@ -1,15 +1,25 @@
 <script setup lang="ts">
   import { TimeTable as VueTimeTable, type TimeTableItem } from 'vue3-timetable'
 
-  defineProps<{
+  interface Props {
     locations: TimeTableItem[]
-    date: string
-  }>()
+    date?: string
+  }
+
+  const props = defineProps<Props>()
+
+  const date = computed(() => {
+    const date = props.date ? new Date(props.date) : new Date()
+
+    // format to YYYY-MM-DD, little hacky but native
+    return date.toLocaleDateString('fr-CA')
+  })
 </script>
 
 <template>
   <div class="timetable h-full rounded-xl overflow-hidden">
     <VueTimeTable
+      :key="date"
       variant="vertical"
       :styles="{
         backgroundColor: '#111827',

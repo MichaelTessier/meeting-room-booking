@@ -1,34 +1,30 @@
-import { useFetch } from '@vueuse/core'
-import type { Booking } from 'meeting-room-booking-types'
+import { type ZonedDateTime } from '@internationalized/date'
 
 interface BookingFiltersState {
-  startDate: Date
-  time: boolean
+  startDate?: ZonedDateTime
+  time?: Times
 }
 
-export const useBookingStore = defineStore('bookingStore', {
+export const useBookingFiltersStore = defineStore('bookingFiltersStore', {
   state: () =>
     ({
-      bookings: [],
-      isFetching: false,
-      error: undefined,
+      startDate: undefined,
+      time: undefined,
     }) as BookingFiltersState,
-  getters: {},
+  getters: {
+    formattedDate(state) {
+      if (!state.startDate) return ''
+
+      const date = new Date(
+        `${state.startDate.year}-${state.startDate.month}-${state.startDate.day} ${state.time}`,
+      )
+      return getLocalISOString(date)
+    },
+  },
   actions: {
-    async fetchBookings(startDate?: string) {
-      const url = new URL(`${import.meta.env.VITE_API_URL}/api/V1/bookings`)
-
-      if (startDate) {
-        url.searchParams.append('start', startDate as string)
-      }
-
-      const { isFetching, error, data } = await useFetch(url.toString())
-        .get()
-        .json<Booking[]>()
-
-      this.isFetching = isFetching.value
-      this.error = error.value
-      this.bookings = data.value ?? []
+    init(date: Date) {
+      this.startDate = toZonedTime(date)
+      this.time = getHours(date, true)
     },
   },
 })

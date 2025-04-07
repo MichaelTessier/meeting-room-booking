@@ -1,17 +1,52 @@
+import { getLocalTimeZone, fromDate } from '@internationalized/date'
+
 export function getLocalISOString(date: Date) {
-  console.log('🚀 ~ getLocalISOString ~ date:', date)
   const timezoneOffset = new Date(date).getTimezoneOffset() * 60000 //offset in milliseconds
 
   return new Date(date.getTime() - timezoneOffset).toISOString().slice(0, -1)
 }
 
-export function getCurrentHours(isRounded: boolean = false) {
-  const date = new Date()
-  const dateHours = date.getHours()
-  const dateMinutes = date.getMinutes()
+export function getHours(date: Date, isRounded: boolean = false) {
+  const _date = new Date(date)
+  const dateHours = _date.getHours()
+  const dateMinutes = _date.getMinutes()
 
   const hours = dateHours < 10 ? `0${dateHours}` : `${dateHours}`
   const minutes = isRounded ? `00` : `${dateMinutes}`
 
   return `${hours}:${minutes}`
 }
+
+export function toZonedTime(date: Date) {
+  return fromDate(date, getLocalTimeZone())
+}
+
+export const TIME = {
+  '00': '00:00',
+  '01': '01:00',
+  '02': '02:00',
+  '03': '03:00',
+  '04': '04:00',
+  '05': '05:00',
+  '06': '06:00',
+  '07': '07:00',
+  '08': '08:00',
+  '09': '09:00',
+  '10': '10:00',
+  '11': '11:00',
+  '12': '12:00',
+  '13': '13:00',
+  '14': '14:00',
+  '15': '15:00',
+  '16': '16:00',
+  '17': '17:00',
+  '18': '18:00',
+  '19': '19:00',
+  '20': '20:00',
+  '21': '21:00',
+  '22': '22:00',
+  '23': '23:00',
+}
+
+export const TIMES = Object.values(TIME)
+export type Times = (typeof TIMES)[number]

@@ -8,15 +8,19 @@
   onBeforeMount(async () => {
     await roomStore.fetchRooms(route.query.start as string)
   })
+
+  watch(
+    () => route.query.start,
+    async (newValue) => {
+      await roomStore.fetchRooms(newValue as string)
+    },
+    { immediate: true },
+  )
 </script>
 
 <template>
-  <BookingLayout>
-    <BookingFilters has-times />
-
-    <RoomGrid
-      v-if="rooms.length"
-      :rooms="rooms"
-    />
-  </BookingLayout>
+  <RoomGrid
+    v-if="rooms.length"
+    :rooms="rooms"
+  />
 </template>

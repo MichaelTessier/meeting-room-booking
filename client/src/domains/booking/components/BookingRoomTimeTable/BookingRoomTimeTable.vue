@@ -30,20 +30,11 @@
   })
 
   const route = useRoute()
-
-  const date = computed(() => {
-    const date = route.query.start
-      ? new Date(route.query.start as string)
-      : new Date()
-
-    // format to YYYY-MM-DD, little hacky but native
-    return date.toLocaleDateString('fr-CA')
-  })
 </script>
 
 <template>
   <TimeTable
     :locations="locations"
-    :date="date"
+    :date="route.query.start as string"
   />
 </template>

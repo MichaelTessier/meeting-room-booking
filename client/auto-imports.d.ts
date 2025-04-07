@@ -6,6 +6,7 @@
 // biome-ignore lint: disable
 export {}
 declare global {
+  const BOOKING_FILTERS: (typeof import('./src/domains/booking/components/BookingFilters/BookingFilters.model'))['BOOKING_FILTERS']
   const BOOKING_ROUTES: (typeof import('./src/domains/booking/routes'))['BOOKING_ROUTES']
   const Badge: (typeof import('./src/lib/shadcn/ui/badge/index'))['Badge']
   const Button: (typeof import('./src/lib/shadcn/ui/button/index'))['Button']
@@ -55,6 +56,10 @@ declare global {
   const Switch: (typeof import('./src/lib/shadcn/ui/switch/index'))['Switch']
   const TEXT_TYPE: (typeof import('./src/domains/functional/components/Text/Text.model'))['TEXT_TYPE']
   const TEXT_TYPES: (typeof import('./src/domains/functional/components/Text/Text.model'))['TEXT_TYPES']
+  const TIME: (typeof import('./src/utils/date'))['TIME']
+  const TIMES: (typeof import('./src/utils/date'))['TIMES']
+  const TIMES_24H: (typeof import('./src/utils/date'))['TIMES_24H']
+  const TIMES_24H_ARRAY: (typeof import('./src/utils/date'))['TIMES_24H_ARRAY']
   const USER_ROUTES: (typeof import('./src/domains/user/routes'))['USER_ROUTES']
   const acceptHMRUpdate: (typeof import('pinia'))['acceptHMRUpdate']
   const badgeVariants: (typeof import('./src/lib/shadcn/ui/badge/index'))['badgeVariants']
@@ -73,6 +78,7 @@ declare global {
   const getCurrentHours: (typeof import('./src/utils/date'))['getCurrentHours']
   const getCurrentInstance: (typeof import('vue'))['getCurrentInstance']
   const getCurrentScope: (typeof import('vue'))['getCurrentScope']
+  const getHours: (typeof import('./src/utils/date'))['getHours']
   const getLocalISOString: (typeof import('./src/utils/date'))['getLocalISOString']
   const h: (typeof import('vue'))['h']
   const i18n: (typeof import('./src/i18n/index'))['i18n']
@@ -119,13 +125,16 @@ declare global {
   const shallowReadonly: (typeof import('vue'))['shallowReadonly']
   const shallowRef: (typeof import('vue'))['shallowRef']
   const storeToRefs: (typeof import('pinia'))['storeToRefs']
+  const to: (typeof import('./src/utils/date'))['to']
   const toRaw: (typeof import('vue'))['toRaw']
   const toRef: (typeof import('vue'))['toRef']
   const toRefs: (typeof import('vue'))['toRefs']
   const toValue: (typeof import('vue'))['toValue']
+  const toZonedTime: (typeof import('./src/utils/date'))['toZonedTime']
   const triggerRef: (typeof import('vue'))['triggerRef']
   const unref: (typeof import('vue'))['unref']
   const useAttrs: (typeof import('vue'))['useAttrs']
+  const useBookingFiltersStore: (typeof import('./src/domains/booking/stores/useBookingFiltersStore'))['useBookingFiltersStore']
   const useBookingStore: (typeof import('./src/domains/booking/stores/useBookingStore'))['useBookingStore']
   const useCssModule: (typeof import('vue'))['useCssModule']
   const useCssVars: (typeof import('vue'))['useCssVars']
@@ -191,6 +200,9 @@ declare global {
   // @ts-ignore
   export type { ButtonVariants } from './src/lib/shadcn/ui/button/index'
   import('./src/lib/shadcn/ui/button/index')
+  // @ts-ignore
+  export type { Times } from './src/utils/date'
+  import('./src/utils/date')
 }
 
 // for vue template auto import
@@ -343,6 +355,8 @@ declare module 'vue' {
     readonly TEXT_TYPES: UnwrapRef<
       (typeof import('./src/domains/functional/components/Text/Text.model'))['TEXT_TYPES']
     >
+    readonly TIME: UnwrapRef<(typeof import('./src/utils/date'))['TIME']>
+    readonly TIMES: UnwrapRef<(typeof import('./src/utils/date'))['TIMES']>
     readonly USER_ROUTES: UnwrapRef<
       (typeof import('./src/domains/user/routes'))['USER_ROUTES']
     >
@@ -374,14 +388,14 @@ declare module 'vue' {
     readonly getActivePinia: UnwrapRef<
       (typeof import('pinia'))['getActivePinia']
     >
-    readonly getCurrentHours: UnwrapRef<
-      (typeof import('./src/utils/date'))['getCurrentHours']
-    >
     readonly getCurrentInstance: UnwrapRef<
       (typeof import('vue'))['getCurrentInstance']
     >
     readonly getCurrentScope: UnwrapRef<
       (typeof import('vue'))['getCurrentScope']
+    >
+    readonly getHours: UnwrapRef<
+      (typeof import('./src/utils/date'))['getHours']
     >
     readonly getLocalISOString: UnwrapRef<
       (typeof import('./src/utils/date'))['getLocalISOString']
@@ -465,9 +479,15 @@ declare module 'vue' {
     readonly toRef: UnwrapRef<(typeof import('vue'))['toRef']>
     readonly toRefs: UnwrapRef<(typeof import('vue'))['toRefs']>
     readonly toValue: UnwrapRef<(typeof import('vue'))['toValue']>
+    readonly toZonedTime: UnwrapRef<
+      (typeof import('./src/utils/date'))['toZonedTime']
+    >
     readonly triggerRef: UnwrapRef<(typeof import('vue'))['triggerRef']>
     readonly unref: UnwrapRef<(typeof import('vue'))['unref']>
     readonly useAttrs: UnwrapRef<(typeof import('vue'))['useAttrs']>
+    readonly useBookingFiltersStore: UnwrapRef<
+      (typeof import('./src/domains/booking/stores/useBookingFiltersStore'))['useBookingFiltersStore']
+    >
     readonly useBookingStore: UnwrapRef<
       (typeof import('./src/domains/booking/stores/useBookingStore'))['useBookingStore']
     >

@@ -10,13 +10,13 @@ export const fetchBookings = async () => {
   return bookingsData.bookings
 }
 
-export const fetchBookingsByUserId = async (userId: string) => {
+export const fetchUserBooking = async () => {
   const bookings = await fetchBookings()
 
   const booking = bookings.filter(
     (booking) =>
-      booking.user.id === userId &&
-      booking.dateStart > new Date().toISOString(),
+      // 1 is current ID user, it's just for the POC
+      booking.user.id === '1' && booking.dateStart > new Date().toISOString(),
   )
 
   return booking
@@ -26,6 +26,24 @@ export const fetchBooking = async (id: string) => {
   const bookings = await fetchBookings()
 
   const booking = bookings.find((booking) => booking.id === id)
+
+  return booking
+}
+
+export const updateBooking = async (booking: Booking) => {
+  const bookings = await fetchBookings()
+
+  const bookingsUpdated = bookings.map((item) => {
+    return {
+      ...item,
+      ...(item.id === booking.id && booking),
+    }
+  })
+
+  await fs.writeFile(
+    BOOKINGS_URL,
+    JSON.stringify({ bookings: bookingsUpdated }),
+  )
 
   return booking
 }

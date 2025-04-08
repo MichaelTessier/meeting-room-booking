@@ -1,5 +1,5 @@
 import { useFetch } from '@vueuse/core'
-import type { User, Booking } from 'meeting-room-booking-types'
+import type { User, Booking, BookingUpdate } from 'meeting-room-booking-types'
 
 interface UserState {
   user?: User
@@ -35,11 +35,11 @@ export const useUserStore = defineStore('userStore', {
         this.user = data.value
       }
     },
-    async fetchBookings() {
+    async fetchUserBookings() {
       if (!this.user) return
 
       const { isFetching, error, data } = await useFetch(
-        `${import.meta.env.VITE_API_URL}/api/V1/bookings/users/${this.user?.id}`,
+        `${import.meta.env.VITE_API_URL}/api/V1/bookings/me`,
       )
         .get()
         .json<Booking[]>()
@@ -56,6 +56,14 @@ export const useUserStore = defineStore('userStore', {
       if (data.value) {
         this.bookings = data.value
       }
+    },
+    updateUserBooking(booking: BookingUpdate) {
+      this.bookings = this.bookings.map((item) => {
+        return {
+          ...item,
+          ...(item.id === booking.id && booking),
+        }
+      })
     },
   },
 })

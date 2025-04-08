@@ -25,10 +25,6 @@
     await bookingStore.fetchBookings(startDate.value)
   }
 
-  onMounted(async () => {
-    await fetchData()
-  })
-
   watch(
     () => startDate.value,
     async (newValue) => {

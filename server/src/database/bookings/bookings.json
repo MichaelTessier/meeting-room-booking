@@ -2,8 +2,8 @@
   "bookings": [
     {
       "createdAt": "2025-04-07T12:39:29.812Z",
-      "dateEnd": "2025-04-08T12:00:00.000Z",
-      "dateStart": "2025-04-08T10:00:00.000Z",
+      "dateEnd": "2025-04-10T14:00:00.000Z",
+      "dateStart": "2025-04-10T12:00:00.000",
       "description": "Réunion avec les Avengers pour discuter de la prochaine mission.",
       "id": "1",
       "room": {
@@ -11,16 +11,8 @@
         "createdAt": "2025-04-07T12:39:29.812Z",
         "description": "Salle #1",
         "equipments": [
-          {
-            "id": "1",
-            "name": "TV",
-            "type": "TELEVISION"
-          },
-          {
-            "id": "2",
-            "name": "Retro Projecteur",
-            "type": "PROJECTOR"
-          }
+          { "id": "1", "name": "TV", "type": "TELEVISION" },
+          { "id": "2", "name": "Retro Projecteur", "type": "PROJECTOR" }
         ],
         "id": "1",
         "image": "images/campaign.jpg",
@@ -39,8 +31,8 @@
     },
     {
       "createdAt": "2025-04-07T12:39:29.812Z",
-      "dateEnd": "2025-04-08T12:00:00.000Z",
-      "dateStart": "2025-04-08T10:00:00.000Z",
+      "dateEnd": "2025-04-12T12:00:00.000Z",
+      "dateStart": "2025-04-12T10:00:00.000Z",
       "description": "Réunion avec les Avengers pour discuter de la prochaine mission.",
       "id": "2",
       "room": {
@@ -48,11 +40,7 @@
         "createdAt": "2025-04-07T12:39:55.384Z",
         "description": "Salle #2",
         "equipments": [
-          {
-            "id": "2",
-            "name": "Retro Projecteur",
-            "type": "PROJECTOR"
-          }
+          { "id": "2", "name": "Retro Projecteur", "type": "PROJECTOR" }
         ],
         "id": "2",
         "image": "images/cooper.jpg",
@@ -71,8 +59,8 @@
     },
     {
       "createdAt": "2025-04-07T12:39:29.812Z",
-      "dateEnd": "2025-04-08T12:00:00.000Z",
-      "dateStart": "2025-04-08T10:00:00.000Z",
+      "dateEnd": "2025-04-13T19:00:00.000",
+      "dateStart": "2025-04-13T12:00:00.000",
       "description": "Réunion avec les Avengers pour discuter de la prochaine mission.",
       "id": "3",
       "room": {
@@ -86,7 +74,7 @@
         "slug": "salle-okjsdkso",
         "updatedAt": "2025-04-09T16:45:19.025Z"
       },
-      "title": "Réunion au sommet",
+      "title": "Nouvelle réunion 3",
       "updatedAt": "2025-04-08T17:31:39.489Z",
       "user": {
         "createdAt": "2025-04-07T12:39:29.812Z",
@@ -106,11 +94,7 @@
         "createdAt": "2025-04-07T12:39:55.384Z",
         "description": "Salle #2",
         "equipments": [
-          {
-            "id": "2",
-            "name": "Retro Projecteur",
-            "type": "PROJECTOR"
-          }
+          { "id": "2", "name": "Retro Projecteur", "type": "PROJECTOR" }
         ],
         "id": "2",
         "image": "images/cooper.jpg",

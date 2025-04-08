@@ -5,7 +5,8 @@ import type { ApiResponse } from '@/types'
 import {
   fetchBooking,
   fetchBookings,
-  fetchBookingsByUserId,
+  updateBooking,
+  fetchUserBooking,
 } from '@/database/bookings'
 
 const router = express.Router()
@@ -24,24 +25,19 @@ router.get<{}, ApiResponse<Booking[]>>('/', async (req, res) => {
   }
 })
 
-router.get<{ id: string }, ApiResponse<Booking[]>>(
-  '/users/:id',
-  async (req, res) => {
-    try {
-      const response = await fetchBookingsByUserId(req.params.id)
+router.get<{}, ApiResponse<Booking[]>>('/me', async (req, res) => {
+  try {
+    const response = await fetchUserBooking()
 
-      if (!response) {
-        res.status(404).json({ message: 'Bookings not found' })
-      } else {
-        res.json(response)
-      }
-    } catch (error) {
-      res
-        .status(500)
-        .json({ message: 'Error when fetching bookings by user id' })
+    if (!response) {
+      res.status(404).json({ message: 'Bookings not found' })
+    } else {
+      res.json(response)
     }
-  },
-)
+  } catch (error) {
+    res.status(500).json({ message: 'Error when fetching bookings by user id' })
+  }
+})
 
 router.get<{ id: string }, ApiResponse<Booking>>('/:id', async (req, res) => {
   try {
@@ -56,5 +52,22 @@ router.get<{ id: string }, ApiResponse<Booking>>('/:id', async (req, res) => {
     res.status(500).json({ message: 'Error when fetching booking' })
   }
 })
+
+router.put<{}, ApiResponse<Booking>, { booking: Booking }>(
+  '/:id',
+  async (req, res) => {
+    try {
+      const response = await updateBooking(req.body?.booking)
+
+      if (!response) {
+        res.status(404).json({ message: 'Booking not updated' })
+      } else {
+        res.json(response)
+      }
+    } catch (error) {
+      res.status(500).json({ message: 'Error when creating booking' })
+    }
+  },
+)
 
 export default router

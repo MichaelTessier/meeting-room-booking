@@ -12,3 +12,5 @@ export interface Booking {
   createdAt: string
   updatedAt: string
 }
+
+export type BookingUpdate = Omit<Booking, 'createdAt' | 'updatedAt'>

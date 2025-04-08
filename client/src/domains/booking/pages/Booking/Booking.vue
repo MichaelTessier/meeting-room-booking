@@ -1,3 +1,11 @@
+<script setup lang="ts">
+  const route = useRoute()
+
+  const hasFilters = computed(() => {
+    return route.meta?.hasDateFilter || route.meta?.hasTimeFilter
+  })
+</script>
+
 <template>
   <section
     class="min-h-screen w-full grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12"
@@ -7,7 +15,9 @@
 
       <div class="flex flex-1 h-full">
         <BookingLayout>
-          <BookingFilters />
+          <div class="my-5">
+            <BookingFilters v-if="hasFilters" />
+          </div>
 
           <RouterView />
         </BookingLayout>

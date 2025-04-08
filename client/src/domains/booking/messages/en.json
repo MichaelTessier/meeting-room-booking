@@ -1,5 +1,21 @@
 {
   "booking": {
+    "dialog": {
+      "cancel": "Cancel",
+      "title": {
+        "add": "New booking",
+        "edit": "Edit booking"
+      }
+    },
+    "form": {
+      "date": "Date",
+      "dateEnd": "End date",
+      "dateStart": "Start date",
+      "description": "Description",
+      "reset": "Reset",
+      "submit": "Submit",
+      "title": "Title"
+    },
     "header": {
       "menu": {
         "calendar": "Calendar",

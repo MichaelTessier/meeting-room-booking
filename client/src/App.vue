@@ -3,7 +3,7 @@
 
   onBeforeMount(async () => {
     await userStore.fetchUser()
-    await userStore.fetchBookings()
+    await userStore.fetchUserBookings()
   })
 </script>
 

@@ -6,190 +6,196 @@
 // biome-ignore lint: disable
 export {}
 declare global {
+  const AlertDialog: typeof import('./src/lib/shadcn/ui/alert-dialog/index')['AlertDialog']
+  const AlertDialogAction: typeof import('./src/lib/shadcn/ui/alert-dialog/index')['AlertDialogAction']
+  const AlertDialogCancel: typeof import('./src/lib/shadcn/ui/alert-dialog/index')['AlertDialogCancel']
+  const AlertDialogContent: typeof import('./src/lib/shadcn/ui/alert-dialog/index')['AlertDialogContent']
+  const AlertDialogDescription: typeof import('./src/lib/shadcn/ui/alert-dialog/index')['AlertDialogDescription']
+  const AlertDialogFooter: typeof import('./src/lib/shadcn/ui/alert-dialog/index')['AlertDialogFooter']
+  const AlertDialogHeader: typeof import('./src/lib/shadcn/ui/alert-dialog/index')['AlertDialogHeader']
+  const AlertDialogTitle: typeof import('./src/lib/shadcn/ui/alert-dialog/index')['AlertDialogTitle']
+  const AlertDialogTrigger: typeof import('./src/lib/shadcn/ui/alert-dialog/index')['AlertDialogTrigger']
   const BOOKING_FILTERS: (typeof import('./src/domains/booking/components/BookingFilters/BookingFilters.model'))['BOOKING_FILTERS']
-  const BOOKING_ROUTES: (typeof import('./src/domains/booking/routes'))['BOOKING_ROUTES']
-  const Badge: (typeof import('./src/lib/shadcn/ui/badge/index'))['Badge']
-  const Button: (typeof import('./src/lib/shadcn/ui/button/index'))['Button']
-  const Calendar: (typeof import('./src/lib/shadcn/ui/calendar/index'))['Calendar']
-  const CalendarCell: (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarCell']
-  const CalendarCellTrigger: (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarCellTrigger']
-  const CalendarGrid: (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarGrid']
-  const CalendarGridBody: (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarGridBody']
-  const CalendarGridHead: (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarGridHead']
-  const CalendarGridRow: (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarGridRow']
-  const CalendarHeadCell: (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarHeadCell']
-  const CalendarHeader: (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarHeader']
-  const CalendarHeading: (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarHeading']
-  const CalendarNextButton: (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarNextButton']
-  const CalendarPrevButton: (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarPrevButton']
-  const Card: (typeof import('./src/lib/shadcn/ui/card/index'))['Card']
-  const CardContent: (typeof import('./src/lib/shadcn/ui/card/index'))['CardContent']
-  const CardDescription: (typeof import('./src/lib/shadcn/ui/card/index'))['CardDescription']
-  const CardFooter: (typeof import('./src/lib/shadcn/ui/card/index'))['CardFooter']
-  const CardHeader: (typeof import('./src/lib/shadcn/ui/card/index'))['CardHeader']
-  const CardTitle: (typeof import('./src/lib/shadcn/ui/card/index'))['CardTitle']
-  const EffectScope: (typeof import('vue'))['EffectScope']
-  const HEADING_TAG: (typeof import('./src/domains/functional/components/Heading/Heading.model'))['HEADING_TAG']
-  const HEADING_TAGS: (typeof import('./src/domains/functional/components/Heading/Heading.model'))['HEADING_TAGS']
-  const HEADING_TYPE: (typeof import('./src/domains/functional/components/Heading/Heading.model'))['HEADING_TYPE']
-  const HEADING_TYPES: (typeof import('./src/domains/functional/components/Heading/Heading.model'))['HEADING_TYPES']
-  const ICON_NAME: (typeof import('./src/domains/functional/components/Icon/Icon.model'))['ICON_NAME']
-  const ICON_NAMES: (typeof import('./src/domains/functional/components/Icon/Icon.model'))['ICON_NAMES']
-  const ICON_SIZE: (typeof import('./src/domains/functional/components/Icon/Icon.model'))['ICON_SIZE']
-  const ICON_SIZES: (typeof import('./src/domains/functional/components/Icon/Icon.model'))['ICON_SIZES']
-  const Label: (typeof import('./src/lib/shadcn/ui/label/index'))['Label']
-  const Popover: (typeof import('./src/lib/shadcn/ui/popover/index'))['Popover']
-  const PopoverAnchor: (typeof import('./src/lib/shadcn/ui/popover/index'))['PopoverAnchor']
-  const PopoverContent: (typeof import('./src/lib/shadcn/ui/popover/index'))['PopoverContent']
-  const PopoverTrigger: (typeof import('./src/lib/shadcn/ui/popover/index'))['PopoverTrigger']
-  const Select: (typeof import('./src/lib/shadcn/ui/select/index'))['Select']
-  const SelectContent: (typeof import('./src/lib/shadcn/ui/select/index'))['SelectContent']
-  const SelectGroup: (typeof import('./src/lib/shadcn/ui/select/index'))['SelectGroup']
-  const SelectItem: (typeof import('./src/lib/shadcn/ui/select/index'))['SelectItem']
-  const SelectItemText: (typeof import('./src/lib/shadcn/ui/select/index'))['SelectItemText']
-  const SelectLabel: (typeof import('./src/lib/shadcn/ui/select/index'))['SelectLabel']
-  const SelectScrollDownButton: (typeof import('./src/lib/shadcn/ui/select/index'))['SelectScrollDownButton']
-  const SelectScrollUpButton: (typeof import('./src/lib/shadcn/ui/select/index'))['SelectScrollUpButton']
-  const SelectSeparator: (typeof import('./src/lib/shadcn/ui/select/index'))['SelectSeparator']
-  const SelectTrigger: (typeof import('./src/lib/shadcn/ui/select/index'))['SelectTrigger']
-  const SelectValue: (typeof import('./src/lib/shadcn/ui/select/index'))['SelectValue']
-  const Switch: (typeof import('./src/lib/shadcn/ui/switch/index'))['Switch']
-  const TEXT_TYPE: (typeof import('./src/domains/functional/components/Text/Text.model'))['TEXT_TYPE']
-  const TEXT_TYPES: (typeof import('./src/domains/functional/components/Text/Text.model'))['TEXT_TYPES']
-  const TIME: (typeof import('./src/utils/date'))['TIME']
-  const TIMES: (typeof import('./src/utils/date'))['TIMES']
+  const BOOKING_ROUTES: typeof import('./src/domains/booking/routes')['BOOKING_ROUTES']
+  const Badge: typeof import('./src/lib/shadcn/ui/badge/index')['Badge']
+  const Button: typeof import('./src/lib/shadcn/ui/button/index')['Button']
+  const Calendar: typeof import('./src/lib/shadcn/ui/calendar/index')['Calendar']
+  const CalendarCell: typeof import('./src/lib/shadcn/ui/calendar/index')['CalendarCell']
+  const CalendarCellTrigger: typeof import('./src/lib/shadcn/ui/calendar/index')['CalendarCellTrigger']
+  const CalendarGrid: typeof import('./src/lib/shadcn/ui/calendar/index')['CalendarGrid']
+  const CalendarGridBody: typeof import('./src/lib/shadcn/ui/calendar/index')['CalendarGridBody']
+  const CalendarGridHead: typeof import('./src/lib/shadcn/ui/calendar/index')['CalendarGridHead']
+  const CalendarGridRow: typeof import('./src/lib/shadcn/ui/calendar/index')['CalendarGridRow']
+  const CalendarHeadCell: typeof import('./src/lib/shadcn/ui/calendar/index')['CalendarHeadCell']
+  const CalendarHeader: typeof import('./src/lib/shadcn/ui/calendar/index')['CalendarHeader']
+  const CalendarHeading: typeof import('./src/lib/shadcn/ui/calendar/index')['CalendarHeading']
+  const CalendarNextButton: typeof import('./src/lib/shadcn/ui/calendar/index')['CalendarNextButton']
+  const CalendarPrevButton: typeof import('./src/lib/shadcn/ui/calendar/index')['CalendarPrevButton']
+  const Card: typeof import('./src/lib/shadcn/ui/card/index')['Card']
+  const CardContent: typeof import('./src/lib/shadcn/ui/card/index')['CardContent']
+  const CardDescription: typeof import('./src/lib/shadcn/ui/card/index')['CardDescription']
+  const CardFooter: typeof import('./src/lib/shadcn/ui/card/index')['CardFooter']
+  const CardHeader: typeof import('./src/lib/shadcn/ui/card/index')['CardHeader']
+  const CardTitle: typeof import('./src/lib/shadcn/ui/card/index')['CardTitle']
+  const Dialog: typeof import('./src/lib/shadcn/ui/dialog/index')['Dialog']
+  const DialogClose: typeof import('./src/lib/shadcn/ui/dialog/index')['DialogClose']
+  const DialogContent: typeof import('./src/lib/shadcn/ui/dialog/index')['DialogContent']
+  const DialogDescription: typeof import('./src/lib/shadcn/ui/dialog/index')['DialogDescription']
+  const DialogFooter: typeof import('./src/lib/shadcn/ui/dialog/index')['DialogFooter']
+  const DialogHeader: typeof import('./src/lib/shadcn/ui/dialog/index')['DialogHeader']
+  const DialogScrollContent: typeof import('./src/lib/shadcn/ui/dialog/index')['DialogScrollContent']
+  const DialogTitle: typeof import('./src/lib/shadcn/ui/dialog/index')['DialogTitle']
+  const DialogTrigger: typeof import('./src/lib/shadcn/ui/dialog/index')['DialogTrigger']
+  const EffectScope: typeof import('vue')['EffectScope']
+  const HEADING_TAG: typeof import('./src/domains/functional/components/Heading/Heading.model')['HEADING_TAG']
+  const HEADING_TAGS: typeof import('./src/domains/functional/components/Heading/Heading.model')['HEADING_TAGS']
+  const HEADING_TYPE: typeof import('./src/domains/functional/components/Heading/Heading.model')['HEADING_TYPE']
+  const HEADING_TYPES: typeof import('./src/domains/functional/components/Heading/Heading.model')['HEADING_TYPES']
+  const ICON_NAME: typeof import('./src/domains/functional/components/Icon/Icon.model')['ICON_NAME']
+  const ICON_NAMES: typeof import('./src/domains/functional/components/Icon/Icon.model')['ICON_NAMES']
+  const ICON_SIZE: typeof import('./src/domains/functional/components/Icon/Icon.model')['ICON_SIZE']
+  const ICON_SIZES: typeof import('./src/domains/functional/components/Icon/Icon.model')['ICON_SIZES']
+  const Input: typeof import('./src/lib/shadcn/ui/input/index')['Input']
+  const Label: typeof import('./src/lib/shadcn/ui/label/index')['Label']
+  const NumberField: typeof import('./src/lib/shadcn/ui/number-field/index')['NumberField']
+  const NumberFieldContent: typeof import('./src/lib/shadcn/ui/number-field/index')['NumberFieldContent']
+  const NumberFieldDecrement: typeof import('./src/lib/shadcn/ui/number-field/index')['NumberFieldDecrement']
+  const NumberFieldIncrement: typeof import('./src/lib/shadcn/ui/number-field/index')['NumberFieldIncrement']
+  const NumberFieldInput: typeof import('./src/lib/shadcn/ui/number-field/index')['NumberFieldInput']
+  const Popover: typeof import('./src/lib/shadcn/ui/popover/index')['Popover']
+  const PopoverAnchor: typeof import('./src/lib/shadcn/ui/popover/index')['PopoverAnchor']
+  const PopoverContent: typeof import('./src/lib/shadcn/ui/popover/index')['PopoverContent']
+  const PopoverTrigger: typeof import('./src/lib/shadcn/ui/popover/index')['PopoverTrigger']
+  const Select: typeof import('./src/lib/shadcn/ui/select/index')['Select']
+  const SelectContent: typeof import('./src/lib/shadcn/ui/select/index')['SelectContent']
+  const SelectGroup: typeof import('./src/lib/shadcn/ui/select/index')['SelectGroup']
+  const SelectItem: typeof import('./src/lib/shadcn/ui/select/index')['SelectItem']
+  const SelectItemText: typeof import('./src/lib/shadcn/ui/select/index')['SelectItemText']
+  const SelectLabel: typeof import('./src/lib/shadcn/ui/select/index')['SelectLabel']
+  const SelectScrollDownButton: typeof import('./src/lib/shadcn/ui/select/index')['SelectScrollDownButton']
+  const SelectScrollUpButton: typeof import('./src/lib/shadcn/ui/select/index')['SelectScrollUpButton']
+  const SelectSeparator: typeof import('./src/lib/shadcn/ui/select/index')['SelectSeparator']
+  const SelectTrigger: typeof import('./src/lib/shadcn/ui/select/index')['SelectTrigger']
+  const SelectValue: typeof import('./src/lib/shadcn/ui/select/index')['SelectValue']
+  const Switch: typeof import('./src/lib/shadcn/ui/switch/index')['Switch']
+  const TEXT_TYPE: typeof import('./src/domains/functional/components/Text/Text.model')['TEXT_TYPE']
+  const TEXT_TYPES: typeof import('./src/domains/functional/components/Text/Text.model')['TEXT_TYPES']
+  const TIME: typeof import('./src/utils/date')['TIME']
+  const TIMES: typeof import('./src/utils/date')['TIMES']
   const TIMES_24H: (typeof import('./src/utils/date'))['TIMES_24H']
   const TIMES_24H_ARRAY: (typeof import('./src/utils/date'))['TIMES_24H_ARRAY']
-  const USER_ROUTES: (typeof import('./src/domains/user/routes'))['USER_ROUTES']
-  const acceptHMRUpdate: (typeof import('pinia'))['acceptHMRUpdate']
-  const badgeVariants: (typeof import('./src/lib/shadcn/ui/badge/index'))['badgeVariants']
-  const bookingRoutes: (typeof import('./src/domains/booking/routes'))['bookingRoutes']
-  const buttonVariants: (typeof import('./src/lib/shadcn/ui/button/index'))['buttonVariants']
-  const cn: (typeof import('./src/lib/shadcn/utils'))['cn']
-  const computed: (typeof import('vue'))['computed']
-  const createApp: (typeof import('vue'))['createApp']
-  const createPinia: (typeof import('pinia'))['createPinia']
-  const customRef: (typeof import('vue'))['customRef']
-  const defineAsyncComponent: (typeof import('vue'))['defineAsyncComponent']
-  const defineComponent: (typeof import('vue'))['defineComponent']
-  const defineStore: (typeof import('pinia'))['defineStore']
-  const effectScope: (typeof import('vue'))['effectScope']
-  const getActivePinia: (typeof import('pinia'))['getActivePinia']
+  const Textarea: typeof import('./src/lib/shadcn/ui/textarea/index')['Textarea']
+  const USER_ROUTES: typeof import('./src/domains/user/routes')['USER_ROUTES']
+  const acceptHMRUpdate: typeof import('pinia')['acceptHMRUpdate']
+  const badgeVariants: typeof import('./src/lib/shadcn/ui/badge/index')['badgeVariants']
+  const bookingRoutes: typeof import('./src/domains/booking/routes')['bookingRoutes']
+  const buttonVariants: typeof import('./src/lib/shadcn/ui/button/index')['buttonVariants']
+  const cn: typeof import('./src/lib/shadcn/utils')['cn']
+  const computed: typeof import('vue')['computed']
+  const createApp: typeof import('vue')['createApp']
+  const createPinia: typeof import('pinia')['createPinia']
+  const customRef: typeof import('vue')['customRef']
+  const defineAsyncComponent: typeof import('vue')['defineAsyncComponent']
+  const defineComponent: typeof import('vue')['defineComponent']
+  const defineStore: typeof import('pinia')['defineStore']
+  const effectScope: typeof import('vue')['effectScope']
+  const getActivePinia: typeof import('pinia')['getActivePinia']
   const getCurrentHours: (typeof import('./src/utils/date'))['getCurrentHours']
-  const getCurrentInstance: (typeof import('vue'))['getCurrentInstance']
-  const getCurrentScope: (typeof import('vue'))['getCurrentScope']
-  const getHours: (typeof import('./src/utils/date'))['getHours']
-  const getLocalISOString: (typeof import('./src/utils/date'))['getLocalISOString']
-  const h: (typeof import('vue'))['h']
-  const i18n: (typeof import('./src/i18n/index'))['i18n']
-  const iconLucideMatcher: (typeof import('./src/domains/functional/components/Icon/Icon.model'))['iconLucideMatcher']
-  const indexD: (typeof import('./src/index.d'))['default']
-  const inject: (typeof import('vue'))['inject']
-  const isProxy: (typeof import('vue'))['isProxy']
-  const isReactive: (typeof import('vue'))['isReactive']
-  const isReadonly: (typeof import('vue'))['isReadonly']
-  const isRef: (typeof import('vue'))['isRef']
-  const mapActions: (typeof import('pinia'))['mapActions']
-  const mapGetters: (typeof import('pinia'))['mapGetters']
-  const mapState: (typeof import('pinia'))['mapState']
-  const mapStores: (typeof import('pinia'))['mapStores']
-  const mapWritableState: (typeof import('pinia'))['mapWritableState']
-  const markRaw: (typeof import('vue'))['markRaw']
-  const nextTick: (typeof import('vue'))['nextTick']
-  const onActivated: (typeof import('vue'))['onActivated']
-  const onBeforeMount: (typeof import('vue'))['onBeforeMount']
-  const onBeforeRouteLeave: (typeof import('vue-router'))['onBeforeRouteLeave']
-  const onBeforeRouteUpdate: (typeof import('vue-router'))['onBeforeRouteUpdate']
-  const onBeforeUnmount: (typeof import('vue'))['onBeforeUnmount']
-  const onBeforeUpdate: (typeof import('vue'))['onBeforeUpdate']
-  const onDeactivated: (typeof import('vue'))['onDeactivated']
-  const onErrorCaptured: (typeof import('vue'))['onErrorCaptured']
-  const onMounted: (typeof import('vue'))['onMounted']
-  const onRenderTracked: (typeof import('vue'))['onRenderTracked']
-  const onRenderTriggered: (typeof import('vue'))['onRenderTriggered']
-  const onScopeDispose: (typeof import('vue'))['onScopeDispose']
-  const onServerPrefetch: (typeof import('vue'))['onServerPrefetch']
-  const onUnmounted: (typeof import('vue'))['onUnmounted']
-  const onUpdated: (typeof import('vue'))['onUpdated']
-  const onWatcherCleanup: (typeof import('vue'))['onWatcherCleanup']
-  const provide: (typeof import('vue'))['provide']
-  const reactive: (typeof import('vue'))['reactive']
-  const readonly: (typeof import('vue'))['readonly']
-  const ref: (typeof import('vue'))['ref']
-  const resolveComponent: (typeof import('vue'))['resolveComponent']
-  const router: (typeof import('./src/router/index'))['router']
-  const routes: (typeof import('./src/router/index'))['routes']
-  const setActivePinia: (typeof import('pinia'))['setActivePinia']
-  const setMapStoreSuffix: (typeof import('pinia'))['setMapStoreSuffix']
-  const shallowReactive: (typeof import('vue'))['shallowReactive']
-  const shallowReadonly: (typeof import('vue'))['shallowReadonly']
-  const shallowRef: (typeof import('vue'))['shallowRef']
-  const storeToRefs: (typeof import('pinia'))['storeToRefs']
+  const getCurrentInstance: typeof import('vue')['getCurrentInstance']
+  const getCurrentScope: typeof import('vue')['getCurrentScope']
+  const getHours: typeof import('./src/utils/date')['getHours']
+  const getLocalISOString: typeof import('./src/utils/date')['getLocalISOString']
+  const h: typeof import('vue')['h']
+  const i18n: typeof import('./src/i18n/index')['i18n']
+  const iconLucideMatcher: typeof import('./src/domains/functional/components/Icon/Icon.model')['iconLucideMatcher']
+  const indexD: typeof import('./src/index.d')['default']
+  const inject: typeof import('vue')['inject']
+  const isProxy: typeof import('vue')['isProxy']
+  const isReactive: typeof import('vue')['isReactive']
+  const isReadonly: typeof import('vue')['isReadonly']
+  const isRef: typeof import('vue')['isRef']
+  const mapActions: typeof import('pinia')['mapActions']
+  const mapGetters: typeof import('pinia')['mapGetters']
+  const mapState: typeof import('pinia')['mapState']
+  const mapStores: typeof import('pinia')['mapStores']
+  const mapWritableState: typeof import('pinia')['mapWritableState']
+  const markRaw: typeof import('vue')['markRaw']
+  const nextTick: typeof import('vue')['nextTick']
+  const onActivated: typeof import('vue')['onActivated']
+  const onBeforeMount: typeof import('vue')['onBeforeMount']
+  const onBeforeRouteLeave: typeof import('vue-router')['onBeforeRouteLeave']
+  const onBeforeRouteUpdate: typeof import('vue-router')['onBeforeRouteUpdate']
+  const onBeforeUnmount: typeof import('vue')['onBeforeUnmount']
+  const onBeforeUpdate: typeof import('vue')['onBeforeUpdate']
+  const onDeactivated: typeof import('vue')['onDeactivated']
+  const onErrorCaptured: typeof import('vue')['onErrorCaptured']
+  const onMounted: typeof import('vue')['onMounted']
+  const onRenderTracked: typeof import('vue')['onRenderTracked']
+  const onRenderTriggered: typeof import('vue')['onRenderTriggered']
+  const onScopeDispose: typeof import('vue')['onScopeDispose']
+  const onServerPrefetch: typeof import('vue')['onServerPrefetch']
+  const onUnmounted: typeof import('vue')['onUnmounted']
+  const onUpdated: typeof import('vue')['onUpdated']
+  const onWatcherCleanup: typeof import('vue')['onWatcherCleanup']
+  const provide: typeof import('vue')['provide']
+  const reactive: typeof import('vue')['reactive']
+  const readonly: typeof import('vue')['readonly']
+  const ref: typeof import('vue')['ref']
+  const resolveComponent: typeof import('vue')['resolveComponent']
+  const router: typeof import('./src/router/index')['router']
+  const routes: typeof import('./src/router/index')['routes']
+  const setActivePinia: typeof import('pinia')['setActivePinia']
+  const setMapStoreSuffix: typeof import('pinia')['setMapStoreSuffix']
+  const shallowReactive: typeof import('vue')['shallowReactive']
+  const shallowReadonly: typeof import('vue')['shallowReadonly']
+  const shallowRef: typeof import('vue')['shallowRef']
+  const storeToRefs: typeof import('pinia')['storeToRefs']
   const to: (typeof import('./src/utils/date'))['to']
-  const toRaw: (typeof import('vue'))['toRaw']
-  const toRef: (typeof import('vue'))['toRef']
-  const toRefs: (typeof import('vue'))['toRefs']
-  const toValue: (typeof import('vue'))['toValue']
-  const toZonedTime: (typeof import('./src/utils/date'))['toZonedTime']
-  const triggerRef: (typeof import('vue'))['triggerRef']
-  const unref: (typeof import('vue'))['unref']
-  const useAttrs: (typeof import('vue'))['useAttrs']
-  const useBookingFiltersStore: (typeof import('./src/domains/booking/stores/useBookingFiltersStore'))['useBookingFiltersStore']
-  const useBookingStore: (typeof import('./src/domains/booking/stores/useBookingStore'))['useBookingStore']
-  const useCssModule: (typeof import('vue'))['useCssModule']
-  const useCssVars: (typeof import('vue'))['useCssVars']
-  const useFetchMock: (typeof import('./src/test/mocks/useFetch'))['useFetchMock']
-  const useFetchMockJson: (typeof import('./src/test/mocks/useFetch'))['useFetchMockJson']
-  const useI18n: (typeof import('vue-i18n'))['useI18n']
-  const useId: (typeof import('vue'))['useId']
-  const useLink: (typeof import('vue-router'))['useLink']
-  const useModel: (typeof import('vue'))['useModel']
-  const useRoomStore: (typeof import('./src/domains/booking/stores/useRoomStore'))['useRoomStore']
-  const useRooms: (typeof import('./src/domains/booking/composables/useRooms'))['default']
+  const toRaw: typeof import('vue')['toRaw']
+  const toRef: typeof import('vue')['toRef']
+  const toRefs: typeof import('vue')['toRefs']
+  const toValue: typeof import('vue')['toValue']
+  const toZonedDateToISOString: (typeof import('./src/utils/date'))['toZonedDateToISOString']
+  const toZonedTime: typeof import('./src/utils/date')['toZonedTime']
+  const triggerRef: typeof import('vue')['triggerRef']
+  const unref: typeof import('vue')['unref']
+  const useAttrs: typeof import('vue')['useAttrs']
+  const useBookingFiltersStore: typeof import('./src/domains/booking/stores/useBookingFiltersStore')['useBookingFiltersStore']
+  const useBookingStore: typeof import('./src/domains/booking/stores/useBookingStore')['useBookingStore']
+  const useCssModule: typeof import('vue')['useCssModule']
+  const useCssVars: typeof import('vue')['useCssVars']
+  const useFetchMock: typeof import('./src/test/mocks/useFetch')['useFetchMock']
+  const useFetchMockJson: typeof import('./src/test/mocks/useFetch')['useFetchMockJson']
+  const useI18n: typeof import('vue-i18n')['useI18n']
+  const useId: typeof import('vue')['useId']
+  const useLink: typeof import('vue-router')['useLink']
+  const useModel: typeof import('vue')['useModel']
+  const useRoomStore: typeof import('./src/domains/booking/stores/useRoomStore')['useRoomStore']
+  const useRooms: typeof import('./src/domains/booking/composables/useRooms')['default']
   const useRoomsStore: (typeof import('./src/domains/booking/stores/useRoomsStore'))['useRoomsStore']
-  const useRoute: (typeof import('vue-router'))['useRoute']
-  const useRouter: (typeof import('vue-router'))['useRouter']
-  const useSlots: (typeof import('vue'))['useSlots']
-  const useTemplateRef: (typeof import('vue'))['useTemplateRef']
-  const useUserStore: (typeof import('./src/domains/user/stores/useUserStore'))['useUserStore']
-  const userRoutes: (typeof import('./src/domains/user/routes'))['userRoutes']
-  const valueUpdater: (typeof import('./src/lib/shadcn/utils'))['valueUpdater']
-  const watch: (typeof import('vue'))['watch']
-  const watchEffect: (typeof import('vue'))['watchEffect']
-  const watchPostEffect: (typeof import('vue'))['watchPostEffect']
-  const watchSyncEffect: (typeof import('vue'))['watchSyncEffect']
+  const useRoute: typeof import('vue-router')['useRoute']
+  const useRouter: typeof import('vue-router')['useRouter']
+  const useSlots: typeof import('vue')['useSlots']
+  const useTemplateRef: typeof import('vue')['useTemplateRef']
+  const useUserStore: typeof import('./src/domains/user/stores/useUserStore')['useUserStore']
+  const userRoutes: typeof import('./src/domains/user/routes')['userRoutes']
+  const valueUpdater: typeof import('./src/lib/shadcn/utils')['valueUpdater']
+  const watch: typeof import('vue')['watch']
+  const watchEffect: typeof import('vue')['watchEffect']
+  const watchPostEffect: typeof import('vue')['watchPostEffect']
+  const watchSyncEffect: typeof import('vue')['watchSyncEffect']
+  const zonedDateToISOString: typeof import('./src/utils/date')['zonedDateToISOString']
 }
 // for type re-export
 declare global {
   // @ts-ignore
-  export type {
-    Component,
-    ComponentPublicInstance,
-    ComputedRef,
-    DirectiveBinding,
-    ExtractDefaultPropTypes,
-    ExtractPropTypes,
-    ExtractPublicPropTypes,
-    InjectionKey,
-    PropType,
-    Ref,
-    MaybeRef,
-    MaybeRefOrGetter,
-    VNode,
-    WritableComputedRef,
-  } from 'vue'
+  export type { Component, ComponentPublicInstance, ComputedRef, DirectiveBinding, ExtractDefaultPropTypes, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, MaybeRef, MaybeRefOrGetter, VNode, WritableComputedRef } from 'vue'
   import('vue')
   // @ts-ignore
-  export type {
-    HeadingType,
-    HeadingTag,
-  } from './src/domains/functional/components/Heading/Heading.model'
+  export type { HeadingType, HeadingTag } from './src/domains/functional/components/Heading/Heading.model'
   import('./src/domains/functional/components/Heading/Heading.model')
   // @ts-ignore
-  export type {
-    IconName,
-    IconSize,
-  } from './src/domains/functional/components/Icon/Icon.model'
+  export type { IconName, IconSize } from './src/domains/functional/components/Icon/Icon.model'
   import('./src/domains/functional/components/Icon/Icon.model')
   // @ts-ignore
   export type { TextType } from './src/domains/functional/components/Text/Text.model'
@@ -210,325 +216,177 @@ import { UnwrapRef } from 'vue'
 declare module 'vue' {
   interface GlobalComponents {}
   interface ComponentCustomProperties {
-    readonly BOOKING_ROUTES: UnwrapRef<
-      (typeof import('./src/domains/booking/routes'))['BOOKING_ROUTES']
-    >
-    readonly Badge: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/badge/index'))['Badge']
-    >
-    readonly Button: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/button/index'))['Button']
-    >
-    readonly Calendar: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/calendar/index'))['Calendar']
-    >
-    readonly CalendarCell: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarCell']
-    >
-    readonly CalendarCellTrigger: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarCellTrigger']
-    >
-    readonly CalendarGrid: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarGrid']
-    >
-    readonly CalendarGridBody: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarGridBody']
-    >
-    readonly CalendarGridHead: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarGridHead']
-    >
-    readonly CalendarGridRow: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarGridRow']
-    >
-    readonly CalendarHeadCell: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarHeadCell']
-    >
-    readonly CalendarHeader: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarHeader']
-    >
-    readonly CalendarHeading: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarHeading']
-    >
-    readonly CalendarNextButton: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarNextButton']
-    >
-    readonly CalendarPrevButton: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/calendar/index'))['CalendarPrevButton']
-    >
-    readonly Card: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/card/index'))['Card']
-    >
-    readonly CardContent: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/card/index'))['CardContent']
-    >
-    readonly CardDescription: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/card/index'))['CardDescription']
-    >
-    readonly CardFooter: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/card/index'))['CardFooter']
-    >
-    readonly CardHeader: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/card/index'))['CardHeader']
-    >
-    readonly CardTitle: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/card/index'))['CardTitle']
-    >
-    readonly EffectScope: UnwrapRef<(typeof import('vue'))['EffectScope']>
-    readonly HEADING_TAG: UnwrapRef<
-      (typeof import('./src/domains/functional/components/Heading/Heading.model'))['HEADING_TAG']
-    >
-    readonly HEADING_TAGS: UnwrapRef<
-      (typeof import('./src/domains/functional/components/Heading/Heading.model'))['HEADING_TAGS']
-    >
-    readonly HEADING_TYPE: UnwrapRef<
-      (typeof import('./src/domains/functional/components/Heading/Heading.model'))['HEADING_TYPE']
-    >
-    readonly HEADING_TYPES: UnwrapRef<
-      (typeof import('./src/domains/functional/components/Heading/Heading.model'))['HEADING_TYPES']
-    >
-    readonly ICON_NAME: UnwrapRef<
-      (typeof import('./src/domains/functional/components/Icon/Icon.model'))['ICON_NAME']
-    >
-    readonly ICON_NAMES: UnwrapRef<
-      (typeof import('./src/domains/functional/components/Icon/Icon.model'))['ICON_NAMES']
-    >
-    readonly ICON_SIZE: UnwrapRef<
-      (typeof import('./src/domains/functional/components/Icon/Icon.model'))['ICON_SIZE']
-    >
-    readonly ICON_SIZES: UnwrapRef<
-      (typeof import('./src/domains/functional/components/Icon/Icon.model'))['ICON_SIZES']
-    >
-    readonly Label: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/label/index'))['Label']
-    >
-    readonly Popover: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/popover/index'))['Popover']
-    >
-    readonly PopoverAnchor: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/popover/index'))['PopoverAnchor']
-    >
-    readonly PopoverContent: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/popover/index'))['PopoverContent']
-    >
-    readonly PopoverTrigger: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/popover/index'))['PopoverTrigger']
-    >
-    readonly Select: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/select/index'))['Select']
-    >
-    readonly SelectContent: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/select/index'))['SelectContent']
-    >
-    readonly SelectGroup: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/select/index'))['SelectGroup']
-    >
-    readonly SelectItem: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/select/index'))['SelectItem']
-    >
-    readonly SelectItemText: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/select/index'))['SelectItemText']
-    >
-    readonly SelectLabel: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/select/index'))['SelectLabel']
-    >
-    readonly SelectScrollDownButton: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/select/index'))['SelectScrollDownButton']
-    >
-    readonly SelectScrollUpButton: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/select/index'))['SelectScrollUpButton']
-    >
-    readonly SelectSeparator: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/select/index'))['SelectSeparator']
-    >
-    readonly SelectTrigger: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/select/index'))['SelectTrigger']
-    >
-    readonly SelectValue: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/select/index'))['SelectValue']
-    >
-    readonly Switch: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/switch/index'))['Switch']
-    >
-    readonly TEXT_TYPE: UnwrapRef<
-      (typeof import('./src/domains/functional/components/Text/Text.model'))['TEXT_TYPE']
-    >
-    readonly TEXT_TYPES: UnwrapRef<
-      (typeof import('./src/domains/functional/components/Text/Text.model'))['TEXT_TYPES']
-    >
-    readonly TIME: UnwrapRef<(typeof import('./src/utils/date'))['TIME']>
-    readonly TIMES: UnwrapRef<(typeof import('./src/utils/date'))['TIMES']>
-    readonly USER_ROUTES: UnwrapRef<
-      (typeof import('./src/domains/user/routes'))['USER_ROUTES']
-    >
-    readonly acceptHMRUpdate: UnwrapRef<
-      (typeof import('pinia'))['acceptHMRUpdate']
-    >
-    readonly badgeVariants: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/badge/index'))['badgeVariants']
-    >
-    readonly bookingRoutes: UnwrapRef<
-      (typeof import('./src/domains/booking/routes'))['bookingRoutes']
-    >
-    readonly buttonVariants: UnwrapRef<
-      (typeof import('./src/lib/shadcn/ui/button/index'))['buttonVariants']
-    >
-    readonly cn: UnwrapRef<(typeof import('./src/lib/shadcn/utils'))['cn']>
-    readonly computed: UnwrapRef<(typeof import('vue'))['computed']>
-    readonly createApp: UnwrapRef<(typeof import('vue'))['createApp']>
-    readonly createPinia: UnwrapRef<(typeof import('pinia'))['createPinia']>
-    readonly customRef: UnwrapRef<(typeof import('vue'))['customRef']>
-    readonly defineAsyncComponent: UnwrapRef<
-      (typeof import('vue'))['defineAsyncComponent']
-    >
-    readonly defineComponent: UnwrapRef<
-      (typeof import('vue'))['defineComponent']
-    >
-    readonly defineStore: UnwrapRef<(typeof import('pinia'))['defineStore']>
-    readonly effectScope: UnwrapRef<(typeof import('vue'))['effectScope']>
-    readonly getActivePinia: UnwrapRef<
-      (typeof import('pinia'))['getActivePinia']
-    >
-    readonly getCurrentInstance: UnwrapRef<
-      (typeof import('vue'))['getCurrentInstance']
-    >
-    readonly getCurrentScope: UnwrapRef<
-      (typeof import('vue'))['getCurrentScope']
-    >
-    readonly getHours: UnwrapRef<
-      (typeof import('./src/utils/date'))['getHours']
-    >
-    readonly getLocalISOString: UnwrapRef<
-      (typeof import('./src/utils/date'))['getLocalISOString']
-    >
-    readonly h: UnwrapRef<(typeof import('vue'))['h']>
-    readonly i18n: UnwrapRef<(typeof import('./src/i18n/index'))['i18n']>
-    readonly iconLucideMatcher: UnwrapRef<
-      (typeof import('./src/domains/functional/components/Icon/Icon.model'))['iconLucideMatcher']
-    >
-    readonly indexD: UnwrapRef<(typeof import('./src/index.d'))['default']>
-    readonly inject: UnwrapRef<(typeof import('vue'))['inject']>
-    readonly isProxy: UnwrapRef<(typeof import('vue'))['isProxy']>
-    readonly isReactive: UnwrapRef<(typeof import('vue'))['isReactive']>
-    readonly isReadonly: UnwrapRef<(typeof import('vue'))['isReadonly']>
-    readonly isRef: UnwrapRef<(typeof import('vue'))['isRef']>
-    readonly mapActions: UnwrapRef<(typeof import('pinia'))['mapActions']>
-    readonly mapGetters: UnwrapRef<(typeof import('pinia'))['mapGetters']>
-    readonly mapState: UnwrapRef<(typeof import('pinia'))['mapState']>
-    readonly mapStores: UnwrapRef<(typeof import('pinia'))['mapStores']>
-    readonly mapWritableState: UnwrapRef<
-      (typeof import('pinia'))['mapWritableState']
-    >
-    readonly markRaw: UnwrapRef<(typeof import('vue'))['markRaw']>
-    readonly nextTick: UnwrapRef<(typeof import('vue'))['nextTick']>
-    readonly onActivated: UnwrapRef<(typeof import('vue'))['onActivated']>
-    readonly onBeforeMount: UnwrapRef<(typeof import('vue'))['onBeforeMount']>
-    readonly onBeforeRouteLeave: UnwrapRef<
-      (typeof import('vue-router'))['onBeforeRouteLeave']
-    >
-    readonly onBeforeRouteUpdate: UnwrapRef<
-      (typeof import('vue-router'))['onBeforeRouteUpdate']
-    >
-    readonly onBeforeUnmount: UnwrapRef<
-      (typeof import('vue'))['onBeforeUnmount']
-    >
-    readonly onBeforeUpdate: UnwrapRef<(typeof import('vue'))['onBeforeUpdate']>
-    readonly onDeactivated: UnwrapRef<(typeof import('vue'))['onDeactivated']>
-    readonly onErrorCaptured: UnwrapRef<
-      (typeof import('vue'))['onErrorCaptured']
-    >
-    readonly onMounted: UnwrapRef<(typeof import('vue'))['onMounted']>
-    readonly onRenderTracked: UnwrapRef<
-      (typeof import('vue'))['onRenderTracked']
-    >
-    readonly onRenderTriggered: UnwrapRef<
-      (typeof import('vue'))['onRenderTriggered']
-    >
-    readonly onScopeDispose: UnwrapRef<(typeof import('vue'))['onScopeDispose']>
-    readonly onServerPrefetch: UnwrapRef<
-      (typeof import('vue'))['onServerPrefetch']
-    >
-    readonly onUnmounted: UnwrapRef<(typeof import('vue'))['onUnmounted']>
-    readonly onUpdated: UnwrapRef<(typeof import('vue'))['onUpdated']>
-    readonly onWatcherCleanup: UnwrapRef<
-      (typeof import('vue'))['onWatcherCleanup']
-    >
-    readonly provide: UnwrapRef<(typeof import('vue'))['provide']>
-    readonly reactive: UnwrapRef<(typeof import('vue'))['reactive']>
-    readonly readonly: UnwrapRef<(typeof import('vue'))['readonly']>
-    readonly ref: UnwrapRef<(typeof import('vue'))['ref']>
-    readonly resolveComponent: UnwrapRef<
-      (typeof import('vue'))['resolveComponent']
-    >
-    readonly router: UnwrapRef<(typeof import('./src/router/index'))['router']>
-    readonly routes: UnwrapRef<(typeof import('./src/router/index'))['routes']>
-    readonly setActivePinia: UnwrapRef<
-      (typeof import('pinia'))['setActivePinia']
-    >
-    readonly setMapStoreSuffix: UnwrapRef<
-      (typeof import('pinia'))['setMapStoreSuffix']
-    >
-    readonly shallowReactive: UnwrapRef<
-      (typeof import('vue'))['shallowReactive']
-    >
-    readonly shallowReadonly: UnwrapRef<
-      (typeof import('vue'))['shallowReadonly']
-    >
-    readonly shallowRef: UnwrapRef<(typeof import('vue'))['shallowRef']>
-    readonly storeToRefs: UnwrapRef<(typeof import('pinia'))['storeToRefs']>
-    readonly toRaw: UnwrapRef<(typeof import('vue'))['toRaw']>
-    readonly toRef: UnwrapRef<(typeof import('vue'))['toRef']>
-    readonly toRefs: UnwrapRef<(typeof import('vue'))['toRefs']>
-    readonly toValue: UnwrapRef<(typeof import('vue'))['toValue']>
-    readonly toZonedTime: UnwrapRef<
-      (typeof import('./src/utils/date'))['toZonedTime']
-    >
-    readonly triggerRef: UnwrapRef<(typeof import('vue'))['triggerRef']>
-    readonly unref: UnwrapRef<(typeof import('vue'))['unref']>
-    readonly useAttrs: UnwrapRef<(typeof import('vue'))['useAttrs']>
-    readonly useBookingFiltersStore: UnwrapRef<
-      (typeof import('./src/domains/booking/stores/useBookingFiltersStore'))['useBookingFiltersStore']
-    >
-    readonly useBookingStore: UnwrapRef<
-      (typeof import('./src/domains/booking/stores/useBookingStore'))['useBookingStore']
-    >
-    readonly useCssModule: UnwrapRef<(typeof import('vue'))['useCssModule']>
-    readonly useCssVars: UnwrapRef<(typeof import('vue'))['useCssVars']>
-    readonly useFetchMock: UnwrapRef<
-      (typeof import('./src/test/mocks/useFetch'))['useFetchMock']
-    >
-    readonly useFetchMockJson: UnwrapRef<
-      (typeof import('./src/test/mocks/useFetch'))['useFetchMockJson']
-    >
-    readonly useI18n: UnwrapRef<(typeof import('vue-i18n'))['useI18n']>
-    readonly useId: UnwrapRef<(typeof import('vue'))['useId']>
-    readonly useLink: UnwrapRef<(typeof import('vue-router'))['useLink']>
-    readonly useModel: UnwrapRef<(typeof import('vue'))['useModel']>
-    readonly useRoomStore: UnwrapRef<
-      (typeof import('./src/domains/booking/stores/useRoomStore'))['useRoomStore']
-    >
-    readonly useRooms: UnwrapRef<
-      (typeof import('./src/domains/booking/composables/useRooms'))['default']
-    >
-    readonly useRoute: UnwrapRef<(typeof import('vue-router'))['useRoute']>
-    readonly useRouter: UnwrapRef<(typeof import('vue-router'))['useRouter']>
-    readonly useSlots: UnwrapRef<(typeof import('vue'))['useSlots']>
-    readonly useTemplateRef: UnwrapRef<(typeof import('vue'))['useTemplateRef']>
-    readonly useUserStore: UnwrapRef<
-      (typeof import('./src/domains/user/stores/useUserStore'))['useUserStore']
-    >
-    readonly userRoutes: UnwrapRef<
-      (typeof import('./src/domains/user/routes'))['userRoutes']
-    >
-    readonly valueUpdater: UnwrapRef<
-      (typeof import('./src/lib/shadcn/utils'))['valueUpdater']
-    >
-    readonly watch: UnwrapRef<(typeof import('vue'))['watch']>
-    readonly watchEffect: UnwrapRef<(typeof import('vue'))['watchEffect']>
-    readonly watchPostEffect: UnwrapRef<
-      (typeof import('vue'))['watchPostEffect']
-    >
-    readonly watchSyncEffect: UnwrapRef<
-      (typeof import('vue'))['watchSyncEffect']
-    >
+    readonly AlertDialog: UnwrapRef<typeof import('./src/lib/shadcn/ui/alert-dialog/index')['AlertDialog']>
+    readonly AlertDialogAction: UnwrapRef<typeof import('./src/lib/shadcn/ui/alert-dialog/index')['AlertDialogAction']>
+    readonly AlertDialogCancel: UnwrapRef<typeof import('./src/lib/shadcn/ui/alert-dialog/index')['AlertDialogCancel']>
+    readonly AlertDialogContent: UnwrapRef<typeof import('./src/lib/shadcn/ui/alert-dialog/index')['AlertDialogContent']>
+    readonly AlertDialogDescription: UnwrapRef<typeof import('./src/lib/shadcn/ui/alert-dialog/index')['AlertDialogDescription']>
+    readonly AlertDialogFooter: UnwrapRef<typeof import('./src/lib/shadcn/ui/alert-dialog/index')['AlertDialogFooter']>
+    readonly AlertDialogHeader: UnwrapRef<typeof import('./src/lib/shadcn/ui/alert-dialog/index')['AlertDialogHeader']>
+    readonly AlertDialogTitle: UnwrapRef<typeof import('./src/lib/shadcn/ui/alert-dialog/index')['AlertDialogTitle']>
+    readonly AlertDialogTrigger: UnwrapRef<typeof import('./src/lib/shadcn/ui/alert-dialog/index')['AlertDialogTrigger']>
+    readonly BOOKING_ROUTES: UnwrapRef<typeof import('./src/domains/booking/routes')['BOOKING_ROUTES']>
+    readonly Badge: UnwrapRef<typeof import('./src/lib/shadcn/ui/badge/index')['Badge']>
+    readonly Button: UnwrapRef<typeof import('./src/lib/shadcn/ui/button/index')['Button']>
+    readonly Calendar: UnwrapRef<typeof import('./src/lib/shadcn/ui/calendar/index')['Calendar']>
+    readonly CalendarCell: UnwrapRef<typeof import('./src/lib/shadcn/ui/calendar/index')['CalendarCell']>
+    readonly CalendarCellTrigger: UnwrapRef<typeof import('./src/lib/shadcn/ui/calendar/index')['CalendarCellTrigger']>
+    readonly CalendarGrid: UnwrapRef<typeof import('./src/lib/shadcn/ui/calendar/index')['CalendarGrid']>
+    readonly CalendarGridBody: UnwrapRef<typeof import('./src/lib/shadcn/ui/calendar/index')['CalendarGridBody']>
+    readonly CalendarGridHead: UnwrapRef<typeof import('./src/lib/shadcn/ui/calendar/index')['CalendarGridHead']>
+    readonly CalendarGridRow: UnwrapRef<typeof import('./src/lib/shadcn/ui/calendar/index')['CalendarGridRow']>
+    readonly CalendarHeadCell: UnwrapRef<typeof import('./src/lib/shadcn/ui/calendar/index')['CalendarHeadCell']>
+    readonly CalendarHeader: UnwrapRef<typeof import('./src/lib/shadcn/ui/calendar/index')['CalendarHeader']>
+    readonly CalendarHeading: UnwrapRef<typeof import('./src/lib/shadcn/ui/calendar/index')['CalendarHeading']>
+    readonly CalendarNextButton: UnwrapRef<typeof import('./src/lib/shadcn/ui/calendar/index')['CalendarNextButton']>
+    readonly CalendarPrevButton: UnwrapRef<typeof import('./src/lib/shadcn/ui/calendar/index')['CalendarPrevButton']>
+    readonly Card: UnwrapRef<typeof import('./src/lib/shadcn/ui/card/index')['Card']>
+    readonly CardContent: UnwrapRef<typeof import('./src/lib/shadcn/ui/card/index')['CardContent']>
+    readonly CardDescription: UnwrapRef<typeof import('./src/lib/shadcn/ui/card/index')['CardDescription']>
+    readonly CardFooter: UnwrapRef<typeof import('./src/lib/shadcn/ui/card/index')['CardFooter']>
+    readonly CardHeader: UnwrapRef<typeof import('./src/lib/shadcn/ui/card/index')['CardHeader']>
+    readonly CardTitle: UnwrapRef<typeof import('./src/lib/shadcn/ui/card/index')['CardTitle']>
+    readonly Dialog: UnwrapRef<typeof import('./src/lib/shadcn/ui/dialog/index')['Dialog']>
+    readonly DialogClose: UnwrapRef<typeof import('./src/lib/shadcn/ui/dialog/index')['DialogClose']>
+    readonly DialogContent: UnwrapRef<typeof import('./src/lib/shadcn/ui/dialog/index')['DialogContent']>
+    readonly DialogDescription: UnwrapRef<typeof import('./src/lib/shadcn/ui/dialog/index')['DialogDescription']>
+    readonly DialogFooter: UnwrapRef<typeof import('./src/lib/shadcn/ui/dialog/index')['DialogFooter']>
+    readonly DialogHeader: UnwrapRef<typeof import('./src/lib/shadcn/ui/dialog/index')['DialogHeader']>
+    readonly DialogScrollContent: UnwrapRef<typeof import('./src/lib/shadcn/ui/dialog/index')['DialogScrollContent']>
+    readonly DialogTitle: UnwrapRef<typeof import('./src/lib/shadcn/ui/dialog/index')['DialogTitle']>
+    readonly DialogTrigger: UnwrapRef<typeof import('./src/lib/shadcn/ui/dialog/index')['DialogTrigger']>
+    readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly HEADING_TAG: UnwrapRef<typeof import('./src/domains/functional/components/Heading/Heading.model')['HEADING_TAG']>
+    readonly HEADING_TAGS: UnwrapRef<typeof import('./src/domains/functional/components/Heading/Heading.model')['HEADING_TAGS']>
+    readonly HEADING_TYPE: UnwrapRef<typeof import('./src/domains/functional/components/Heading/Heading.model')['HEADING_TYPE']>
+    readonly HEADING_TYPES: UnwrapRef<typeof import('./src/domains/functional/components/Heading/Heading.model')['HEADING_TYPES']>
+    readonly ICON_NAME: UnwrapRef<typeof import('./src/domains/functional/components/Icon/Icon.model')['ICON_NAME']>
+    readonly ICON_NAMES: UnwrapRef<typeof import('./src/domains/functional/components/Icon/Icon.model')['ICON_NAMES']>
+    readonly ICON_SIZE: UnwrapRef<typeof import('./src/domains/functional/components/Icon/Icon.model')['ICON_SIZE']>
+    readonly ICON_SIZES: UnwrapRef<typeof import('./src/domains/functional/components/Icon/Icon.model')['ICON_SIZES']>
+    readonly Input: UnwrapRef<typeof import('./src/lib/shadcn/ui/input/index')['Input']>
+    readonly Label: UnwrapRef<typeof import('./src/lib/shadcn/ui/label/index')['Label']>
+    readonly NumberField: UnwrapRef<typeof import('./src/lib/shadcn/ui/number-field/index')['NumberField']>
+    readonly NumberFieldContent: UnwrapRef<typeof import('./src/lib/shadcn/ui/number-field/index')['NumberFieldContent']>
+    readonly NumberFieldDecrement: UnwrapRef<typeof import('./src/lib/shadcn/ui/number-field/index')['NumberFieldDecrement']>
+    readonly NumberFieldIncrement: UnwrapRef<typeof import('./src/lib/shadcn/ui/number-field/index')['NumberFieldIncrement']>
+    readonly NumberFieldInput: UnwrapRef<typeof import('./src/lib/shadcn/ui/number-field/index')['NumberFieldInput']>
+    readonly Popover: UnwrapRef<typeof import('./src/lib/shadcn/ui/popover/index')['Popover']>
+    readonly PopoverAnchor: UnwrapRef<typeof import('./src/lib/shadcn/ui/popover/index')['PopoverAnchor']>
+    readonly PopoverContent: UnwrapRef<typeof import('./src/lib/shadcn/ui/popover/index')['PopoverContent']>
+    readonly PopoverTrigger: UnwrapRef<typeof import('./src/lib/shadcn/ui/popover/index')['PopoverTrigger']>
+    readonly Select: UnwrapRef<typeof import('./src/lib/shadcn/ui/select/index')['Select']>
+    readonly SelectContent: UnwrapRef<typeof import('./src/lib/shadcn/ui/select/index')['SelectContent']>
+    readonly SelectGroup: UnwrapRef<typeof import('./src/lib/shadcn/ui/select/index')['SelectGroup']>
+    readonly SelectItem: UnwrapRef<typeof import('./src/lib/shadcn/ui/select/index')['SelectItem']>
+    readonly SelectItemText: UnwrapRef<typeof import('./src/lib/shadcn/ui/select/index')['SelectItemText']>
+    readonly SelectLabel: UnwrapRef<typeof import('./src/lib/shadcn/ui/select/index')['SelectLabel']>
+    readonly SelectScrollDownButton: UnwrapRef<typeof import('./src/lib/shadcn/ui/select/index')['SelectScrollDownButton']>
+    readonly SelectScrollUpButton: UnwrapRef<typeof import('./src/lib/shadcn/ui/select/index')['SelectScrollUpButton']>
+    readonly SelectSeparator: UnwrapRef<typeof import('./src/lib/shadcn/ui/select/index')['SelectSeparator']>
+    readonly SelectTrigger: UnwrapRef<typeof import('./src/lib/shadcn/ui/select/index')['SelectTrigger']>
+    readonly SelectValue: UnwrapRef<typeof import('./src/lib/shadcn/ui/select/index')['SelectValue']>
+    readonly Switch: UnwrapRef<typeof import('./src/lib/shadcn/ui/switch/index')['Switch']>
+    readonly TEXT_TYPE: UnwrapRef<typeof import('./src/domains/functional/components/Text/Text.model')['TEXT_TYPE']>
+    readonly TEXT_TYPES: UnwrapRef<typeof import('./src/domains/functional/components/Text/Text.model')['TEXT_TYPES']>
+    readonly TIME: UnwrapRef<typeof import('./src/utils/date')['TIME']>
+    readonly TIMES: UnwrapRef<typeof import('./src/utils/date')['TIMES']>
+    readonly Textarea: UnwrapRef<typeof import('./src/lib/shadcn/ui/textarea/index')['Textarea']>
+    readonly USER_ROUTES: UnwrapRef<typeof import('./src/domains/user/routes')['USER_ROUTES']>
+    readonly acceptHMRUpdate: UnwrapRef<typeof import('pinia')['acceptHMRUpdate']>
+    readonly badgeVariants: UnwrapRef<typeof import('./src/lib/shadcn/ui/badge/index')['badgeVariants']>
+    readonly bookingRoutes: UnwrapRef<typeof import('./src/domains/booking/routes')['bookingRoutes']>
+    readonly buttonVariants: UnwrapRef<typeof import('./src/lib/shadcn/ui/button/index')['buttonVariants']>
+    readonly cn: UnwrapRef<typeof import('./src/lib/shadcn/utils')['cn']>
+    readonly computed: UnwrapRef<typeof import('vue')['computed']>
+    readonly createApp: UnwrapRef<typeof import('vue')['createApp']>
+    readonly createPinia: UnwrapRef<typeof import('pinia')['createPinia']>
+    readonly customRef: UnwrapRef<typeof import('vue')['customRef']>
+    readonly defineAsyncComponent: UnwrapRef<typeof import('vue')['defineAsyncComponent']>
+    readonly defineComponent: UnwrapRef<typeof import('vue')['defineComponent']>
+    readonly defineStore: UnwrapRef<typeof import('pinia')['defineStore']>
+    readonly effectScope: UnwrapRef<typeof import('vue')['effectScope']>
+    readonly getActivePinia: UnwrapRef<typeof import('pinia')['getActivePinia']>
+    readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
+    readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
+    readonly getHours: UnwrapRef<typeof import('./src/utils/date')['getHours']>
+    readonly getLocalISOString: UnwrapRef<typeof import('./src/utils/date')['getLocalISOString']>
+    readonly h: UnwrapRef<typeof import('vue')['h']>
+    readonly i18n: UnwrapRef<typeof import('./src/i18n/index')['i18n']>
+    readonly iconLucideMatcher: UnwrapRef<typeof import('./src/domains/functional/components/Icon/Icon.model')['iconLucideMatcher']>
+    readonly indexD: UnwrapRef<typeof import('./src/index.d')['default']>
+    readonly inject: UnwrapRef<typeof import('vue')['inject']>
+    readonly isProxy: UnwrapRef<typeof import('vue')['isProxy']>
+    readonly isReactive: UnwrapRef<typeof import('vue')['isReactive']>
+    readonly isReadonly: UnwrapRef<typeof import('vue')['isReadonly']>
+    readonly isRef: UnwrapRef<typeof import('vue')['isRef']>
+    readonly mapActions: UnwrapRef<typeof import('pinia')['mapActions']>
+    readonly mapGetters: UnwrapRef<typeof import('pinia')['mapGetters']>
+    readonly mapState: UnwrapRef<typeof import('pinia')['mapState']>
+    readonly mapStores: UnwrapRef<typeof import('pinia')['mapStores']>
+    readonly mapWritableState: UnwrapRef<typeof import('pinia')['mapWritableState']>
+    readonly markRaw: UnwrapRef<typeof import('vue')['markRaw']>
+    readonly nextTick: UnwrapRef<typeof import('vue')['nextTick']>
+    readonly onActivated: UnwrapRef<typeof import('vue')['onActivated']>
+    readonly onBeforeMount: UnwrapRef<typeof import('vue')['onBeforeMount']>
+    readonly onBeforeRouteLeave: UnwrapRef<typeof import('vue-router')['onBeforeRouteLeave']>
+    readonly onBeforeRouteUpdate: UnwrapRef<typeof import('vue-router')['onBeforeRouteUpdate']>
+    readonly onBeforeUnmount: UnwrapRef<typeof import('vue')['onBeforeUnmount']>
+    readonly onBeforeUpdate: UnwrapRef<typeof import('vue')['onBeforeUpdate']>
+    readonly onDeactivated: UnwrapRef<typeof import('vue')['onDeactivated']>
+    readonly onErrorCaptured: UnwrapRef<typeof import('vue')['onErrorCaptured']>
+    readonly onMounted: UnwrapRef<typeof import('vue')['onMounted']>
+    readonly onRenderTracked: UnwrapRef<typeof import('vue')['onRenderTracked']>
+    readonly onRenderTriggered: UnwrapRef<typeof import('vue')['onRenderTriggered']>
+    readonly onScopeDispose: UnwrapRef<typeof import('vue')['onScopeDispose']>
+    readonly onServerPrefetch: UnwrapRef<typeof import('vue')['onServerPrefetch']>
+    readonly onUnmounted: UnwrapRef<typeof import('vue')['onUnmounted']>
+    readonly onUpdated: UnwrapRef<typeof import('vue')['onUpdated']>
+    readonly onWatcherCleanup: UnwrapRef<typeof import('vue')['onWatcherCleanup']>
+    readonly provide: UnwrapRef<typeof import('vue')['provide']>
+    readonly reactive: UnwrapRef<typeof import('vue')['reactive']>
+    readonly readonly: UnwrapRef<typeof import('vue')['readonly']>
+    readonly ref: UnwrapRef<typeof import('vue')['ref']>
+    readonly resolveComponent: UnwrapRef<typeof import('vue')['resolveComponent']>
+    readonly router: UnwrapRef<typeof import('./src/router/index')['router']>
+    readonly routes: UnwrapRef<typeof import('./src/router/index')['routes']>
+    readonly setActivePinia: UnwrapRef<typeof import('pinia')['setActivePinia']>
+    readonly setMapStoreSuffix: UnwrapRef<typeof import('pinia')['setMapStoreSuffix']>
+    readonly shallowReactive: UnwrapRef<typeof import('vue')['shallowReactive']>
+    readonly shallowReadonly: UnwrapRef<typeof import('vue')['shallowReadonly']>
+    readonly shallowRef: UnwrapRef<typeof import('vue')['shallowRef']>
+    readonly storeToRefs: UnwrapRef<typeof import('pinia')['storeToRefs']>
+    readonly toRaw: UnwrapRef<typeof import('vue')['toRaw']>
+    readonly toRef: UnwrapRef<typeof import('vue')['toRef']>
+    readonly toRefs: UnwrapRef<typeof import('vue')['toRefs']>
+    readonly toValue: UnwrapRef<typeof import('vue')['toValue']>
+    readonly toZonedTime: UnwrapRef<typeof import('./src/utils/date')['toZonedTime']>
+    readonly triggerRef: UnwrapRef<typeof import('vue')['triggerRef']>
+    readonly unref: UnwrapRef<typeof import('vue')['unref']>
+    readonly useAttrs: UnwrapRef<typeof import('vue')['useAttrs']>
+    readonly useBookingFiltersStore: UnwrapRef<typeof import('./src/domains/booking/stores/useBookingFiltersStore')['useBookingFiltersStore']>
+    readonly useBookingStore: UnwrapRef<typeof import('./src/domains/booking/stores/useBookingStore')['useBookingStore']>
+    readonly useCssModule: UnwrapRef<typeof import('vue')['useCssModule']>
+    readonly useCssVars: UnwrapRef<typeof import('vue')['useCssVars']>
+    readonly useFetchMock: UnwrapRef<typeof import('./src/test/mocks/useFetch')['useFetchMock']>
+    readonly useFetchMockJson: UnwrapRef<typeof import('./src/test/mocks/useFetch')['useFetchMockJson']>
+    readonly useI18n: UnwrapRef<typeof import('vue-i18n')['useI18n']>
+    readonly useId: UnwrapRef<typeof import('vue')['useId']>
+    readonly useLink: UnwrapRef<typeof import('vue-router')['useLink']>
+    readonly useModel: UnwrapRef<typeof import('vue')['useModel']>
+    readonly useRoomStore: UnwrapRef<typeof import('./src/domains/booking/stores/useRoomStore')['useRoomStore']>
+    readonly useRooms: UnwrapRef<typeof import('./src/domains/booking/composables/useRooms')['default']>
+    readonly useRoute: UnwrapRef<typeof import('vue-router')['useRoute']>
+    readonly useRouter: UnwrapRef<typeof import('vue-router')['useRouter']>
+    readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
+    readonly useTemplateRef: UnwrapRef<typeof import('vue')['useTemplateRef']>
+    readonly useUserStore: UnwrapRef<typeof import('./src/domains/user/stores/useUserStore')['useUserStore']>
+    readonly userRoutes: UnwrapRef<typeof import('./src/domains/user/routes')['userRoutes']>
+    readonly valueUpdater: UnwrapRef<typeof import('./src/lib/shadcn/utils')['valueUpdater']>
+    readonly watch: UnwrapRef<typeof import('vue')['watch']>
+    readonly watchEffect: UnwrapRef<typeof import('vue')['watchEffect']>
+    readonly watchPostEffect: UnwrapRef<typeof import('vue')['watchPostEffect']>
+    readonly watchSyncEffect: UnwrapRef<typeof import('vue')['watchSyncEffect']>
+    readonly zonedDateToISOString: UnwrapRef<typeof import('./src/utils/date')['zonedDateToISOString']>
   }
 }

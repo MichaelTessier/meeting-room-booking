@@ -14,12 +14,31 @@
     // format to YYYY-MM-DD, little hacky but native
     return date.toLocaleDateString('fr-CA')
   })
+
+  const emit = defineEmits<{
+    'item-click': [TimeTableItem]
+    'location-click': [TimeTableItem]
+  }>()
+
+  const onItemClick = (item: TimeTableItem) => {
+    emit('item-click', item)
+  }
+
+  const id = ref(new Date().getTime())
+
+  watch(
+    () => props.locations,
+    () => {
+      id.value = new Date().getTime()
+    },
+  )
 </script>
 
 <template>
   <div class="timetable h-full rounded-xl overflow-hidden">
+    <!-- KEY UGLY but maybe this component is not really reactive -->
     <VueTimeTable
-      :key="date"
+      :key="date && id"
       variant="vertical"
       :styles="{
         backgroundColor: '#111827',
@@ -31,7 +50,7 @@
       :number-of-hours="17"
       :show-time-marker="false"
       :locations="locations"
-      @item-click="(item) => console.log(item)"
+      @item-click="onItemClick"
       @location-click="(location) => console.log(location)"
     />
   </div>

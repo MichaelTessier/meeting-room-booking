@@ -38,6 +38,7 @@
       v-model:open="isDialogOpen"
       :booking="selectedBooking"
       @submit="isDialogOpen = false"
+      @delete="isDialogOpen = false"
     />
   </div>
 </template>

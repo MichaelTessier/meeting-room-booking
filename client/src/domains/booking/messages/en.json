@@ -7,6 +7,7 @@
       "date": "Date",
       "dateEnd": "End date",
       "dateStart": "Start date",
+      "cancel": "Cancel booking",
       "description": "Description",
       "reset": "Reset",
       "submit": "Submit",

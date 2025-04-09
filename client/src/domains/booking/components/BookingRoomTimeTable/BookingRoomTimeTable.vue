@@ -24,6 +24,9 @@
           endDate: booking.dateEnd,
           name: booking.title,
           info: booking.description,
+          data: {
+            userId: booking.user.id,
+          },
           style: {
             backgroundColor:
               userStore.user?.id === booking.user?.id
@@ -48,6 +51,9 @@
   })
 
   const onBookingClick = (item: TimeTableItem) => {
+    if (userStore.user?.id !== item.data?.userId) {
+      return
+    }
     isUpdateDialogOpen.value = true
     selectedBookingId.value = item.id.toString()
   }

@@ -7,9 +7,11 @@
 
 <template>
   <div class="flex flex-row gap-4 justify-end">
+    <slot />
     <Button
       v-if="resetLabel"
       type="reset"
+      variant="outline"
     >
       {{ resetLabel }}
     </Button>

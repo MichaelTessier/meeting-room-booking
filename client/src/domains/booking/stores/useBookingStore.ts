@@ -43,7 +43,7 @@ export const useBookingStore = defineStore('bookingStore', {
         }
       })
 
-      const { isFetching, error } = await useFetch(baseUrl)
+      const { data, isFetching, error } = await useFetch(baseUrl)
         .put({ booking })
         .json<Booking>()
 
@@ -52,9 +52,11 @@ export const useBookingStore = defineStore('bookingStore', {
 
       if (error.value) {
         this.bookings = previousBookings
-      }
-    },
 
+        return
+      }
+      return data.value
+    },
     async createBooking(booking: Booking) {
       const previousBookings = [...this.bookings]
 
@@ -74,6 +76,25 @@ export const useBookingStore = defineStore('bookingStore', {
       }
       return data.value
     },
+    async deleteBooking(id: string) {
+      const previousBookings = [...this.bookings]
+
+      this.bookings = this.bookings.filter((item) => item.id !== id)
+
+      const { isFetching, error, data } = await useFetch(`${baseUrl}/${id}`)
+        .delete()
+        .json<string>()
+
+      this.isFetching = isFetching.value
+      this.error = error.value
+      if (error.value) {
+        this.bookings = previousBookings
+
+        return
+      }
+      return data.value
+    },
+
     removeLastUserBooking() {
       this.bookings = this.bookings.slice(0, -1)
     },

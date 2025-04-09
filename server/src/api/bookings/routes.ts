@@ -7,6 +7,7 @@ import {
   updateBooking,
   createBooking,
   fetchUserBooking,
+  deleteBooking,
 } from '@/database/bookings'
 
 const router = express.Router()
@@ -86,5 +87,19 @@ router.post<{}, ApiResponse<Booking>, { booking: Booking }>(
     }
   },
 )
+
+router.delete<{ id: string }, ApiResponse<string>>('/:id', async (req, res) => {
+  try {
+    const response = await deleteBooking(req.params.id)
+
+    if (!response) {
+      res.status(404).json({ message: 'Booking not found' })
+    } else {
+      res.json(response)
+    }
+  } catch (error) {
+    res.status(500).json({ message: 'Error when deleting booking' })
+  }
+})
 
 export default router

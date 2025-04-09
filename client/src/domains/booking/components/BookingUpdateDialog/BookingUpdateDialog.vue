@@ -5,7 +5,10 @@
     booking: Booking
   }>()
 
-  const emit = defineEmits(['submit'])
+  const emit = defineEmits<{
+    submit: []
+    delete: []
+  }>()
 
   const { t } = useI18n()
   const bookingStore = useBookingStore()
@@ -13,18 +16,42 @@
 
   const bookingRef = ref<Booking>(props.booking)
 
+  const canCancel = computed(
+    () => bookingRef.value.user.id === userStore.user?.id,
+  )
+
   const onSubmit = (booking: Booking) => {
     bookingStore.updateBooking(booking)
     emit('submit')
   }
 
-  bookingStore.$onAction(({ name, onError, args }) => {
+  const onDelete = () => {
+    bookingStore.deleteBooking(bookingRef.value.id)
+    emit('delete')
+  }
+
+  bookingStore.$onAction(({ name, after, args }) => {
     if (name === 'updateBooking') {
       userStore.updateUserBooking(args[0])
+
+      after((result) => {
+        if (!result) {
+          userStore.updateUserBooking(bookingRef.value)
+          return
+        }
+      })
     }
-    onError(() => {
-      userStore.updateUserBooking(bookingRef.value)
-    })
+
+    if (name === 'deleteBooking') {
+      userStore.removeUserBooking(args[0])
+
+      after((result) => {
+        if (!result) {
+          userStore.updateUserBooking(bookingRef.value)
+          return
+        }
+      })
+    }
   })
 </script>
 
@@ -37,7 +64,9 @@
 
       <BookingForm
         :booking="booking"
+        :can-cancel="canCancel"
         @submit="onSubmit"
+        @delete="onDelete"
       />
     </DialogContent>
   </Dialog>

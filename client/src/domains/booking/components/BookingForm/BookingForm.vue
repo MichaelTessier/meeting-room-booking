@@ -1,15 +1,19 @@
 <script setup lang="ts">
-  import type { Booking, BookingUpdate } from 'meeting-room-booking-types'
+  import type { Booking } from 'meeting-room-booking-types'
 
   const props = defineProps<{
-    booking?: Booking | BookingUpdate
+    booking?: Partial<Booking>
+    canCancel?: boolean
   }>()
 
-  const emit = defineEmits(['submit'])
+  const emit = defineEmits<{
+    submit: [booking: Booking]
+    delete: []
+  }>()
 
   const { t } = useI18n()
 
-  const state = reactive({
+  const state = reactive<Partial<Booking>>({
     title: props.booking?.title ?? '',
     description: props.booking?.description ?? '',
     dateStart: props.booking?.dateStart ?? new Date().toISOString(),
@@ -20,7 +24,8 @@
   })
 
   const onSubmit = () => {
-    emit('submit', state)
+    // TODO: validate form
+    emit('submit', state as Booking)
   }
 </script>
 
@@ -72,6 +77,15 @@
     <FormAction
       :submit-label="t('booking.form.submit')"
       :reset-label="t('booking.form.reset')"
-    />
+    >
+      <Button
+        v-if="canCancel"
+        type="button"
+        variant="destructive"
+        @click="$emit('delete')"
+      >
+        {{ t('booking.form.cancel') }}
+      </Button>
+    </FormAction>
   </form>
 </template>

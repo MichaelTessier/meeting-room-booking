@@ -71,5 +71,8 @@ export const useUserStore = defineStore('userStore', {
     removeLastUserBooking() {
       this.bookings = this.bookings.slice(0, -1)
     },
+    removeUserBooking(id: string) {
+      this.bookings = this.bookings.filter((booking) => booking.id !== id)
+    },
   },
 })

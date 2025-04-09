@@ -71,3 +71,19 @@ export const createBooking = async (booking: Booking) => {
 
   return newBooking
 }
+
+export const deleteBooking = async (id: string) => {
+  if (!id) {
+    throw new Error('Booking ID is required')
+  }
+  const bookings = await fetchBookings()
+
+  const bookingsUpdated = bookings.filter((item) => item.id !== id)
+
+  await fs.writeFile(
+    BOOKINGS_URL,
+    JSON.stringify({ bookings: bookingsUpdated }),
+  )
+
+  return id
+}

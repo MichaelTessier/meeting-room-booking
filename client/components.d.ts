@@ -83,6 +83,8 @@ declare module 'vue' {
     PopoverContent: typeof import('./src/lib/shadcn/ui/popover/PopoverContent.vue')['default']
     PopoverTrigger: typeof import('./src/lib/shadcn/ui/popover/PopoverTrigger.vue')['default']
     Room: typeof import('./src/domains/booking/pages/Room/Room.vue')['default']
+    RoomAvailability: typeof import('./src/domains/booking/components/RoomAvailability/RoomAvailability.vue')['default']
+    RoomAvailabilty: typeof import('./src/domains/booking/components/RoomAvailability/RoomAvailabilty.vue')['default']
     RoomCard: typeof import('./src/domains/booking/components/RoomCard/RoomCard.vue')['default']
     RoomDetail: typeof import('./src/domains/booking/components/RoomDetail/RoomDetail.vue')['default']
     RoomGrid: typeof import('./src/domains/booking/components/RoomGrid/RoomGrid.vue')['default']

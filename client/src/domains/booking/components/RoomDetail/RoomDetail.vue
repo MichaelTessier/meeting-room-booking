@@ -36,6 +36,13 @@
         >
           {{ room.name }}
         </Heading>
+        <Text
+          v-if="room.description"
+          data-test="room-detail__description"
+          class="mb-8"
+        >
+          {{ room.description }}
+        </Text>
         <RoomAvailability :is-available="room.isAvailable" />
         <p
           v-if="room.capacity"

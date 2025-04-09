@@ -1,12 +1,9 @@
 {
   "rooms": [
     {
-      "id": "1",
-      "name": "Salle #1",
-      "description": "Salle #1",
-      "slug": "salle-1",
-      "image": "images/campaign.jpg",
       "capacity": 5,
+      "createdAt": "2025-04-07T12:39:29.812Z",
+      "description": "Espace d'expérimentation de test et d'idées",
       "equipments": [
         {
           "id": "1",
@@ -19,17 +16,16 @@
           "type": "PROJECTOR"
         }
       ],
-      "createdAt": "2025-04-07T12:39:29.812Z",
+      "id": "1",
+      "image": "images/campaign.jpg",
+      "name": "Lab Alpha",
+      "slug": "lab-alpha",
       "updatedAt": "2025-04-08T17:31:39.489Z"
     },
     {
-      "id": "2",
-      "name": "Salle #2",
-      "description": "Salle #2",
-      "slug": "salle-2",
-
-      "image": "images/cooper.jpg",
       "capacity": 10,
+      "createdAt": "2025-04-07T12:39:55.384Z",
+      "description": "Pour des prise de décisions rapides et précises",
       "equipments": [
         {
           "id": "2",
@@ -37,29 +33,27 @@
           "type": "PROJECTOR"
         }
       ],
-      "createdAt": "2025-04-07T12:39:55.384Z",
+      "id": "2",
+      "image": "images/cooper.jpg",
+      "name": "Quantum",
+      "slug": "quantum",
       "updatedAt": "2025-04-07T13:33:37.184Z"
     },
     {
-      "id": "3",
-      "name": "Salle Okjsdkso",
-      "description": "Salle Okjsdkso",
-      "slug": "salle-okjsdkso",
-
-      "image": "images/hemant.jpg",
       "capacity": 11,
-      "equipments": [],
       "createdAt": "2025-04-07T14:15:55.733Z",
+      "description": "Brainstorming et créativité",
+      "equipments": [],
+      "id": "3",
+      "image": "images/hemant.jpg",
+      "name": "Helix",
+      "slug": "helix",
       "updatedAt": "2025-04-09T16:45:19.025Z"
     },
     {
-      "id": "4",
-      "name": "Salle de ouf",
-      "description": "Salle de ouf",
-      "slug": "salle-de-ouf",
-
-      "image": "images/walls.jpg",
       "capacity": 10,
+      "createdAt": "2025-04-09T16:45:34.419Z",
+      "description": "Point de convergence de toutes les idées",
       "equipments": [
         {
           "id": "1",
@@ -72,17 +66,16 @@
           "type": "PROJECTOR"
         }
       ],
-      "createdAt": "2025-04-09T16:45:34.419Z",
+      "id": "4",
+      "image": "images/walls.jpg",
+      "name": "Nexus",
+      "slug": "nexus",
       "updatedAt": "2025-04-09T16:45:34.419Z"
     },
     {
-      "id": "5",
-      "name": "Salle nulle",
-      "description": "Salle nulle",
-      "slug": "salle-nulle",
-
-      "image": "images/wells.jpg",
       "capacity": 26,
+      "createdAt": "2025-04-09T16:45:49.096Z",
+      "description": "Pour de la hauteur et de la perspective",
       "equipments": [
         {
           "id": "1",
@@ -94,7 +87,10 @@
           "type": "PROJECTOR"
         }
       ],
-      "createdAt": "2025-04-09T16:45:49.096Z",
+      "id": "5",
+      "image": "images/wells.jpg",
+      "name": "Observatory",
+      "slug": "observatory",
       "updatedAt": "2025-04-09T16:45:49.096Z"
     }
   ]

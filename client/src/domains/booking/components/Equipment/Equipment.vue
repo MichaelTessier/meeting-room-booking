@@ -17,16 +17,17 @@
 </script>
 
 <template>
-  <div
+  <Card
     data-test="equipment"
-    class="flex flex-col items-center justify-center gap-2"
+    class="flex flex-col items-center justify-center gap-2 p-5"
   >
     <Icon
       v-if="icon"
       :icon="icon"
-      :size="ICON_SIZE.XX_LARGE"
+      size="xx-large"
       data-test="equipment__icon"
     />
+    <div class="h-[1px] w-full bg-border"></div>
     <p data-test="equipment__name">{{ equipment.name }}</p>
-  </div>
+  </Card>
 </template>

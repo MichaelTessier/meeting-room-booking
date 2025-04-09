@@ -1,13 +1,13 @@
 {
   "booking": {
     "create": {
-      "title": "booking the {room}"
+      "title": "Booking {room}"
     },
     "form": {
+      "cancel": "Cancel booking",
       "date": "Date",
       "dateEnd": "End date",
       "dateStart": "Start date",
-      "cancel": "Cancel booking",
       "description": "Description",
       "reset": "Reset",
       "submit": "Submit",

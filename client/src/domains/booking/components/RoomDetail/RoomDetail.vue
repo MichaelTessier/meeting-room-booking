@@ -22,7 +22,7 @@
       data-test="room-detail__image"
       :src="room.image"
       :alt="room.name"
-      class="w-full h-[32rem] object-cover object-center"
+      class="w-full h-[31.1rem] object-cover object-center"
     />
     <div class="flex gap-4">
       <div

@@ -72,7 +72,7 @@
 
   .ftr-timetable-location__name {
     text-align: center;
-    font-size: 30px;
+    font-size: 22px;
     height: 110px;
     display: flex !important;
     justify-content: center;

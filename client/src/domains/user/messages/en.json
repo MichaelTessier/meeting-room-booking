@@ -1,8 +1,8 @@
 {
-  "functional": {
-    "dataProvider": {
-      "error": "Sorry, something's wrong",
-      "loading": "Data is loading"
+  "user": {
+    "bookings": {
+      "empty": "You have not booked any events yet.",
+      "title": "Your next bookings"
     }
   }
 }

@@ -1,7 +1,8 @@
 {
-  "user": {
-    "bookings": {
-      "title": "Your next bookings"
+  "functional": {
+    "dataProvider": {
+      "error": "Sorry, something's wrong",
+      "loading": "Data is loading"
     }
   }
 }

@@ -13,6 +13,11 @@
     isDialogOpen.value = true
     selectedBooking.value = booking
   }
+
+  const closeDialog = () => {
+    isDialogOpen.value = false
+    selectedBooking.value = null
+  }
 </script>
 
 <template>
@@ -21,8 +26,15 @@
     class="flex flex-col gap-6"
   >
     <Heading class="text-center">{{ $t('user.bookings.title') }}</Heading>
+
+    <div v-if="!bookings.length">
+      <Text class="text-center">
+        {{ $t('user.bookings.empty') }}
+      </Text>
+    </div>
     <div
       v-for="booking in bookings"
+      v-else
       :key="booking.id"
     >
       <BookingCard
@@ -37,8 +49,8 @@
       :key="selectedBooking.id"
       v-model:open="isDialogOpen"
       :booking="selectedBooking"
-      @submit="isDialogOpen = false"
-      @delete="isDialogOpen = false"
+      @submit="closeDialog"
+      @delete="closeDialog"
     />
   </div>
 </template>

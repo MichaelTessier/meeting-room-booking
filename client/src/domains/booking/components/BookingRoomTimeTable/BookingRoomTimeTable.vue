@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import type { Booking, Room } from 'meeting-room-booking-types'
-  import { type TimeTableItem } from 'vue3-timetable'
+  import { type TimeTableItem, type TimeTableLocation } from 'vue3-timetable'
 
   const props = defineProps<{
     rooms: Room[]
@@ -33,36 +33,59 @@
   })
 
   const route = useRoute()
+  const date = computed(() => {
+    return (route.query.start as string) ?? ''
+  })
 
-  const isDialogOpen = ref(false)
+  const isUpdateDialogOpen = ref(false)
   const selectedBookingId = ref<string>('')
-  const onBookingClick = (item: TimeTableItem) => {
-    isDialogOpen.value = true
-    console.log('🚀 ~ onBookingClick ~ isDialogOpen:', isDialogOpen.value)
-    selectedBookingId.value = item.id.toString()
-  }
-
   const selectedBooking = computed(() => {
     return props.bookings.find(
       (booking) => booking.id === selectedBookingId.value,
     )
   })
+
+  const onBookingClick = (item: TimeTableItem) => {
+    isUpdateDialogOpen.value = true
+    selectedBookingId.value = item.id.toString()
+  }
+
+  const selectedRoomId = ref<string>('')
+  const isCreateDialogOpen = ref(false)
+  const selectedRoom = computed(() => {
+    return props.rooms.find((room) => room.id === selectedRoomId.value)
+  })
+
+  const onRoomClick = (item: TimeTableLocation) => {
+    isCreateDialogOpen.value = true
+    console.log('🚀 ~ onBookingClick ~ isDialogOpen:', isCreateDialogOpen.value)
+    selectedRoomId.value = item.id.toString()
+  }
 </script>
 
 <template>
   <div class="h-full">
     <TimeTable
       :locations="locations"
-      :date="route.query.start as string"
+      :date="date"
       @item-click="onBookingClick"
+      @location-click="onRoomClick"
     />
 
-    <BookingFormDialog
+    <BookingUpdateDialog
       v-if="selectedBooking"
       :key="selectedBooking.id"
-      v-model:open="isDialogOpen"
+      v-model:open="isUpdateDialogOpen"
       :booking="selectedBooking"
-      @submit="isDialogOpen = false"
+      @submit="isUpdateDialogOpen = false"
+    />
+
+    <BookingCreateDialog
+      v-if="selectedRoom"
+      :key="selectedRoom.id"
+      v-model:open="isCreateDialogOpen"
+      :room="selectedRoom"
+      @submit="isCreateDialogOpen = false"
     />
   </div>
 </template>

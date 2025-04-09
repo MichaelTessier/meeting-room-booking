@@ -23,6 +23,9 @@ export const fetchUserBooking = async () => {
 }
 
 export const fetchBooking = async (id: string) => {
+  if (!id) {
+    throw new Error('Booking ID is required')
+  }
   const bookings = await fetchBookings()
 
   const booking = bookings.find((booking) => booking.id === id)
@@ -31,6 +34,9 @@ export const fetchBooking = async (id: string) => {
 }
 
 export const updateBooking = async (booking: Booking) => {
+  if (!booking?.id) {
+    throw new Error('Booking ID is required')
+  }
   const bookings = await fetchBookings()
 
   const bookingsUpdated = bookings.map((item) => {
@@ -46,4 +52,22 @@ export const updateBooking = async (booking: Booking) => {
   )
 
   return booking
+}
+
+export const createBooking = async (booking: Booking) => {
+  if (!booking) {
+    throw new Error('Booking is required')
+  }
+  const bookings = await fetchBookings()
+
+  const newBooking = {
+    ...booking,
+    id: new Date().getUTCMilliseconds().toString(),
+  }
+
+  bookings.push(newBooking)
+
+  await fs.writeFile(BOOKINGS_URL, JSON.stringify({ bookings }))
+
+  return newBooking
 }

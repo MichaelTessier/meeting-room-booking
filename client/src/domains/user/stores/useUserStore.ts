@@ -1,5 +1,5 @@
 import { useFetch } from '@vueuse/core'
-import type { User, Booking, BookingUpdate } from 'meeting-room-booking-types'
+import type { User, Booking } from 'meeting-room-booking-types'
 
 interface UserState {
   user?: User
@@ -57,13 +57,19 @@ export const useUserStore = defineStore('userStore', {
         this.bookings = data.value
       }
     },
-    updateUserBooking(booking: BookingUpdate) {
+    updateUserBooking(booking: Booking) {
       this.bookings = this.bookings.map((item) => {
         return {
           ...item,
           ...(item.id === booking.id && booking),
         }
       })
+    },
+    addUserBooking(booking: Booking) {
+      this.bookings.push(booking)
+    },
+    removeLastUserBooking() {
+      this.bookings = this.bookings.slice(0, -1)
     },
   },
 })

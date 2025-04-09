@@ -31,12 +31,3 @@ exports[`API User > GET /api/v1/users/:id > should return a formatted user 1`] =
   "updatedAt": "2025-04-08T17:31:39.489Z",
 }
 `;
-
-exports[`API User > GET /api/v1/users/:slug > should return a formatted user 1`] = `
-{
-  "createdAt": "2025-04-07T12:39:29.812Z",
-  "id": "1",
-  "name": "Iron Man",
-  "updatedAt": "2025-04-08T17:31:39.489Z",
-}
-`;

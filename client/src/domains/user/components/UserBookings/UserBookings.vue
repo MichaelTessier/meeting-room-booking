@@ -32,11 +32,12 @@
       />
     </div>
 
-    <BookingFormDialog
+    <BookingUpdateDialog
       v-if="selectedBooking"
       :key="selectedBooking.id"
       v-model:open="isDialogOpen"
       :booking="selectedBooking"
+      @submit="isDialogOpen = false"
     />
   </div>
 </template>

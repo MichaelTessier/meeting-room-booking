@@ -10,13 +10,15 @@
       ? new Date(route.query.start as string)
       : new Date()
 
-    bookingFiltersStore.$patch({ startDate: date.toString() })
+    bookingFiltersStore.$patch({ startDate: getLocalISOString(date) })
   })
 
   watch(
     () => startDate,
     (startDate) => {
       if (!startDate?.value) return
+
+      console.log('object')
 
       router.push({
         name: route.name,

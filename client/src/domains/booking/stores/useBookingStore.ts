@@ -1,5 +1,5 @@
 import { useFetch } from '@vueuse/core'
-import type { Booking, BookingUpdate } from 'meeting-room-booking-types'
+import type { Booking } from 'meeting-room-booking-types'
 
 interface BookingState {
   bookings: Booking[]
@@ -33,10 +33,7 @@ export const useBookingStore = defineStore('bookingStore', {
       this.error = error.value
       this.bookings = data.value ?? []
     },
-    async updateBooking(booking: BookingUpdate) {
-      console.log('🚀 ~ updateBooking ~ booking:', booking)
-      const url = new URL(`${baseUrl}/${booking.id}`)
-
+    async updateBooking(booking: Booking) {
       const previousBookings = [...this.bookings]
 
       this.bookings = this.bookings.map((item) => {
@@ -46,7 +43,7 @@ export const useBookingStore = defineStore('bookingStore', {
         }
       })
 
-      const { isFetching, error } = await useFetch(url.toString())
+      const { isFetching, error } = await useFetch(baseUrl)
         .put({ booking })
         .json<Booking>()
 
@@ -56,6 +53,29 @@ export const useBookingStore = defineStore('bookingStore', {
       if (error.value) {
         this.bookings = previousBookings
       }
+    },
+
+    async createBooking(booking: Booking) {
+      const previousBookings = [...this.bookings]
+
+      this.bookings.push(booking)
+
+      const { data, isFetching, error } = await useFetch(baseUrl)
+        .post({ booking })
+        .json<Booking>()
+
+      this.isFetching = isFetching.value
+      this.error = error.value
+
+      if (error.value) {
+        this.bookings = previousBookings
+
+        return
+      }
+      return data.value
+    },
+    removeLastUserBooking() {
+      this.bookings = this.bookings.slice(0, -1)
     },
   },
 })

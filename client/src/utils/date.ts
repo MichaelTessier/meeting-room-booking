@@ -4,8 +4,8 @@ import {
   ZonedDateTime,
 } from '@internationalized/date'
 
-export function getLocalISOString(date: Date) {
-  const timezoneOffset = new Date(date).getTimezoneOffset() * 60000 //offset in milliseconds
+export function getLocalISOString(date: Date = new Date()) {
+  const timezoneOffset = date.getTimezoneOffset() * 60000 //offset in milliseconds
 
   return new Date(date.getTime() - timezoneOffset).toISOString().slice(0, -1)
 }
@@ -19,7 +19,7 @@ export function zonedDateToISOString(date: ZonedDateTime, time: string) {
   return getLocalISOString(_date)
 }
 
-export function getHours(date: Date, isRounded: boolean = false) {
+export function getHours(date: Date = new Date(), isRounded: boolean = false) {
   const _date = new Date(date)
   const dateHours = _date.getHours()
   const dateMinutes = _date.getMinutes()
@@ -63,3 +63,7 @@ export const TIME = {
 
 export const TIMES = Object.values(TIME)
 export type Times = (typeof TIMES)[number]
+
+export function addHours(date: Date = new Date(), hours = 1) {
+  return new Date(date.getTime() + hours * (60 * 60 * 1000))
+}

@@ -20,10 +20,6 @@
     'location-click': [TimeTableItem]
   }>()
 
-  const onItemClick = (item: TimeTableItem) => {
-    emit('item-click', item)
-  }
-
   const id = ref(new Date().getTime())
 
   watch(
@@ -50,8 +46,8 @@
       :number-of-hours="17"
       :show-time-marker="false"
       :locations="locations"
-      @item-click="onItemClick"
-      @location-click="(location) => console.log(location)"
+      @item-click="(item) => emit('item-click', item)"
+      @location-click="(item) => emit('location-click', item)"
     />
   </div>
 </template>
@@ -71,6 +67,10 @@
 
   .ftr-timetable-datetime__select {
     display: none !important;
+  }
+
+  .ftr-timetable-location {
+    cursor: pointer !important;
   }
 
   .ftr-timetable-location,

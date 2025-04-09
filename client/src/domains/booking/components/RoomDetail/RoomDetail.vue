@@ -11,6 +11,8 @@
   const onClick = () => {
     router.push({ name: BOOKING_ROUTES.CALENDAR })
   }
+
+  const isDialogOpen = ref(false)
 </script>
 
 <template>
@@ -79,15 +81,30 @@
           class="my-8"
           :equipments="room.equipments"
         />
-        <Button
-          class="w-full"
-          variant="outline"
-          size="lg"
-          @click="onClick"
-        >
-          {{ t('booking.room.book') }}
-        </Button>
+        <div class="flex flex-row gap-4 w-full">
+          <Button
+            class="w-full"
+            variant="outline"
+            size="lg"
+            @click="isDialogOpen = true"
+          >
+            {{ t('booking.room.button.book') }}
+          </Button>
+          <Button
+            class="w-full"
+            variant="outline"
+            size="lg"
+            @click="onClick"
+          >
+            {{ t('booking.room.button.seeAvailability') }}
+          </Button>
+        </div>
       </div>
     </div>
+    <BookingCreateDialog
+      v-model:open="isDialogOpen"
+      :room="room"
+      @submit="isDialogOpen = false"
+    />
   </div>
 </template>

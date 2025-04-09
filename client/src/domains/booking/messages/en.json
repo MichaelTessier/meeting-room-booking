@@ -1,11 +1,7 @@
 {
   "booking": {
-    "dialog": {
-      "cancel": "Cancel",
-      "title": {
-        "add": "New booking",
-        "edit": "Edit booking"
-      }
+    "create": {
+      "title": "booking the {room}"
     },
     "form": {
       "date": "Date",
@@ -24,7 +20,10 @@
     },
     "room": {
       "available": "Available",
-      "book": "See availability",
+      "button": {
+        "book": "Book",
+        "seeAvailability": "See availability"
+      },
       "capacity": "Capacity",
       "capacityInfo": "up to {capacity} people",
       "card": {
@@ -32,6 +31,9 @@
       },
       "unavailable": "Not available"
     },
-    "title": "Booking"
+    "title": "Booking",
+    "update": {
+      "title": "Edit booking"
+    }
   }
 }

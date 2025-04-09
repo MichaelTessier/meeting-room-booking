@@ -1,11 +1,11 @@
 import express from 'express'
 import { Booking } from 'meeting-room-booking-types'
-// import { formatRoom } from './formatters'
 import type { ApiResponse } from '@/types'
 import {
   fetchBooking,
   fetchBookings,
   updateBooking,
+  createBooking,
   fetchUserBooking,
 } from '@/database/bookings'
 
@@ -54,10 +54,27 @@ router.get<{ id: string }, ApiResponse<Booking>>('/:id', async (req, res) => {
 })
 
 router.put<{}, ApiResponse<Booking>, { booking: Booking }>(
-  '/:id',
+  '/',
   async (req, res) => {
     try {
       const response = await updateBooking(req.body?.booking)
+
+      if (!response) {
+        res.status(404).json({ message: 'Booking not updated' })
+      } else {
+        res.json(response)
+      }
+    } catch (error) {
+      res.status(500).json({ message: 'Error when creating booking' })
+    }
+  },
+)
+
+router.post<{}, ApiResponse<Booking>, { booking: Booking }>(
+  '/',
+  async (req, res) => {
+    try {
+      const response = await createBooking(req.body?.booking)
 
       if (!response) {
         res.status(404).json({ message: 'Booking not updated' })

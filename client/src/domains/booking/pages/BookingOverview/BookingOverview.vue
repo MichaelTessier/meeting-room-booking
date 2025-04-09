@@ -19,8 +19,13 @@
 </script>
 
 <template>
-  <RoomGrid
-    v-if="rooms.length"
-    :rooms="rooms"
-  />
+  <DataLayout
+    :is-fetching="isFetching"
+    :error="error"
+    :data="rooms"
+  >
+    <template #data="{ data }">
+      <RoomGrid :rooms="data" />
+    </template>
+  </DataLayout>
 </template>

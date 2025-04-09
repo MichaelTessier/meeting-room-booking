@@ -15,8 +15,11 @@
 
       <div class="flex flex-1 h-full pb-10">
         <BookingLayout>
-          <div class="my-5">
-            <BookingFilters v-if="hasFilters" />
+          <div
+            v-if="hasFilters"
+            class="my-5"
+          >
+            <BookingFilters />
           </div>
 
           <RouterView />

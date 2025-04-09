@@ -14,6 +14,13 @@
     error: bookingError,
   } = storeToRefs(bookingStore)
 
+  const dataProxy = computed(() => {
+    return {
+      rooms: rooms.value,
+      bookings: bookings.value,
+    }
+  })
+
   const route = useRoute()
 
   const startDate = computed(() => {
@@ -38,12 +45,19 @@
 
 <template>
   <div class="h-full">
-    <BookingRoomTimeTable
-      v-if="rooms.length && bookings.length"
-      :rooms="rooms"
-      :bookings="bookings"
-      :date="startDate"
-      class="mb-4"
-    />
+    <DataLayout
+      :is-fetching="roomIsFetching || bookingIsFetching"
+      :error="roomError || bookingError"
+      :data="dataProxy"
+    >
+      <template #data="{ data }">
+        <BookingRoomTimeTable
+          :rooms="data.rooms"
+          :bookings="data.bookings"
+          :date="startDate"
+          class="mb-4"
+        />
+      </template>
+    </DataLayout>
   </div>
 </template>

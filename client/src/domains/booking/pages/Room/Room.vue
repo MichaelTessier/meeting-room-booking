@@ -11,10 +11,16 @@
 </script>
 
 <template>
-  <BookingLayout>
-    <RoomDetail
-      v-if="room"
-      :room="room"
-    />
-  </BookingLayout>
+  <DataLayout
+    :is-fetching="isFetching"
+    :error="error"
+    :data="room"
+  >
+    <template #data="{ data }">
+      <RoomDetail
+        :room="data"
+        class="mt-10 pt-9"
+      />
+    </template>
+  </DataLayout>
 </template>

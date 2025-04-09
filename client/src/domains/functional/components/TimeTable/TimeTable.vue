@@ -36,11 +36,6 @@
     <VueTimeTable
       :key="date && id"
       variant="vertical"
-      :styles="{
-        backgroundColor: '#111827',
-        dateBackgroundColor: 'transparent',
-        borderStyle: '1px solid #374151',
-      }"
       :dates="[date]"
       :starting-hour="6"
       :number-of-hours="17"
@@ -54,15 +49,12 @@
 
 <style>
   .ftr-timetable {
-    --custom-border-style: 1px solid #dadada !important;
-    --custom-background-color: #e1e8f0 !important;
-    --custom-text-color: #020203 !important;
-  }
-
-  .dark .ftr-timetable {
-    --custom-border-style: 1px solid #03060a !important;
-    --custom-background-color: #0a101c !important;
-    --custom-text-color: #e1e8f0 !important;
+    --custom-border-style: 1px solid hsl(var(--border)) !important;
+    --custom-background-color: hsl(var(--muted)) !important;
+    --custom-text-color: hsl(var(--sidebar-foreground)) !important;
+    --date-background-color: hsl(var(--muted)) !important;
+    --datepicker-background-color: hsl(var(--muted)) !important;
+    --scroll-color: hsl(var(--border)) !important;
   }
 
   .ftr-timetable-datetime__select {
@@ -76,7 +68,6 @@
   .ftr-timetable-location,
   .ftr-timetable-datetime__date {
     height: 100px !important;
-    background-color: var(--custom-background-color) !important;
   }
 
   .ftr-timetable-location__name {

@@ -12,6 +12,8 @@ export const ICON_NAME = {
   PLUS: 'plus',
   PROJECTOR: 'projector',
   TV_MINIMAL: 'tv-minimal',
+  MOON: 'moon',
+  SUN: 'sun',
 } as const
 
 export const ICON_NAMES = Object.values(ICON_NAME)
@@ -31,6 +33,8 @@ export const iconLucideMatcher = {
   [ICON_NAME.PLUS]: 'Plus',
   [ICON_NAME.PROJECTOR]: 'Projector',
   [ICON_NAME.TV_MINIMAL]: 'TvMinimal',
+  [ICON_NAME.MOON]: 'MoonStar',
+  [ICON_NAME.SUN]: 'Sun',
 }
 
 export const ICON_SIZE = {

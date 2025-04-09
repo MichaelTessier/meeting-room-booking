@@ -81,15 +81,7 @@
           class="my-8"
           :equipments="room.equipments"
         />
-        <div class="flex flex-row gap-4 w-full">
-          <Button
-            class="w-full"
-            variant="outline"
-            size="lg"
-            @click="isDialogOpen = true"
-          >
-            {{ t('booking.room.button.book') }}
-          </Button>
+        <div class="flex flex-row gap-4 w-full mt-10">
           <Button
             class="w-full"
             variant="outline"
@@ -97,6 +89,13 @@
             @click="onClick"
           >
             {{ t('booking.room.button.seeAvailability') }}
+          </Button>
+          <Button
+            class="w-full"
+            size="lg"
+            @click="isDialogOpen = true"
+          >
+            {{ t('booking.room.button.book') }}
           </Button>
         </div>
       </div>

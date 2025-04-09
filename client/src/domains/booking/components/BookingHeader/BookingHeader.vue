@@ -15,20 +15,22 @@
 
 <template>
   <header
-    class="flex items-center bg-white p-4 shadow dark:bg-gray-900 h-[100px]"
+    class="flex items-center bg-background p-4 shadow dark:bg-muted h-[100px] sticky top-0"
   >
-    <Icon
-      icon="circle-dot-dashed"
-      class="mr-10"
-      size="xx-large"
-    />
+    <div class="text-primary">
+      <Icon
+        icon="circle-dot-dashed"
+        class="mr-6"
+        size="xx-large"
+      />
+    </div>
     <menu>
       <ul class="flex gap-8">
         <li
           v-for="item in items"
           :key="item.label"
-          class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
         >
+          <!-- class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" -->
           <RouterLink :to="{ name: item.route }">
             {{ item.label }}
           </RouterLink>

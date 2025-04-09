@@ -13,7 +13,7 @@
     <div class="col-span-1 md:col-span-6 lg:col-span-8 flex flex-col">
       <BookingHeader />
 
-      <div class="flex flex-1 h-full">
+      <div class="flex flex-1 h-full pb-10">
         <BookingLayout>
           <div class="my-5">
             <BookingFilters v-if="hasFilters" />

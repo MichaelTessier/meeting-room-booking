@@ -37,11 +37,13 @@
 </script>
 
 <template>
-  <BookingRoomTimeTable
-    v-if="rooms.length && bookings.length"
-    :rooms="rooms"
-    :bookings="bookings"
-    :date="startDate"
-    class="mb-4"
-  />
+  <div class="h-full">
+    <BookingRoomTimeTable
+      v-if="rooms.length && bookings.length"
+      :rooms="rooms"
+      :bookings="bookings"
+      :date="startDate"
+      class="mb-4"
+    />
+  </div>
 </template>

@@ -109,6 +109,7 @@ declare module 'vue' {
     UserAside: typeof import('./src/domains/user/components/UserAside/UserAside.vue')['default']
     UserAvatar: typeof import('./src/domains/user/components/UserAvatar/UserAvatar.vue')['default']
     UserBookings: typeof import('./src/domains/user/components/UserBookings/UserBookings.vue')['default']
+    UserDarkMode: typeof import('./src/domains/user/components/UserDarkMode/UserDarkMode.vue')['default']
     UserHeader: typeof import('./src/domains/user/components/UserHeader/UserHeader.vue')['default']
   }
 }

@@ -26,7 +26,9 @@
           info: booking.description,
           style: {
             backgroundColor:
-              userStore.user?.id === booking.user?.id ? '#3a82f6' : '#34435c',
+              userStore.user?.id === booking.user?.id
+                ? 'hsl(var(--primary)'
+                : 'hsl(var(--border)',
           },
         })),
     }))
@@ -58,7 +60,6 @@
 
   const onRoomClick = (item: TimeTableLocation) => {
     isCreateDialogOpen.value = true
-    console.log('🚀 ~ onBookingClick ~ isDialogOpen:', isCreateDialogOpen.value)
     selectedRoomId.value = item.id.toString()
   }
 </script>

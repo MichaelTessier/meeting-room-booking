@@ -2,7 +2,7 @@
   <div
     v-if="avatarLetters"
     data-test="user-avatar"
-    class="rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-200 flex items-center justify-center w-[40px] h-[40px]"
+    class="rounded-full bg-primary dark:text-muted flex items-center justify-center w-[40px] h-[40px]"
   >
     {{ avatarLetters }}
   </div>

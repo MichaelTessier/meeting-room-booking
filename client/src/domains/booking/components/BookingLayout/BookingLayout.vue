@@ -15,7 +15,7 @@
       {{ title }}
     </Heading>
 
-    <div class="pt-5 h-full">
+    <div class="pt-5 flex flex-col h-full">
       <slot />
     </div>
   </section>

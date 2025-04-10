@@ -10,7 +10,6 @@
     delete: []
   }>()
 
-  const { t } = useI18n()
   const bookingStore = useBookingStore()
   const userStore = useUserStore()
 
@@ -61,7 +60,7 @@
   <Dialog>
     <DialogContent>
       <DialogHeader>
-        <DialogTitle>{{ t('booking.update.title') }}</DialogTitle>
+        <DialogTitle>{{ $t('booking.update.title') }}</DialogTitle>
       </DialogHeader>
 
       <BookingForm

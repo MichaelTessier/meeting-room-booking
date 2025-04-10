@@ -7,7 +7,6 @@
 
   const emit = defineEmits(['submit'])
 
-  const { t } = useI18n()
   const bookingStore = useBookingStore()
   const userStore = useUserStore()
 
@@ -51,7 +50,7 @@
     <DialogContent>
       <DialogHeader>
         <DialogTitle>
-          {{ t('booking.create.title', { room: room.name }) }}
+          {{ $t('booking.create.title', { room: room.name }) }}
         </DialogTitle>
       </DialogHeader>
 

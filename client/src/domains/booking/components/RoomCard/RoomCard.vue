@@ -1,8 +1,6 @@
 <script setup lang="ts">
   import type { Room } from 'meeting-room-booking-types'
 
-  const { t } = useI18n()
-
   const props = defineProps<{
     room: Room
   }>()
@@ -10,7 +8,10 @@
   const router = useRouter()
 
   const onClick = () => {
-    router.push({ name: 'room', params: { slug: props.room.slug } })
+    router.push({
+      name: BOOKING_ROUTES.ROOM,
+      params: { slug: props.room.slug },
+    })
   }
 </script>
 
@@ -41,7 +42,7 @@
           v-if="room.capacity"
           data-test="room-card__capacity"
         >
-          {{ t('booking.room.card.capacity') }} {{ room.capacity }}
+          {{ $t('booking.room.card.capacity') }} {{ room.capacity }}
         </p>
 
         <RoomAvailability

@@ -31,7 +31,10 @@
           :key="item.label"
         >
           <!-- class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" -->
-          <RouterLink :to="{ name: item.route }">
+          <RouterLink
+            :to="{ name: item.route }"
+            class="hover:text-primary transition"
+          >
             {{ item.label }}
           </RouterLink>
         </li>

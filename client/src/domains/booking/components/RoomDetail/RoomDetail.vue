@@ -5,7 +5,6 @@
     room: Room
   }>()
 
-  const { t } = useI18n()
   const router = useRouter()
 
   const onClick = () => {
@@ -49,14 +48,14 @@
           data-test="room-detail__capacity"
         >
           <Text data-test="room-detail__capacity-label">
-            {{ t('booking.room.capacity') }}&nbsp;
+            {{ $t('booking.room.capacity') }}&nbsp;
           </Text>
           <Text
             data-test="room-detail__capacity-info"
             type="large"
           >
             {{
-              t('booking.room.capacityInfo', {
+              $t('booking.room.capacityInfo', {
                 capacity: room.capacity,
               })
             }}
@@ -76,7 +75,7 @@
             size="lg"
             @click="onClick"
           >
-            {{ t('booking.room.button.seeAvailability') }}
+            {{ $t('booking.room.button.seeAvailability') }}
           </Button>
           <Button
             class="w-full"
@@ -84,7 +83,7 @@
             :disabled="!room.isAvailable"
             @click="isDialogOpen = true"
           >
-            {{ t('booking.room.button.book') }}
+            {{ $t('booking.room.button.book') }}
           </Button>
         </div>
       </div>

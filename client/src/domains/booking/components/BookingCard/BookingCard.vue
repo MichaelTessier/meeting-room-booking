@@ -4,8 +4,6 @@
   defineProps<{
     booking: Booking
   }>()
-
-  const { t, d } = useI18n()
 </script>
 
 <template>
@@ -31,7 +29,7 @@
           icon="calendar"
           size="small"
         />
-        <Text type="x-small">{{ t('booking.card.pending') }} </Text>
+        <Text type="x-small">{{ $t('booking.card.pending') }} </Text>
       </div>
     </div>
 
@@ -50,8 +48,8 @@
           type="x-small"
           data-test="booking-card__date"
         >
-          {{ d(booking.dateStart, 'day') }} -
-          {{ d(booking.dateEnd, 'day') }}
+          {{ $d(new Date(booking.dateStart), 'short') }} -
+          {{ $d(new Date(booking.dateEnd), 'short') }}
         </Text>
 
         <Icon

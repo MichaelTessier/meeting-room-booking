@@ -11,8 +11,6 @@
     delete: []
   }>()
 
-  const { t } = useI18n()
-
   const state = reactive<Partial<Booking>>({
     title: props.booking?.title ?? '',
     description: props.booking?.description ?? '',
@@ -49,7 +47,7 @@
     @submit.prevent="onSubmit"
   >
     <FormControl
-      :label="t('booking.form.title')"
+      :label="$t('booking.form.title')"
       :label-for="'title'"
     >
       <Input
@@ -60,7 +58,7 @@
       />
     </FormControl>
     <FormControl
-      :label="t('booking.form.description')"
+      :label="$t('booking.form.description')"
       :label-for="'description'"
     >
       <Textarea
@@ -72,22 +70,22 @@
     </FormControl>
 
     <FormControl
-      :label="t('booking.form.dateStart')"
+      :label="$t('booking.form.dateStart')"
       :label-for="'dateStart'"
     >
       <DateTimePicker v-model:date="state.dateStart" />
     </FormControl>
 
     <FormControl
-      :label="t('booking.form.dateEnd')"
+      :label="$t('booking.form.dateEnd')"
       :label-for="'dateEnd'"
     >
       <DateTimePicker v-model:date="state.dateEnd" />
     </FormControl>
 
     <FormAction
-      :submit-label="t('booking.form.submit')"
-      :reset-label="t('booking.form.reset')"
+      :submit-label="$t('booking.form.submit')"
+      :reset-label="$t('booking.form.reset')"
     >
       <Button
         v-if="canCancel"
@@ -95,7 +93,7 @@
         variant="destructive"
         @click="$emit('delete')"
       >
-        {{ t('booking.form.cancel') }}
+        {{ $t('booking.form.cancel') }}
       </Button>
     </FormAction>
   </form>

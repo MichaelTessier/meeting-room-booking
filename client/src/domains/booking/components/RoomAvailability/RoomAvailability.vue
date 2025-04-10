@@ -1,3 +1,11 @@
+<script setup lang="ts">
+  defineProps<{
+    isAvailable: boolean
+  }>()
+
+  const { t } = useI18n()
+</script>
+
 <template>
   <Badge
     class="flex items-center gap-2"
@@ -24,11 +32,3 @@
     </Text>
   </Badge>
 </template>
-
-<script setup lang="ts">
-  defineProps<{
-    isAvailable: boolean
-  }>()
-
-  const { t } = useI18n()
-</script>

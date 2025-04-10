@@ -5,22 +5,9 @@ import userEn from '@/domains/user/messages/en.json'
 
 const datetimeFormats = {
   en: {
-    day: {
+    short: {
       month: 'numeric',
       day: 'numeric',
-      hour: 'numeric',
-      minute: 'numeric',
-    },
-    short: {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-    },
-    long: {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-      weekday: 'short',
       hour: 'numeric',
       minute: 'numeric',
     },
@@ -28,6 +15,9 @@ const datetimeFormats = {
 }
 
 export const i18n = createI18n({
+  globalInjection: true,
+  legacy: false,
+  locale: 'en',
   fallbackLocale: 'en',
   datetimeFormats,
   messages: {

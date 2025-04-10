@@ -13,7 +13,7 @@ describe('API Booking', () => {
 
   describe('GET /api/v1/bookings/:id', () => {
     it('should return a formatted booking', async () => {
-      const response = await request(app).get('/api/v1/bookings/1')
+      const response = await request(app).get('/api/v1/bookings/252')
       expect(response.status).toBe(200)
       expect(response.body).toMatchSnapshot()
     })

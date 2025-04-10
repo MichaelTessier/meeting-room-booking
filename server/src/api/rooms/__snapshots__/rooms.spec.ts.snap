@@ -5,7 +5,7 @@ exports[`API Rooms > GET /api/v1/rooms > should return a formatted rooms 1`] = `
   {
     "capacity": 5,
     "createdAt": "2025-04-07T12:39:29.812Z",
-    "description": "Salle #1",
+    "description": "Espace d'expérimentation de test et d'idées",
     "equipments": [
       {
         "id": "1",
@@ -21,14 +21,14 @@ exports[`API Rooms > GET /api/v1/rooms > should return a formatted rooms 1`] = `
     "id": "1",
     "image": "undefined/images/campaign.jpg",
     "isAvailable": true,
-    "name": "Salle #1",
-    "slug": "salle-1",
+    "name": "Lab Alpha",
+    "slug": "lab-alpha",
     "updatedAt": "2025-04-08T17:31:39.489Z",
   },
   {
     "capacity": 10,
     "createdAt": "2025-04-07T12:39:55.384Z",
-    "description": "Salle #2",
+    "description": "Pour des prise de décisions rapides et précises",
     "equipments": [
       {
         "id": "2",
@@ -38,27 +38,27 @@ exports[`API Rooms > GET /api/v1/rooms > should return a formatted rooms 1`] = `
     ],
     "id": "2",
     "image": "undefined/images/cooper.jpg",
-    "isAvailable": false,
-    "name": "Salle #2",
-    "slug": "salle-2",
+    "isAvailable": true,
+    "name": "Quantum",
+    "slug": "quantum",
     "updatedAt": "2025-04-07T13:33:37.184Z",
   },
   {
     "capacity": 11,
     "createdAt": "2025-04-07T14:15:55.733Z",
-    "description": "Salle Okjsdkso",
+    "description": "Brainstorming et créativité",
     "equipments": [],
     "id": "3",
     "image": "undefined/images/hemant.jpg",
     "isAvailable": true,
-    "name": "Salle Okjsdkso",
-    "slug": "salle-okjsdkso",
+    "name": "Helix",
+    "slug": "helix",
     "updatedAt": "2025-04-09T16:45:19.025Z",
   },
   {
     "capacity": 10,
     "createdAt": "2025-04-09T16:45:34.419Z",
-    "description": "Salle de ouf",
+    "description": "Point de convergence de toutes les idées",
     "equipments": [
       {
         "id": "1",
@@ -74,14 +74,14 @@ exports[`API Rooms > GET /api/v1/rooms > should return a formatted rooms 1`] = `
     "id": "4",
     "image": "undefined/images/walls.jpg",
     "isAvailable": true,
-    "name": "Salle de ouf",
-    "slug": "salle-de-ouf",
+    "name": "Nexus",
+    "slug": "nexus",
     "updatedAt": "2025-04-09T16:45:34.419Z",
   },
   {
     "capacity": 26,
     "createdAt": "2025-04-09T16:45:49.096Z",
-    "description": "Salle nulle",
+    "description": "Pour de la hauteur et de la perspective",
     "equipments": [
       {
         "id": "1",
@@ -96,8 +96,8 @@ exports[`API Rooms > GET /api/v1/rooms > should return a formatted rooms 1`] = `
     "id": "5",
     "image": "undefined/images/wells.jpg",
     "isAvailable": true,
-    "name": "Salle nulle",
-    "slug": "salle-nulle",
+    "name": "Observatory",
+    "slug": "observatory",
     "updatedAt": "2025-04-09T16:45:49.096Z",
   },
 ]
@@ -107,7 +107,7 @@ exports[`API Rooms > GET /api/v1/rooms/:slug > should return a formatted room 1`
 {
   "capacity": 5,
   "createdAt": "2025-04-07T12:39:29.812Z",
-  "description": "Salle #1",
+  "description": "Espace d'expérimentation de test et d'idées",
   "equipments": [
     {
       "id": "1",
@@ -123,8 +123,8 @@ exports[`API Rooms > GET /api/v1/rooms/:slug > should return a formatted room 1`
   "id": "1",
   "image": "undefined/images/campaign.jpg",
   "isAvailable": true,
-  "name": "Salle #1",
-  "slug": "salle-1",
+  "name": "Lab Alpha",
+  "slug": "lab-alpha",
   "updatedAt": "2025-04-08T17:31:39.489Z",
 }
 `;

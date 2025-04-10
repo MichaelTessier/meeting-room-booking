@@ -10,6 +10,7 @@ describe('router', () => {
         'booking',
         'booking-calendar',
         'booking-overview',
+        'home',
         'room',
         'user',
       ].sort(),

@@ -1,4 +1,4 @@
-# Meeting room booking application
+# 📆 Meeting room booking application
 
 ## Projects install
 
@@ -19,31 +19,6 @@ yarn dev
 ## Contribution
 
 You need to follow commitlint rules with these available subjects `feat|fix|docs|chore|style|refactor|ci|test|revert|perf`
-
-## TODO
-
-### client
-- Test
-  - Add coverage
-  - Global RouterLink
-- i18n
-  - Configure i18n with VSCode
-- Shadcn
-  - Add Dark Mode Switch (dark is default, see class dark on index.html)
-- ESLint
-  - extends rules
-- UI
-  - challenge switch component on Chart
-  - Add skeleton
-  - And more stuffs
-
-### server
-- Eslint
-  - fix format on save
-
-## Complementary information
-
-The user folder is present to show the relevance of the domains folder.
 
 ## Useful development resources
 

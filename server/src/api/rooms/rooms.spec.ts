@@ -13,7 +13,7 @@ describe('API Rooms', () => {
 
   describe('GET /api/v1/rooms/:slug', () => {
     it('should return a formatted room', async () => {
-      const response = await request(app).get('/api/v1/rooms/salle-1')
+      const response = await request(app).get('/api/v1/rooms/lab-alpha')
       expect(response.status).toBe(200)
       expect(response.body).toMatchSnapshot()
     })

@@ -20,7 +20,7 @@ export const fetchRooms = async ({ filters }: FetchRoomsOptions = {}): Promise<
       fetchBookings(),
     ])
 
-    if (!roomsDataString) return undefined
+    if (!roomsDataString) return []
 
     const roomsData = JSON.parse(roomsDataString) as { rooms: Room[] }
     const startDate = filters?.start ? new Date(filters.start) : new Date()

@@ -21,7 +21,7 @@ export const fetchBookings = async (): Promise<Booking[] | undefined> => {
       bookings: Booking[]
     }
 
-    if (!bookingsData) return undefined
+    if (!bookingsData) return []
 
     const now = new Date().toLocaleString()
 
@@ -35,7 +35,7 @@ export const fetchUserBookings = async (): Promise<Booking[] | undefined> => {
   try {
     const bookings = await fetchBookings()
 
-    if (!bookings) return undefined
+    if (!bookings) return []
 
     const now = new Date().toLocaleString()
 
@@ -46,7 +46,7 @@ export const fetchUserBookings = async (): Promise<Booking[] | undefined> => {
         new Date(booking.dateEnd).toLocaleString() > now,
     )
 
-    if (!userBookings.length) return undefined
+    if (!userBookings.length) return []
 
     return userBookings
   } catch (error) {

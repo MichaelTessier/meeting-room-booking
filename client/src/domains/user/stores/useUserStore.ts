@@ -74,6 +74,7 @@ export const useUserStore = defineStore('userStore', {
       })
     },
     addUserBooking(booking: Booking) {
+      console.log('🚀 ~ addUserBooking ~ booking:', booking)
       this.bookings.push(booking)
     },
     removeLastUserBooking() {

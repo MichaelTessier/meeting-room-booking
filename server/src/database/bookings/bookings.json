@@ -2,93 +2,11 @@
   "bookings": [
     {
       "createdAt": "2025-04-07T12:39:29.812Z",
-      "dateEnd": "2025-04-10T14:00:00.000Z",
-      "dateStart": "2025-04-10T12:00:00.000",
-      "description": "Réunion avec les Avengers pour discuter de la prochaine mission.",
-      "id": "1",
-      "room": {
-        "capacity": 5,
-        "createdAt": "2025-04-07T12:39:29.812Z",
-        "description": "Salle #1",
-        "equipments": [
-          { "id": "1", "name": "TV", "type": "TELEVISION" },
-          { "id": "2", "name": "Retro Projecteur", "type": "PROJECTOR" }
-        ],
-        "id": "1",
-        "image": "images/campaign.jpg",
-        "name": "Salle #1",
-        "slug": "salle-1",
-        "updatedAt": "2025-04-08T17:31:39.489Z"
-      },
-      "title": "Réunion au sommet",
-      "updatedAt": "2025-04-08T17:31:39.489Z",
-      "user": {
-        "createdAt": "2025-04-07T12:39:29.812Z",
-        "id": "1",
-        "name": "Iron Man",
-        "updatedAt": "2025-04-08T17:31:39.489Z"
-      }
-    },
-    {
-      "createdAt": "2025-04-07T12:39:29.812Z",
-      "dateEnd": "2025-04-12T12:00:00.000Z",
-      "dateStart": "2025-04-12T10:00:00.000Z",
-      "description": "Réunion avec les Avengers pour discuter de la prochaine mission.",
-      "id": "2",
-      "room": {
-        "capacity": 10,
-        "createdAt": "2025-04-07T12:39:55.384Z",
-        "description": "Salle #2",
-        "equipments": [
-          { "id": "2", "name": "Retro Projecteur", "type": "PROJECTOR" }
-        ],
-        "id": "2",
-        "image": "images/cooper.jpg",
-        "name": "Salle #2",
-        "slug": "salle-2",
-        "updatedAt": "2025-04-07T13:33:37.184Z"
-      },
-      "title": "Réunion au sommet",
-      "updatedAt": "2025-04-08T17:31:39.489Z",
-      "user": {
-        "createdAt": "2025-04-07T12:39:29.812Z",
-        "id": "1",
-        "name": "Iron Man",
-        "updatedAt": "2025-04-08T17:31:39.489Z"
-      }
-    },
-    {
-      "createdAt": "2025-04-07T12:39:29.812Z",
-      "dateEnd": "2025-04-13T19:00:00.000",
-      "dateStart": "2025-04-13T12:00:00.000",
-      "description": "Réunion avec les Avengers pour discuter de la prochaine mission.",
-      "id": "3",
-      "room": {
-        "capacity": 11,
-        "createdAt": "2025-04-07T14:15:55.733Z",
-        "description": "Salle Okjsdkso",
-        "equipments": [],
-        "id": "3",
-        "image": "images/hemant.jpg",
-        "name": "Salle Okjsdkso",
-        "slug": "salle-okjsdkso",
-        "updatedAt": "2025-04-09T16:45:19.025Z"
-      },
-      "title": "Nouvelle réunion 3",
-      "updatedAt": "2025-04-08T17:31:39.489Z",
-      "user": {
-        "createdAt": "2025-04-07T12:39:29.812Z",
-        "id": "1",
-        "name": "Iron Man",
-        "updatedAt": "2025-04-08T17:31:39.489Z"
-      }
-    },
-    {
-      "createdAt": "2025-04-07T12:39:29.812Z",
       "dateEnd": "2025-04-08T14:00:00.000Z",
       "dateStart": "2025-04-08T12:00:00.000Z",
       "description": "Réunion avec les Avengers pour discuter de la prochaine mission.",
       "id": "4",
+      "isPending": false,
       "room": {
         "capacity": 10,
         "createdAt": "2025-04-07T12:39:55.384Z",
@@ -117,6 +35,7 @@
       "dateStart": "2025-04-08T14:00:00.000Z",
       "description": "Réunion avec les Avengers pour discuter de la prochaine mission.",
       "id": "5",
+      "isPending": false,
       "room": {
         "capacity": 11,
         "createdAt": "2025-04-07T14:15:55.733Z",
@@ -138,10 +57,207 @@
       }
     },
     {
-      "title": "azza",
-      "description": "azreraez",
-      "dateStart": "2025-04-10T03:21:14.409Z",
-      "dateEnd": "2025-04-10T04:21:14.409Z",
+      "dateEnd": "2025-04-17T14:00:00.000",
+      "dateStart": "2025-04-17T13:00:00.000",
+      "description": "Histoire de refaire le monde",
+      "id": "252",
+      "isPending": false,
+      "room": {
+        "capacity": 10,
+        "createdAt": "2025-04-07T12:39:55.384Z",
+        "description": "Pour des prise de décisions rapides et précises",
+        "equipments": [
+          { "id": "2", "name": "Retro Projecteur", "type": "PROJECTOR" }
+        ],
+        "id": "2",
+        "image": "http://localhost:8080/images/cooper.jpg",
+        "isAvailable": true,
+        "name": "Quantum",
+        "slug": "quantum",
+        "updatedAt": "2025-04-07T13:33:37.184Z"
+      },
+      "title": "Réunion au sommet",
+      "user": {
+        "createdAt": "2025-04-07T12:39:29.812Z",
+        "id": "3",
+        "name": "Thor",
+        "updatedAt": "2025-04-08T17:31:39.489Z"
+      }
+    },
+    {
+      "dateEnd": "2025-04-11T16:00:00.000",
+      "dateStart": "2025-04-11T13:00:00.000",
+      "description": "Une histoire à raconter",
+      "id": "279",
+      "isPending": false,
+      "room": {
+        "capacity": 11,
+        "createdAt": "2025-04-07T14:15:55.733Z",
+        "description": "Brainstorming et créativité",
+        "equipments": [],
+        "id": "3",
+        "image": "http://localhost:8080/images/hemant.jpg",
+        "isAvailable": true,
+        "name": "Helix",
+        "slug": "helix",
+        "updatedAt": "2025-04-09T16:45:19.025Z"
+      },
+      "title": "Une autre réunion ",
+      "user": {
+        "createdAt": "2025-04-07T12:39:29.812Z",
+        "id": "3",
+        "name": "Thor",
+        "updatedAt": "2025-04-08T17:31:39.489Z"
+      }
+    },
+    {
+      "dateEnd": "2025-04-11T14:00:00.000",
+      "dateStart": "2025-04-11T13:00:00.000",
+      "description": "Pour observer l'inobservable...",
+      "id": "978",
+      "isPending": false,
+      "room": {
+        "capacity": 26,
+        "createdAt": "2025-04-09T16:45:49.096Z",
+        "description": "Pour de la hauteur et de la perspective",
+        "equipments": [
+          { "id": "1", "name": "TV" },
+          { "id": "2", "name": "Retro Projecteur", "type": "PROJECTOR" }
+        ],
+        "id": "5",
+        "image": "http://localhost:8080/images/wells.jpg",
+        "isAvailable": true,
+        "name": "Observatory",
+        "slug": "observatory",
+        "updatedAt": "2025-04-09T16:45:49.096Z"
+      },
+      "title": "Une réunion d'observation",
+      "user": {
+        "createdAt": "2025-04-07T12:39:29.812Z",
+        "id": "3",
+        "name": "Thor",
+        "updatedAt": "2025-04-08T17:31:39.489Z"
+      }
+    },
+    {
+      "dateEnd": "2025-04-14T16:00:00.000",
+      "dateStart": "2025-04-14T14:00:00.000",
+      "description": "Pour voir si cela marche bien ",
+      "id": "318",
+      "isPending": false,
+      "room": {
+        "capacity": 10,
+        "createdAt": "2025-04-09T16:45:34.419Z",
+        "description": "Point de convergence de toutes les idées",
+        "equipments": [
+          { "id": "1", "name": "TV", "type": "TELEVISION" },
+          { "id": "2", "name": "Retro Projecteur", "type": "PROJECTOR" }
+        ],
+        "id": "4",
+        "image": "http://localhost:8080/images/walls.jpg",
+        "isAvailable": true,
+        "name": "Nexus",
+        "slug": "nexus",
+        "updatedAt": "2025-04-09T16:45:34.419Z"
+      },
+      "title": "Juste un test ",
+      "user": {
+        "createdAt": "2025-04-07T12:39:29.812Z",
+        "id": "3",
+        "name": "Thor",
+        "updatedAt": "2025-04-08T17:31:39.489Z"
+      }
+    },
+    {
+      "dateEnd": "2025-04-10T14:00:00.000",
+      "dateStart": "2025-04-10T12:00:00.000",
+      "description": "Pour voir du quantum",
+      "id": "569",
+      "room": {
+        "capacity": 10,
+        "createdAt": "2025-04-07T12:39:55.384Z",
+        "description": "Pour des prise de décisions rapides et précises",
+        "equipments": [
+          { "id": "2", "name": "Retro Projecteur", "type": "PROJECTOR" }
+        ],
+        "id": "2",
+        "image": "http://localhost:8080/images/cooper.jpg",
+        "isAvailable": true,
+        "name": "Quantum",
+        "slug": "quantum",
+        "updatedAt": "2025-04-07T13:33:37.184Z"
+      },
+      "title": "Quantum room",
+      "user": {
+        "createdAt": "2025-04-07T12:39:29.812Z",
+        "id": "3",
+        "name": "Thor",
+        "updatedAt": "2025-04-08T17:31:39.489Z"
+      },
+      "isPending": false
+    },
+    {
+      "title": "Book le Lab",
+      "description": "bla bla bla ",
+      "dateStart": "2025-04-11T13:00:00.000",
+      "dateEnd": "2025-04-11T19:00:00.000",
+      "user": {
+        "createdAt": "2025-04-07T12:39:29.812Z",
+        "id": "1",
+        "name": "Iron Man",
+        "updatedAt": "2025-04-08T17:31:39.489Z"
+      },
+      "room": {
+        "capacity": 5,
+        "createdAt": "2025-04-07T12:39:29.812Z",
+        "description": "Espace d'expérimentation de test et d'idées",
+        "equipments": [
+          { "id": "1", "name": "TV", "type": "TELEVISION" },
+          { "id": "2", "name": "Retro Projecteur", "type": "PROJECTOR" }
+        ],
+        "id": "1",
+        "image": "http://localhost:8080/images/campaign.jpg",
+        "name": "Lab Alpha",
+        "slug": "lab-alpha",
+        "updatedAt": "2025-04-08T17:31:39.489Z",
+        "isAvailable": true
+      },
+      "id": "77",
+      "isPending": false
+    },
+    {
+      "title": "Cadrage des composants",
+      "description": "Pour cadrer des composants",
+      "dateStart": "2025-04-13T12:00:00.000",
+      "dateEnd": "2025-04-13T13:00:00.000",
+      "user": {
+        "createdAt": "2025-04-07T12:39:29.812Z",
+        "id": "1",
+        "name": "Iron Man",
+        "updatedAt": "2025-04-08T17:31:39.489Z"
+      },
+      "room": {
+        "capacity": 10,
+        "createdAt": "2025-04-07T12:39:55.384Z",
+        "description": "Pour des prise de décisions rapides et précises",
+        "equipments": [
+          { "id": "2", "name": "Retro Projecteur", "type": "PROJECTOR" }
+        ],
+        "id": "2",
+        "image": "http://localhost:8080/images/cooper.jpg",
+        "name": "Quantum",
+        "slug": "quantum",
+        "updatedAt": "2025-04-07T13:33:37.184Z",
+        "isAvailable": true
+      },
+      "id": "554",
+      "isPending": false
+    },
+    {
+      "title": "Helix room",
+      "description": "organisation des features",
+      "dateStart": "2025-04-13T13:00:00.000",
+      "dateEnd": "2025-04-13T16:00:00.000",
       "user": {
         "createdAt": "2025-04-07T12:39:29.812Z",
         "id": "1",
@@ -160,7 +276,36 @@
         "updatedAt": "2025-04-09T16:45:19.025Z",
         "isAvailable": true
       },
-      "id": "269"
+      "id": "664",
+      "isPending": false
+    },
+    {
+      "title": "Juste pour voir",
+      "description": "C'est pas mal ",
+      "dateStart": "2025-04-14T12:00:00.000",
+      "dateEnd": "2025-04-14T17:00:00.000",
+      "user": {
+        "createdAt": "2025-04-07T12:39:29.812Z",
+        "id": "1",
+        "name": "Iron Man",
+        "updatedAt": "2025-04-08T17:31:39.489Z"
+      },
+      "room": {
+        "capacity": 26,
+        "createdAt": "2025-04-09T16:45:49.096Z",
+        "description": "Pour de la hauteur et de la perspective",
+        "equipments": [
+          { "id": "1", "name": "TV" },
+          { "id": "2", "name": "Retro Projecteur", "type": "PROJECTOR" }
+        ],
+        "id": "5",
+        "image": "http://localhost:8080/images/wells.jpg",
+        "name": "Observatory",
+        "slug": "observatory",
+        "updatedAt": "2025-04-09T16:45:49.096Z",
+        "isAvailable": true
+      },
+      "id": "83"
     }
   ]
 }

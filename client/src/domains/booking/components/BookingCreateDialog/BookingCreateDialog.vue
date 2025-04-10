@@ -23,7 +23,7 @@
     emit('submit')
   }
 
-  bookingStore.$onAction(({ name, after, args, store }) => {
+  bookingStore.$onAction(({ name, after, args }) => {
     if (name === 'createBooking') {
       userStore.addUserBooking(args[0])
 
@@ -33,13 +33,7 @@
           return
         }
 
-        bookingStore.removeLastUserBooking()
-        userStore.removeLastUserBooking()
-
-        const bookings = store.bookings
-
-        bookingStore.$patch({ bookings: [...bookings, result] })
-        userStore.addUserBooking(result)
+        userStore.updateUserBooking(result)
       })
     }
   })

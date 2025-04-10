@@ -18,8 +18,6 @@
     (startDate) => {
       if (!startDate?.value) return
 
-      console.log('object')
-
       router.push({
         name: route.name,
         query: {

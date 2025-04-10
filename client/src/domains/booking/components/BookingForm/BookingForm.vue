@@ -11,11 +11,18 @@
     delete: []
   }>()
 
+  const route = useRoute()
+
+  const defaultStartDate = ref(
+    route.query.start ? new Date(route.query.start as string) : new Date(),
+  )
+
   const state = reactive<Partial<Booking>>({
     title: props.booking?.title ?? '',
     description: props.booking?.description ?? '',
-    dateStart: props.booking?.dateStart ?? roundedDate(new Date()),
-    dateEnd: props.booking?.dateEnd ?? roundedDate(addHours(new Date())),
+    dateStart: props.booking?.dateStart ?? roundedDate(defaultStartDate.value),
+    dateEnd:
+      props.booking?.dateEnd ?? roundedDate(addHours(defaultStartDate.value)),
     user: props.booking?.user,
     room: props.booking?.room,
     id: props.booking?.id,

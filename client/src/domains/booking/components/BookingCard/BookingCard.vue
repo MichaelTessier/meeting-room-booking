@@ -16,6 +16,7 @@
     >
       <Heading
         v-if="booking.room?.name"
+        type="heading-small"
         data-test="booking-card__room-name"
       >
         {{ booking.room.name }}
@@ -37,6 +38,7 @@
       <Text
         v-if="booking.title"
         data-test="booking-card__title"
+        class="mt-1"
         type="large"
       >
         {{ booking.title }}

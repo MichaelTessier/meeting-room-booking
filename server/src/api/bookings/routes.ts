@@ -6,7 +6,7 @@ import {
   fetchBookings,
   updateBooking,
   createBooking,
-  fetchUserBooking,
+  fetchUserBookings,
   deleteBooking,
 } from '@/database/bookings'
 
@@ -28,7 +28,7 @@ router.get<{}, ApiResponse<Booking[]>>('/', async (req, res) => {
 
 router.get<{}, ApiResponse<Booking[]>>('/me', async (req, res) => {
   try {
-    const response = await fetchUserBooking()
+    const response = await fetchUserBookings()
 
     if (!response) {
       res.status(404).json({ message: 'Bookings not found' })

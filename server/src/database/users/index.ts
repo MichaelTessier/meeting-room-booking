@@ -3,17 +3,33 @@ import { User } from 'meeting-room-booking-types'
 
 const USERS_URL = 'src/database/users/users.json'
 
-export const fetchUsers = async () => {
-  const usersDataString = await fs.readFile(USERS_URL, 'utf-8')
-  const usersData = JSON.parse(usersDataString) as { users: User[] }
+export const fetchUsers = async (): Promise<User[] | undefined> => {
+  try {
+    const usersDataString = await fs.readFile(USERS_URL, 'utf-8')
+    const usersData = JSON.parse(usersDataString) as { users: User[] }
 
-  return usersData.users
+    if (!usersData) return []
+
+    return usersData.users
+  } catch (error) {
+    throw new Error('Error fetching users')
+  }
 }
 
 export const fetchUser = async (id: string) => {
-  const users = await fetchUsers()
+  try {
+    if (!id) {
+      throw new Error('User ID is required')
+    }
 
-  const user = users.find((user) => user.id === id)
+    const users = await fetchUsers()
 
-  return user
+    if (!users) return undefined
+
+    const user = users.find((user) => user.id === id)
+
+    return user
+  } catch (error) {
+    throw new Error('Error fetching user')
+  }
 }

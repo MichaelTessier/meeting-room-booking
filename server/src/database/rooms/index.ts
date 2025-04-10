@@ -11,56 +11,60 @@ interface FetchRoomsFilters {
   start?: string
 }
 
-export const fetchRooms = async ({ filters }: FetchRoomsOptions = {}) => {
-  const [roomsDataString, bookings] = await Promise.all([
-    fs.readFile(ROOMS_URL, 'utf-8'),
-    fetchBookings(),
-  ])
-  const roomsData = JSON.parse(roomsDataString) as { rooms: Room[] }
-  const startDate = filters?.start ? new Date(filters.start) : new Date()
+export const fetchRooms = async ({ filters }: FetchRoomsOptions = {}): Promise<
+  Room[] | undefined
+> => {
+  try {
+    const [roomsDataString, bookings] = await Promise.all([
+      fs.readFile(ROOMS_URL, 'utf-8'),
+      fetchBookings(),
+    ])
 
-  const rooms = roomsData.rooms.map((room) => {
-    const roomBookings = bookings.filter(
-      (booking) => booking.room.id === room.id,
-    )
+    if (!roomsDataString) return undefined
 
-    const hasBooking = roomBookings.some((booking) => {
-      const bookingStart = new Date(booking.dateStart)
-      const bookingEnd = new Date(booking.dateEnd)
-      return startDate >= bookingStart && startDate <= bookingEnd
-    })
+    const roomsData = JSON.parse(roomsDataString) as { rooms: Room[] }
+    const startDate = filters?.start ? new Date(filters.start) : new Date()
 
-    return {
-      ...room,
-      isAvailable: !hasBooking,
-    }
-  })
+    const rooms =
+      roomsData?.rooms?.map((room) => {
+        const roomBookings =
+          bookings?.filter((booking) => booking.room.id === room.id) ?? []
 
-  // if (filters?.start) {
-  //   const startDate = new Date(filters.start)
-  //   const filteredRooms = rooms.filter((room) => {
-  //     if (!room?.bookings?.length) return true
+        const hasBooking =
+          roomBookings?.some((booking) => {
+            const bookingStart = new Date(booking.dateStart)
+            const bookingEnd = new Date(booking.dateEnd)
+            return startDate >= bookingStart && startDate <= bookingEnd
+          }) ?? false
 
-  //     const isNotAvailable = room.bookings.some((booking) => {
-  //       const bookingStart = new Date(booking.dateStart)
-  //       const bookingEnd = new Date(booking.dateEnd)
+        return {
+          ...room,
+          isAvailable: !hasBooking,
+        }
+      }) ?? []
 
-  //       return startDate >= bookingStart && startDate <= bookingEnd
-  //     })
-
-  //     return !isNotAvailable
-  //   })
-
-  //   return filteredRooms
-  // }
-
-  return rooms
+    return rooms
+  } catch (error) {
+    throw new Error('Error when fetching rooms')
+  }
 }
 
-export const fetchRoom = async (slug: string) => {
-  const rooms = await fetchRooms()
+export const fetchRoom = async (slug: string): Promise<Room | undefined> => {
+  try {
+    if (!slug) {
+      throw new Error('Room slug is required')
+    }
 
-  const room = rooms.find((room) => room.slug === slug)
+    const rooms = await fetchRooms()
 
-  return room
+    if (!rooms) return undefined
+
+    const room = rooms.find((room) => room.slug === slug)
+
+    if (!room) return undefined
+
+    return room
+  } catch (error) {
+    throw new Error('Error fetching room')
+  }
 }

@@ -136,6 +136,31 @@
         "name": "Thor",
         "updatedAt": "2025-04-08T17:31:39.489Z"
       }
+    },
+    {
+      "title": "azza",
+      "description": "azreraez",
+      "dateStart": "2025-04-10T03:21:14.409Z",
+      "dateEnd": "2025-04-10T04:21:14.409Z",
+      "user": {
+        "createdAt": "2025-04-07T12:39:29.812Z",
+        "id": "1",
+        "name": "Iron Man",
+        "updatedAt": "2025-04-08T17:31:39.489Z"
+      },
+      "room": {
+        "capacity": 11,
+        "createdAt": "2025-04-07T14:15:55.733Z",
+        "description": "Brainstorming et créativité",
+        "equipments": [],
+        "id": "3",
+        "image": "http://localhost:8080/images/hemant.jpg",
+        "name": "Helix",
+        "slug": "helix",
+        "updatedAt": "2025-04-09T16:45:19.025Z",
+        "isAvailable": true
+      },
+      "id": "269"
     }
   ]
 }

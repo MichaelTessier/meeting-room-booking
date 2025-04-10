@@ -12,7 +12,15 @@ export const useUserStore = defineStore('userStore', {
       user: undefined,
       bookings: [],
     }) as UserState,
-  getters: {},
+  getters: {
+    sortedBookings: (state) => {
+      return state.bookings.sort((a, b) => {
+        const dateA = new Date(a.dateStart)
+        const dateB = new Date(b.dateStart)
+        return dateA.getTime() - dateB.getTime()
+      })
+    },
+  },
   actions: {
     async fetchUser() {
       // FAKE USER DATA

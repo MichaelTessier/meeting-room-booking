@@ -4,7 +4,7 @@
 
   const userStore = useUserStore()
 
-  const { bookings } = storeToRefs(userStore)
+  const { sortedBookings } = storeToRefs(userStore)
 
   const isDialogOpen = ref(false)
   const selectedBooking = ref<Booking | null>(null)
@@ -23,25 +23,27 @@
 <template>
   <div
     data-test="user-bookings"
-    class="flex flex-col gap-6"
+    class="flex flex-col gap-6 h-full"
   >
     <Heading class="text-center">{{ $t('user.bookings.title') }}</Heading>
 
-    <div v-if="!bookings.length">
-      <Text class="text-center">
-        {{ $t('user.bookings.empty') }}
-      </Text>
-    </div>
-    <div
-      v-for="booking in bookings"
-      v-else
-      :key="booking.id"
-    >
-      <BookingCard
-        data-test="user-bookings__booking-card"
-        :booking="booking"
-        @click="onBookingClick(booking)"
-      />
+    <div class="overflow-y-auto h-[540px] flex flex-col gap-6">
+      <div v-if="!sortedBookings.length">
+        <Text class="text-center">
+          {{ $t('user.bookings.empty') }}
+        </Text>
+      </div>
+      <div
+        v-for="booking in sortedBookings"
+        v-else
+        :key="booking.id"
+      >
+        <BookingCard
+          data-test="user-bookings__booking-card"
+          :booking="booking"
+          @click="onBookingClick(booking)"
+        />
+      </div>
     </div>
 
     <BookingUpdateDialog

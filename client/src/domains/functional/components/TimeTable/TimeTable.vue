@@ -31,7 +31,7 @@
 </script>
 
 <template>
-  <div class="timetable h-full rounded-xl overflow-hidden">
+  <div class="timetable h-full rounded overflow-hidden border">
     <!-- KEY UGLY but maybe this component is not really reactive -->
     <VueTimeTable
       :key="date && id"
@@ -63,6 +63,7 @@
 
   .ftr-timetable-location {
     cursor: pointer !important;
+    background-color: var(--custom-background-color) !important;
   }
 
   .ftr-timetable-location,

@@ -27,7 +27,7 @@
   >
     <Heading class="text-center">{{ $t('user.bookings.title') }}</Heading>
 
-    <div class="overflow-y-auto h-[540px] flex flex-col gap-6">
+    <div class="flex flex-col gap-6 h-full overflow-y-auto pb-[80px]">
       <div v-if="!sortedBookings.length">
         <Text class="text-center">
           {{ $t('user.bookings.empty') }}

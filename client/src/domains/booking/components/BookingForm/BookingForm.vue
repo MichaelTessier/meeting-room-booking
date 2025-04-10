@@ -16,8 +16,8 @@
   const state = reactive<Partial<Booking>>({
     title: props.booking?.title ?? '',
     description: props.booking?.description ?? '',
-    dateStart: props.booking?.dateStart ?? new Date().toISOString(),
-    dateEnd: props.booking?.dateEnd ?? addHours(new Date()).toISOString(),
+    dateStart: props.booking?.dateStart ?? roundedDate(new Date()),
+    dateEnd: props.booking?.dateEnd ?? roundedDate(addHours(new Date())),
     user: props.booking?.user,
     room: props.booking?.room,
     id: props.booking?.id,
@@ -27,6 +27,20 @@
     // TODO: validate form
     emit('submit', state as Booking)
   }
+
+  watch(
+    () => [state.dateStart, state.dateEnd],
+    () => {
+      if (state.dateStart && state.dateEnd) {
+        const start = new Date(state.dateStart)
+        const end = new Date(state.dateEnd)
+
+        if (start >= end) {
+          state.dateEnd = roundedDate(addHours(start))
+        }
+      }
+    },
+  )
 </script>
 
 <template>
@@ -68,10 +82,7 @@
       :label="t('booking.form.dateEnd')"
       :label-for="'dateEnd'"
     >
-      <DateTimePicker
-        v-model:date="state.dateEnd"
-        min-value=""
-      />
+      <DateTimePicker v-model:date="state.dateEnd" />
     </FormControl>
 
     <FormAction

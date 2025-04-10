@@ -1,5 +1,8 @@
 {
   "booking": {
+    "card": {
+      "pending": "Pending"
+    },
     "create": {
       "title": "Booking {room}"
     },

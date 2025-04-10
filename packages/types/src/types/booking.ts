@@ -7,6 +7,7 @@ export interface Booking {
   description?: string
   room: Room
   user: User
+  isPending: boolean
   dateEnd: string
   dateStart: string
   createdAt: string

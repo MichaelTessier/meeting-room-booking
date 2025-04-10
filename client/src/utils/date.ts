@@ -34,6 +34,11 @@ export function toZonedTime(date: Date) {
   return fromDate(date, getLocalTimeZone())
 }
 
+export function roundedDate(date: Date) {
+  const _date = new Date(date).setUTCMinutes(0)
+  return getLocalISOString(new Date(_date))
+}
+
 export const TIME = {
   '00': '00:00',
   '01': '01:00',

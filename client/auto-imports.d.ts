@@ -143,6 +143,7 @@ declare global {
   const readonly: (typeof import('vue'))['readonly']
   const ref: (typeof import('vue'))['ref']
   const resolveComponent: (typeof import('vue'))['resolveComponent']
+  const roundedDate: (typeof import('./src/utils/date'))['roundedDate']
   const router: (typeof import('./src/router/index'))['router']
   const routes: (typeof import('./src/router/index'))['routes']
   const setActivePinia: (typeof import('pinia'))['setActivePinia']
@@ -564,6 +565,9 @@ declare module 'vue' {
     readonly ref: UnwrapRef<(typeof import('vue'))['ref']>
     readonly resolveComponent: UnwrapRef<
       (typeof import('vue'))['resolveComponent']
+    >
+    readonly roundedDate: UnwrapRef<
+      (typeof import('./src/utils/date'))['roundedDate']
     >
     readonly router: UnwrapRef<(typeof import('./src/router/index'))['router']>
     readonly routes: UnwrapRef<(typeof import('./src/router/index'))['routes']>

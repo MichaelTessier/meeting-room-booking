@@ -36,9 +36,10 @@
 
       after((result) => {
         if (!result) {
-          userStore.updateUserBooking(bookingRef.value)
+          userStore.removeLastUserBooking()
           return
         }
+        userStore.updateUserBooking(result)
       })
     }
 
@@ -47,9 +48,10 @@
 
       after((result) => {
         if (!result) {
-          userStore.updateUserBooking(bookingRef.value)
+          userStore.removeLastUserBooking()
           return
         }
+        userStore.updateUserBooking(bookingRef.value)
       })
     }
   })

@@ -6,5 +6,12 @@ export const routes = [...bookingRoutes, ...userRoutes]
 
 export const router = createRouter({
   history: createWebHistory(),
-  routes,
+  routes: [
+    {
+      name: 'home',
+      path: '/',
+      redirect: BOOKING_ROUTES.ROOT,
+    },
+    ...routes,
+  ],
 })
